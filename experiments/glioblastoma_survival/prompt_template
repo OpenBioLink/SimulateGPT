@@ -1,0 +1,4 @@
+Consider a patient diagnosed with a glioblastoma with genetic alterations, as indicated below. Explore the tumor progression under standard of care with genotype-informed treatment (if applicable). As final outcome, provide two values, first indicating whether the patient's survival is more likely to be 'increased' or 'decreased' relative to the median overall glioblastoma survival (15 months), and second, the number of months by which you estimate the survival to deviate from that median. Focus on novelty and ignore the inherent uncertainty of this scenario to provide bold estimates based on your knowledge.
+
+Identified mutations:
+{genes}

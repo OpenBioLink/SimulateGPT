@@ -1,0 +1,35 @@
+parameters:
+  - gene: NOC3L
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: NOC3L (Nucleolar Complex Associated 3 Homolog) is a protein-coding gene that is involved in the regulation of transcription and chromatin remodeling [1]. It has been identified as a potential cancer driver gene in several studies [2,3]. However, its essentiality in cancer cell-lines has not been well-established.
+    entities: NOC3L, transcription, chromatin remodeling, cancer driver gene
+    assumptions: Given the involvement of NOC3L in transcription and chromatin remodeling, it may play a role in cancer cell-line survival and proliferation.
+    consequence: potential essentiality of NOC3L in cancer cell-lines
+    probability: 60
+    explanation: The involvement of NOC3L in transcription and chromatin remodeling, as well as its identification as a potential cancer driver gene, suggests that it may be essential in cancer cell-lines. However, the lack of direct evidence for its essentiality in cancer cell-lines makes this consequence less certain.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival or reproduction of an organism or cell [4]. In cancer cell-lines, essential genes are often involved in processes such as cell cycle regulation, DNA replication, and cell survival pathways [5].
+    entities: essential genes, cell cycle regulation, DNA replication, cell survival pathways
+    assumptions: If NOC3L is essential in cancer cell-lines, it should be involved in one or more of the processes mentioned above.
+    consequence: involvement of NOC3L in essential cellular processes in cancer cell-lines
+    probability: 60
+    explanation: The involvement of NOC3L in transcription and chromatin remodeling suggests that it may play a role in essential cellular processes in cancer cell-lines. However, the lack of direct evidence for its involvement in these processes makes this consequence less certain.
+    novelty: 50
+
+conclusion:
+  outcome: likely
+  explanation: Based on the involvement of NOC3L in transcription and chromatin remodeling, as well as its identification as a potential cancer driver gene, it is likely that NOC3L is essential in cancer cell-lines. However, further research is needed to confirm its essentiality and involvement in essential cellular processes in cancer cell-lines.
+
+references:
+  "[1]": "Entrez Gene: NOC3L nucleolar complex associated 3 homolog (S. cerevisiae)"
+  "[2]": "Lawrence MS, et al. (2014) Nature. Discovery and saturation analysis of cancer genes across 21 tumour types."
+  "[3]": "Davoli T, et al. (2013) Cell Reports. Cumulative haploinsufficiency and triplosensitivity drive aneuploidy patterns and shape the cancer genome."
+  "[4]": "Hart T, et al. (2015) Science. High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities."
+  "[5]": "Meyers RM, et al. (2017) Cell. Computational correction of copy number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells."

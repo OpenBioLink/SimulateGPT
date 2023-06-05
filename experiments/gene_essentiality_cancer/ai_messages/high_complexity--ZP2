@@ -1,0 +1,33 @@
+parameters:
+  - gene: ZP2
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: ZP2 (zona pellucida glycoprotein 2) is a glycoprotein that is part of the zona pellucida, which surrounds the oocyte and early embryo in mammals [1]. ZP2 is mainly expressed in the oocytes of the ovary and is involved in sperm binding and fertilization [2]. Cancer cell-lines can originate from various tissues and have diverse molecular characteristics.
+    entities: ZP2, cancer cell-lines, oocyte, zona pellucida
+    assumptions: ZP2 expression is primarily restricted to oocytes and is involved in fertilization.
+    consequence: ZP2 is unlikely to be essential in cancer cell-lines not derived from oocytes.
+    probability: 90
+    explanation: Given that ZP2 is primarily expressed in oocytes and is involved in fertilization, it is unlikely to be essential in cancer cell-lines not derived from oocytes.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Cancer cell-lines derived from oocytes are relatively rare compared to those derived from other tissues [3]. The essentiality of a gene in a cancer cell-line depends on its role in cellular processes, such as cell proliferation, survival, and metabolism.
+    entities: cancer cell-lines, oocyte-derived cancer cell-lines, cellular processes
+    assumptions: ZP2 is primarily involved in fertilization and is not known to play a significant role in cellular processes essential for cancer cell survival and proliferation.
+    consequence: ZP2 is unlikely to be essential in oocyte-derived cancer cell-lines.
+    probability: 80
+    explanation: Since ZP2 is primarily involved in fertilization and not known to play a significant role in essential cellular processes for cancer cell survival and proliferation, it is unlikely to be essential in oocyte-derived cancer cell-lines.
+    novelty: 0
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the simulation, ZP2 is unlikely to be essential in cancer cell-lines, as it is primarily expressed in oocytes and involved in fertilization, which are not directly related to cancer cell survival and proliferation.
+
+references:
+  "[1]": "Lefièvre L, Conner SJ, Salpekar A, et al. 2004. Human Reproduction. Four zona pellucida glycoproteins are expressed in the human."
+  "[2]": "Rankin TL, Coleman JS, Epifano O, et al. 2003. Developmental Biology. Fertility and taxon-specific sperm binding persist after replacement of mouse sperm receptors with human homologs."
+  "[3]": "Domcke S, Sinha R, Levine DA, et al. 2013. Nature Communications. Evaluating cell lines as tumour models by comparison of genomic profiles."

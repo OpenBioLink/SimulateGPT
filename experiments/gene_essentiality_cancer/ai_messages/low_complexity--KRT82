@@ -1,0 +1,28 @@
+simulation:
+  - step: 1
+    level: molecular
+    consequence: KRT82 expression in cancer cell lines
+    probability: 100
+    explanation: KRT82 (Keratin 82) is a gene that encodes a type II keratin protein, which is a structural component of hair. To determine if KRT82 is likely essential in cancer cell lines, we first need to examine its expression in these cells.
+
+  - step: 2
+    level: molecular
+    consequence: KRT82 expression is low or absent in most cancer cell lines
+    probability: 90
+    explanation: KRT82 is primarily expressed in hair follicle cells and has limited expression in other tissues. Most cancer cell lines are derived from tissues other than hair follicles, so it is likely that KRT82 expression is low or absent in these cells.
+
+  - step: 3
+    level: molecular
+    consequence: KRT82 is not involved in essential cellular processes in cancer cell lines
+    probability: 85
+    explanation: Since KRT82 is a structural protein specific to hair follicles, it is unlikely to be involved in essential cellular processes in cancer cell lines derived from other tissues. Essential cellular processes include cell division, DNA replication, and cell survival, which are critical for cancer cell growth and proliferation.
+
+  - step: 4
+    level: cellular
+    consequence: KRT82 knockout does not affect cancer cell line viability
+    probability: 80
+    explanation: If KRT82 is not involved in essential cellular processes in cancer cell lines, then knocking out the KRT82 gene should not have a significant impact on cell viability. This would further support the notion that KRT82 is not essential in cancer cell lines.
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the limited expression of KRT82 in cancer cell lines, its role as a structural protein specific to hair follicles, and the lack of involvement in essential cellular processes, it is unlikely that KRT82 is essential in cancer cell lines.

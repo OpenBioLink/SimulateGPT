@@ -1,0 +1,43 @@
+parameters:
+  - glioblastoma diagnosis
+  - PTEN mutations
+  - NF1 mutations
+  - MGMT methylation status: low
+  - EGFR: no mutations
+  - TP53: no mutations
+  - PIK3CA: no mutations
+  - MUC16: no mutations
+  - RB1: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: PTEN and NF1 are tumor suppressor genes, and their mutations can lead to uncontrolled cell growth and tumor formation [1]. Low MGMT methylation status is associated with a poorer response to temozolomide, a standard chemotherapy drug for glioblastoma [2].
+    entities: PTEN, NF1, MGMT, temozolomide
+    assumptions: The patient's glioblastoma has PTEN and NF1 mutations, which contribute to tumor progression. Low MGMT methylation status reduces the effectiveness of temozolomide treatment.
+    consequence: increased tumor progression and reduced response to temozolomide
+    probability: 80
+    explanation: PTEN and NF1 mutations are known to contribute to tumor progression, and low MGMT methylation status is associated with a poorer response to temozolomide treatment.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Glioblastoma is an aggressive brain tumor with a poor prognosis [3]. Standard of care includes surgery, radiation therapy, and chemotherapy with temozolomide [4]. Genotype-informed treatment may include targeted therapies or immunotherapies based on the specific genetic alterations present in the tumor [5].
+    entities: glioblastoma, surgery, radiation therapy, chemotherapy, temozolomide, targeted therapies, immunotherapies
+    assumptions: The patient receives standard of care treatment, including surgery, radiation therapy, and chemotherapy with temozolomide. Genotype-informed treatment may be considered based on the identified genetic alterations.
+    consequence: partial tumor removal and control, but limited response to temozolomide due to low MGMT methylation status
+    probability: 70
+    explanation: Standard of care treatment can help control tumor growth, but the patient's low MGMT methylation status may limit the effectiveness of temozolomide.
+    novelty: 0
+
+conclusion:
+  outcome: decreased, -4 months
+  explanation: The patient's glioblastoma has PTEN and NF1 mutations, which contribute to tumor progression, and low MGMT methylation status, which is associated with a poorer response to temozolomide treatment. These factors suggest a decreased survival relative to the median overall glioblastoma survival of 15 months. We estimate a deviation of -4 months from the median survival.
+
+references:
+  "[1]": "Furnari FB, Fenton T, Bachoo RM, et al. 2007. Cancer Cell. Malignant astrocytic glioma: genetics, biology, and paths to treatment."
+  "[2]": "Hegi ME, Diserens AC, Gorlia T, et al. 2005. N Engl J Med. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[3]": "Ostrom QT, Gittleman H, Liao P, et al. 2014. Neuro Oncol. CBTRUS statistical report: primary brain and central nervous system tumors diagnosed in the United States in 2007-2011."
+  "[4]": "Stupp R, Mason WP, van den Bent MJ, et al. 2005. N Engl J Med. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."
+  "[5]": "Alexander BM, Cloughesy TF. 2017. J Clin Oncol. Adult Glioblastoma."

@@ -1,0 +1,28 @@
+simulation:
+  - step: 1
+    level: molecular
+    consequence: H2BC1 expression in cancer cell lines
+    probability: 100
+    explanation: H2BC1 is a histone gene that encodes a protein involved in the structure of chromatin. It is expressed in various cell types, including cancer cell lines.
+
+  - step: 2
+    level: molecular
+    consequence: H2BC1 protein participates in chromatin structure and function
+    probability: 100
+    explanation: The H2BC1 protein is a histone protein that forms part of the nucleosome core, which is essential for the packaging of DNA into chromatin. This process is crucial for the regulation of gene expression and DNA replication, repair, and recombination.
+
+  - step: 3
+    level: cellular
+    consequence: disruption of H2BC1 function affects chromatin structure and function
+    probability: 90
+    explanation: Disruption of H2BC1 function can lead to alterations in chromatin structure and function, which may affect the regulation of gene expression and other DNA-related processes. This can have consequences for cell growth, division, and survival.
+
+  - step: 4
+    level: cellular
+    consequence: cancer cell lines are sensitive to H2BC1 disruption
+    probability: 60
+    explanation: Cancer cell lines often have altered chromatin structure and function, which can contribute to their uncontrolled growth and survival. Disruption of H2BC1 function may have a more significant impact on cancer cell lines compared to normal cells, making them more sensitive to its loss.
+
+conclusion:
+  outcome: likely
+  explanation: Given the role of H2BC1 in chromatin structure and function, and the potential sensitivity of cancer cell lines to its disruption, it is likely that H2BC1 is essential in cancer cell lines.

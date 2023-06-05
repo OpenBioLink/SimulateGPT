@@ -1,0 +1,39 @@
+Generation 0:
+\begin{bmatrix}
+  & \blacksquare &   &  \\
+  &   & \blacksquare &  \\
+  \blacksquare & \blacksquare & \blacksquare &  \\
+  &   &   &  \\
+\end{bmatrix}
+
+Generation 1:
+\begin{bmatrix}
+  &   &   &  \\
+  \blacksquare &   & \blacksquare &  \\
+  & \blacksquare & \blacksquare &  \\
+  & \blacksquare &   &  \\
+\end{bmatrix}
+
+Generation 2:
+\begin{bmatrix}
+  &   &   &  \\
+  &   & \blacksquare &  \\
+  \blacksquare &   & \blacksquare &  \\
+  & \blacksquare & \blacksquare &  \\
+\end{bmatrix}
+
+Generation 3:
+\begin{bmatrix}
+  &   &   &  \\
+  & \blacksquare &   &  \\
+  &   & \blacksquare & \blacksquare \\
+  & \blacksquare & \blacksquare &  \\
+\end{bmatrix}
+
+Generation 4:
+\begin{bmatrix}
+  &   &   &  \\
+  &   & \blacksquare &  \\
+  &   &   & \blacksquare \\
+  & \blacksquare & \blacksquare & \blacksquare \\
+\end{bmatrix}

@@ -1,0 +1,73 @@
+parameters:
+  - age: 60
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - differentiation: moderately differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The RAS-RAF-MEK-ERK pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and survival [1]. Moderately differentiated tumors have intermediate levels of differentiation and are associated with intermediate prognosis [2].
+    entities: RAS, RAF, MEK, ERK, cell proliferation, cell survival
+    assumptions: The patient's tumor has dysregulated RAS-RAF-MEK-ERK signaling, contributing to tumor growth and metastasis.
+    consequence: increased cell proliferation and survival in the tumor
+    probability: 80
+    explanation: Dysregulation of the RAS-RAF-MEK-ERK pathway is common in colon adenocarcinoma and contributes to tumor growth and metastasis.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor cells can evade the immune system by expressing immune checkpoint molecules such as PD-L1, which inhibits T cell activation [3].
+    entities: tumor cells, immune system, PD-L1, T cells
+    assumptions: The patient's tumor cells express PD-L1, allowing them to evade immune surveillance.
+    consequence: decreased immune response against the tumor
+    probability: 70
+    explanation: Immune checkpoint molecules like PD-L1 help tumor cells evade the immune system, contributing to tumor growth and metastasis.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Angiogenesis, the formation of new blood vessels, is a key process in tumor growth and metastasis, providing nutrients and oxygen to the tumor [4].
+    entities: angiogenesis, blood vessels, nutrients, oxygen
+    assumptions: The patient's tumor induces angiogenesis, promoting tumor growth and metastasis.
+    consequence: increased tumor growth and metastasis
+    probability: 80
+    explanation: Angiogenesis is a key process in tumor growth and metastasis, providing nutrients and oxygen to the tumor.
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Stage IV colon adenocarcinoma indicates that the cancer has metastasized to distant organs [5]. The liver is a common site of metastasis for colon cancer [6].
+    entities: stage IV, colon adenocarcinoma, metastasis, liver
+    assumptions: The patient's cancer has metastasized to the liver, increasing the complexity of treatment and reducing the likelihood of complete remission.
+    consequence: reduced likelihood of complete remission
+    probability: 90
+    explanation: Stage IV colon adenocarcinoma has metastasized to distant organs, making treatment more complex and reducing the likelihood of complete remission.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Optimal standard of care for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and/or immunotherapy [7].
+    entities: chemotherapy, targeted therapy, immunotherapy
+    assumptions: The patient receives optimal standard of care treatment, which may slow tumor growth and metastasis but is unlikely to result in complete remission.
+    consequence: slowed tumor growth and metastasis
+    probability: 80
+    explanation: Optimal standard of care treatment can slow tumor growth and metastasis but is unlikely to result in complete remission for stage IV colon adenocarcinoma.
+    novelty: 0
+
+conclusion:
+  outcome: 6 months of progression-free survival
+  explanation: Given the patient's stage IV colon adenocarcinoma with moderately differentiated histology and no signs of carcinomatosis, and considering the examples provided, the expected progression-free survival under optimal standard of care treatment is estimated to be around 6 months.
+
+references:
+  "[1]": "Downward J. (2003) Nature Reviews Cancer. Targeting RAS signalling pathways in cancer therapy."
+  "[2]": "Compton CC. (2006) Archives of Pathology & Laboratory Medicine. Updated protocol for the examination of specimens from patients with carcinomas of the colon and rectum, excluding carcinoid tumors, lymphomas, sarcomas, and tumors of the vermiform appendix."
+  "[3]": "Topalian SL, et al. (2015) Nature Reviews Cancer. Immune checkpoint blockade: a common denominator approach to cancer therapy."
+  "[4]": "Carmeliet P, Jain RK. (2011) Nature. Molecular mechanisms and clinical applications of angiogenesis."
+  "[5]": "American Cancer Society. (2021) Colon Cancer Stages."
+  "[6]": "van der Pool AE, et al. (2012) Annals of Surgical Oncology. Trends in treatment and survival of patients with non-resected synchronous liver metastases from colorectal cancer."
+  "[7]": "National Comprehensive Cancer Network. (2021) NCCN Clinical Practice Guidelines in Oncology: Colon Cancer."

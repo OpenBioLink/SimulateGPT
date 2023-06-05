@@ -1,0 +1,70 @@
+parameters:
+  - age: 62
+  - cancer_stage: III
+  - cancer_type: rectal adenocarcinoma
+  - tumor_location: rectum
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The optimal standard of care for stage III rectal adenocarcinoma typically includes neoadjuvant chemoradiotherapy, followed by surgery and adjuvant chemotherapy[1]. Neoadjuvant chemoradiotherapy aims to shrink the tumor and kill cancer cells, while adjuvant chemotherapy targets any remaining cancer cells after surgery[2].
+    entities: chemoradiotherapy, surgery, adjuvant chemotherapy
+    assumptions: The patient receives the optimal standard of care treatment plan.
+    consequence: tumor shrinkage and reduced metastasis
+    probability: 80
+    explanation: Neoadjuvant chemoradiotherapy is effective in shrinking the tumor and reducing metastasis in most cases[1].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor shrinkage and reduced metastasis can lead to a decrease in the number of cancer cells and a reduction in the likelihood of further metastasis[3].
+    entities: cancer cells, metastasis
+    assumptions: The patient's tumor responds well to neoadjuvant chemoradiotherapy.
+    consequence: decreased cancer cell count and reduced metastatic potential
+    probability: 75
+    explanation: The effectiveness of neoadjuvant chemoradiotherapy in reducing cancer cell count and metastatic potential is well-established[3].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Following neoadjuvant chemoradiotherapy, surgery is performed to remove the primary tumor and any affected lymph nodes[1]. This further reduces the number of cancer cells and the likelihood of metastasis.
+    entities: surgery, primary tumor, lymph nodes
+    assumptions: The patient undergoes successful surgery.
+    consequence: removal of primary tumor and affected lymph nodes
+    probability: 90
+    explanation: Surgery is a standard and effective treatment for removing primary tumors and affected lymph nodes in stage III rectal adenocarcinoma[1].
+    novelty: 0
+
+  - step: 4
+    level: organism
+    facts: Adjuvant chemotherapy is administered after surgery to target any remaining cancer cells and reduce the risk of recurrence[2].
+    entities: adjuvant chemotherapy, cancer cells, recurrence
+    assumptions: The patient receives adjuvant chemotherapy as part of the optimal standard of care treatment plan.
+    consequence: reduced risk of cancer recurrence
+    probability: 70
+    explanation: Adjuvant chemotherapy is effective in reducing the risk of cancer recurrence in many cases[2].
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival is influenced by factors such as age, cancer stage, differentiation, metastasis, and treatment effectiveness[4]. In the provided examples, progression-free survival ranged from 2 to 14 months.
+    entities: progression-free survival, age, cancer stage, differentiation, metastasis, treatment effectiveness
+    assumptions: The patient's disease progression is influenced by the factors mentioned above.
+    consequence: estimation of progression-free survival
+    probability: 70
+    explanation: Based on the provided examples and the patient's characteristics, an estimation of progression-free survival can be made.
+    novelty: 50
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Considering the patient's age, cancer stage, differentiation, metastasis, and the effectiveness of the optimal standard of care treatment plan, the expected progression-free survival is estimated to be around 10 months. This estimation is based on the provided examples and the assumption that the patient responds well to the treatment plan.
+
+references:
+  "[1]": "Sauer R, Becker H, Hohenberger W, et al. 2004. New England Journal of Medicine. Preoperative versus Postoperative Chemoradiotherapy for Rectal Cancer."
+  "[2]": "André T, Boni C, Navarro M, et al. 2009. Journal of Clinical Oncology. Improved Overall Survival With Oxaliplatin, Fluorouracil, and Leucovorin As Adjuvant Treatment in Stage II or III Colon Cancer in the MOSAIC Trial."
+  "[3]": "Bosset JF, Collette L, Calais G, et al. 2006. The Lancet. Chemotherapy with Preoperative Radiotherapy in Rectal Cancer."
+  "[4]": "Gunderson LL, Jessup JM, Sargent DJ, Greene FL, Stewart AK. 2010. Journal of Clinical Oncology. Revised TN Categorization for Colon Cancer Based on National Survival Outcomes Data."

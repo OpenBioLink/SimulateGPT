@@ -1,0 +1,33 @@
+parameters:
+  - wild type mouse
+  - YUMM 1.7 injection
+
+simulation:
+  - step: 1
+    level: cellular
+    facts: YUMM 1.7 is a murine melanoma cell line derived from a C57BL/6 mouse, which is a wild type mouse strain [1]. Melanoma is a type of skin cancer that arises from melanocytes, the pigment-producing cells [2]. YUMM 1.7 cells have been genetically engineered to express oncogenic mutations, such as BRAFV600E, which promote tumor growth and progression [1].
+    entities: YUMM 1.7, C57BL/6 mouse, melanocytes, BRAFV600E
+    assumptions: The injected YUMM 1.7 cells will interact with the mouse's immune system and other cells in the local environment.
+    consequence: YUMM 1.7 cells engraft and proliferate in the wild type mouse, forming a melanoma tumor.
+    probability: 90
+    explanation: YUMM 1.7 cells are derived from the same mouse strain as the wild type mouse, which increases the likelihood of successful engraftment and tumor formation. Additionally, the oncogenic mutations in YUMM 1.7 cells promote tumor growth and progression.
+    novelty: 0
+
+  - step: 2
+    level: organism
+    facts: Melanoma tumors can grow and invade nearby tissues, and they can also metastasize, or spread, to other parts of the body [2]. The immune system plays a crucial role in recognizing and eliminating cancer cells, but cancer cells can evade immune surveillance through various mechanisms [3].
+    entities: melanoma tumor, immune system, metastasis
+    assumptions: The wild type mouse's immune system will attempt to recognize and eliminate the YUMM 1.7-derived melanoma tumor.
+    consequence: The melanoma tumor grows and potentially metastasizes to other organs in the wild type mouse.
+    probability: 80
+    explanation: The YUMM 1.7-derived melanoma tumor has a high likelihood of growing and invading nearby tissues due to the oncogenic mutations it carries. Additionally, the tumor may evade the immune system and potentially metastasize to other organs.
+    novelty: 0
+
+conclusion:
+  outcome: The wild type mouse develops a melanoma tumor that grows and potentially metastasizes to other organs.
+  explanation: The YUMM 1.7 cells are derived from the same mouse strain as the wild type mouse and carry oncogenic mutations that promote tumor growth and progression. The immune system may not be able to effectively eliminate the tumor, allowing it to grow and potentially metastasize.
+
+references:
+  "[1]": "Meeth K, Wang JX, Micevic G, Damsky W, Bosenberg MW. 2016. The YUMM lines: a series of congenic mouse melanoma cell lines with defined genetic alterations. Pigment Cell Melanoma Res. 29(5):590-7."
+  "[2]": "National Cancer Institute. 2021. Melanoma Treatment (PDQ®)–Patient Version. https://www.cancer.gov/types/skin/patient/melanoma-treatment-pdq"
+  "[3]": "Vinay DS, Ryan EP, Pawelec G, Talib WH, Stagg J, Elkord E, Lichtor T, Decker WK, Whelan RL, Kumara HMCS, Signori E, Honoki K, Georgakilas AG, Amin A, Helferich WG, Boosani CS, Guha G, Ciriolo MR, Chen S, Mohammed SI, Azmi AS, Keith WN, Bilsland A, Bhakta D, Halicka D, Fujii H, Aquilano K, Ashraf SS, Nowsheen S, Yang X, Choi BK, Kwon BS. 2015. Immune evasion in cancer: Mechanistic basis and therapeutic strategies. Semin Cancer Biol. 35 Suppl:S185-S198."

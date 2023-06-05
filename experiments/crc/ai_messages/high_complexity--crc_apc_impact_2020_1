@@ -1,0 +1,51 @@
+parameters:
+  - age: 68
+  - cancer_stage: II
+  - cancer_type: rectal adenocarcinoma
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage II rectal adenocarcinoma with moderately differentiated histology and metastasis. Moderately differentiated tumors have intermediate levels of gene expression and protein activity compared to well-differentiated and poorly differentiated tumors[1]. Optimal standard of care for stage II rectal adenocarcinoma typically includes surgery, radiation therapy, and chemotherapy[2].
+    entities: tumor cells, genes, proteins, immune cells
+    assumptions: The optimal standard of care treatment plan will be effective in reducing tumor size and controlling metastasis.
+    consequence: decreased tumor cell proliferation and metastasis
+    probability: 80
+    explanation: The combination of surgery, radiation therapy, and chemotherapy is expected to effectively target and kill tumor cells, reducing tumor size and controlling metastasis[2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor cells can evade the immune system by expressing immune checkpoint proteins, such as PD-L1, which can inhibit T cell activity[3]. Immunotherapy, which targets immune checkpoint proteins, can enhance the immune system's ability to recognize and kill tumor cells[4].
+    entities: tumor cells, immune cells, PD-L1, T cells
+    assumptions: The patient's immune system is capable of recognizing and attacking tumor cells.
+    consequence: increased immune cell activity against tumor cells
+    probability: 70
+    explanation: Immunotherapy can enhance the immune system's ability to recognize and kill tumor cells by targeting immune checkpoint proteins, such as PD-L1[4].
+    novelty: 50
+
+  - step: 3
+    level: tissue
+    facts: Tumor microenvironment plays a crucial role in cancer progression and response to therapy[5]. Factors such as hypoxia, acidity, and extracellular matrix composition can influence tumor growth and metastasis[6].
+    entities: tumor microenvironment, hypoxia, acidity, extracellular matrix
+    assumptions: The optimal standard of care treatment plan will modify the tumor microenvironment to reduce tumor growth and metastasis.
+    consequence: decreased tumor growth and metastasis
+    probability: 70
+    explanation: The combination of surgery, radiation therapy, and chemotherapy can modify the tumor microenvironment, reducing factors that promote tumor growth and metastasis[6].
+    novelty: 20
+
+conclusion:
+  outcome: 12 months of progression-free survival
+  explanation: Based on the provided examples and the patient's characteristics, the expected progression-free survival for this patient under an optimal standard of care treatment plan is 12 months. This estimate takes into account the effectiveness of the treatment plan in reducing tumor size, controlling metastasis, and enhancing immune cell activity against tumor cells, as well as the potential impact of the tumor microenvironment on disease progression.
+
+references:
+  "[1]": "Hechtman JF, Polydorides AD. 2012. Histopathological features of colorectal carcinomas. Gastroenterol Clin North Am. 41(3): 629-49."
+  "[2]": "National Comprehensive Cancer Network. 2021. Rectal Cancer (Version 6.2021)."
+  "[3]": "Topalian SL, Taube JM, Anders RA, Pardoll DM. 2016. Mechanism-driven biomarkers to guide immune checkpoint blockade in cancer therapy. Nat Rev Cancer. 16(5): 275-87."
+  "[4]": "Ribas A, Wolchok JD. 2018. Cancer immunotherapy using checkpoint blockade. Science. 359(6382): 1350-5."
+  "[5]": "Quail DF, Joyce JA. 2013. Microenvironmental regulation of tumor progression and metastasis. Nat Med. 19(11): 1423-37."
+  "[6]": "Balkwill FR, Capasso M, Hagemann T. 2012. The tumor microenvironment at a glance. J Cell Sci. 125(Pt 23): 5591-6."

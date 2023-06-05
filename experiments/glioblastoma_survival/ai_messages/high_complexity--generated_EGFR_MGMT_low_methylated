@@ -1,0 +1,41 @@
+parameters:
+  - glioblastoma diagnosis
+  - EGFR mutations
+  - MGMT methylation status: low
+  - TP53: no mutations
+  - PIK3CA: no mutations
+  - NF1: no mutations
+  - MUC16: no mutations
+  - PTEN: no mutations
+  - RB1: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: EGFR mutations are common in glioblastoma and are associated with poor prognosis [1]. Low MGMT methylation status is associated with resistance to temozolomide, a standard chemotherapy drug for glioblastoma [2].
+    entities: EGFR, MGMT
+    assumptions: The patient's glioblastoma has EGFR mutations and low MGMT methylation status, which may affect their response to standard treatments.
+    consequence: decreased sensitivity to temozolomide due to low MGMT methylation status
+    probability: 80
+    explanation: Low MGMT methylation status is known to be associated with resistance to temozolomide, which is a standard treatment for glioblastoma [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: EGFR mutations can lead to increased cell proliferation and survival in glioblastoma [1]. Standard of care for glioblastoma includes surgery, radiation therapy, and chemotherapy with temozolomide [3].
+    entities: glioblastoma cells, EGFR, temozolomide
+    assumptions: The patient's glioblastoma cells have EGFR mutations, which may contribute to tumor progression. The patient is receiving standard of care treatment, including temozolomide.
+    consequence: increased tumor progression due to EGFR mutations
+    probability: 70
+    explanation: EGFR mutations are known to contribute to increased cell proliferation and survival in glioblastoma, which can lead to faster tumor progression [1].
+    novelty: 0
+
+conclusion:
+  outcome: decreased survival, -4 months
+  explanation: The patient's glioblastoma has EGFR mutations and low MGMT methylation status, which are associated with poor prognosis and resistance to temozolomide, respectively. This may lead to decreased survival relative to the median overall glioblastoma survival of 15 months.
+
+references:
+  "[1]": "Brennan CW, et al. 2013. Cell. The somatic genomic landscape of glioblastoma."
+  "[2]": "Hegi ME, et al. 2005. N Engl J Med. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[3]": "Stupp R, et al. 2005. N Engl J Med. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."

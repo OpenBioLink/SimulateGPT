@@ -1,0 +1,23 @@
+parameters:
+  - gene: KRT82
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: KRT82 (Keratin 82) is a type II keratin, which is a component of the intermediate filament cytoskeleton in epithelial cells [1]. Keratins are involved in various cellular functions, including cell shape maintenance, mechanical resilience, and intracellular signaling [2]. However, KRT82 is specifically expressed in the hair follicle and is not known to be involved in cancer-related pathways [3].
+    entities: KRT82, keratin, intermediate filament cytoskeleton, epithelial cells, hair follicle
+    assumptions: KRT82 expression is limited to hair follicles and is not involved in cancer-related pathways.
+    consequence: KRT82 is unlikely to be essential in cancer cell-lines.
+    probability: 90
+    explanation: Given the specific expression of KRT82 in hair follicles and its lack of involvement in cancer-related pathways, it is unlikely to be essential in cancer cell-lines.
+    novelty: 0
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the specific expression of KRT82 in hair follicles and its lack of involvement in cancer-related pathways, it is unlikely that KRT82 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Schweizer J, Bowden PE, Coulombe PA, et al. 2006. J Cell Biol. New consensus nomenclature for mammalian keratins."
+  "[2]": "Coulombe PA, Omary MB. 2002. Nat Rev Mol Cell Biol. 'Hard' and 'soft' principles defining the structure, function and regulation of keratin intermediate filaments."
+  "[3]": "Langbein L, Rogers MA, Winter H, et al. 2001. J Biol Chem. The catalog of human hair keratins. I. Expression of the nine type I members in the hair follicle."

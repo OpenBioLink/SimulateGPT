@@ -1,0 +1,43 @@
+parameters:
+  - glioblastoma diagnosis
+  - TP53 mutations
+  - MGMT methylation status: medium
+  - EGFR: no mutations
+  - PIK3CA: no mutations
+  - NF1: no mutations
+  - MUC16: no mutations
+  - PTEN: no mutations
+  - RB1: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: TP53 is a tumor suppressor gene that encodes the p53 protein, which plays a crucial role in cell cycle regulation, apoptosis, and DNA repair [1]. MGMT is a DNA repair enzyme that removes alkyl groups from the O6 position of guanine, and its methylation status can influence the response to alkylating agents such as temozolomide [2]. EGFR, PIK3CA, NF1, MUC16, PTEN, and RB1 are other genes that can be mutated in glioblastoma, but they are not mutated in this patient [3].
+    entities: TP53, p53 protein, MGMT, EGFR, PIK3CA, NF1, MUC16, PTEN, RB1
+    assumptions: The patient has TP53 mutations and medium MGMT methylation status, while other genes are not mutated. The standard of care with genotype-informed treatment will be applied.
+    consequence: decreased p53 protein function, altered response to alkylating agents due to medium MGMT methylation status
+    probability: 90
+    explanation: TP53 mutations are likely to result in decreased p53 protein function, which can contribute to tumor progression [1]. Medium MGMT methylation status may lead to a partially reduced response to alkylating agents [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Glioblastoma is characterized by rapid cell proliferation, angiogenesis, and invasion into surrounding brain tissue [4]. Standard of care for glioblastoma includes surgery, radiation therapy, and chemotherapy with temozolomide [5].
+    entities: glioblastoma cells, temozolomide, radiation therapy, surgery
+    assumptions: The patient's glioblastoma cells have decreased p53 function and altered response to alkylating agents due to medium MGMT methylation status. Standard of care will be applied.
+    consequence: increased tumor cell proliferation, angiogenesis, and invasion; partial response to temozolomide
+    probability: 80
+    explanation: Decreased p53 function can lead to increased tumor cell proliferation, angiogenesis, and invasion [4]. Medium MGMT methylation status may result in a partial response to temozolomide [2].
+    novelty: 0
+
+conclusion:
+  outcome: decreased survival, -3 months
+  explanation: The patient's glioblastoma is characterized by TP53 mutations and medium MGMT methylation status, which can lead to increased tumor cell proliferation, angiogenesis, and invasion, as well as a partial response to temozolomide. These factors may result in a decreased survival relative to the median overall glioblastoma survival of 15 months, with an estimated deviation of -3 months.
+
+references:
+  "[1]": "Levine AJ. 2020. Cell. p53: 30 years and 30,000 papers later."
+  "[2]": "Hegi ME, et al. 2005. N Engl J Med. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[3]": "Cancer Genome Atlas Research Network. 2008. Nature. Comprehensive genomic characterization defines human glioblastoma genes and core pathways."
+  "[4]": "Furnari FB, et al. 2007. Genes Dev. Malignant astrocytic glioma: genetics, biology, and paths to treatment."
+  "[5]": "Stupp R, et al. 2005. N Engl J Med. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."

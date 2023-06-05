@@ -1,0 +1,22 @@
+parameters:
+  - gene: KRT25
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: KRT25 (Keratin 25) is a type II keratin protein that is part of the keratin family, which is involved in the structural integrity of epithelial cells and tissues [1]. Keratins are not typically associated with essential cellular processes in cancer cells, but rather with the differentiation and maintenance of epithelial tissues [2]. There is limited evidence linking KRT25 to cancer cell survival or proliferation.
+    entities: KRT25, keratin family, epithelial cells, cancer cells
+    assumptions: KRT25 is not directly involved in essential cellular processes in cancer cells.
+    consequence: KRT25 is unlikely to be essential in cancer cell-lines.
+    probability: 80
+    explanation: Given the known functions of KRT25 and its limited association with cancer cell survival or proliferation, it is unlikely to be essential in cancer cell-lines.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the known functions of KRT25 and its limited association with cancer cell survival or proliferation, it is unlikely that KRT25 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Schweizer J, Bowden PE, Coulombe PA, et al. 2006. J Cell Biol. New consensus nomenclature for mammalian keratins."
+  "[2]": "Moll R, Divo M, Langbein L. 2008. Histochem Cell Biol. The human keratins: biology and pathology."

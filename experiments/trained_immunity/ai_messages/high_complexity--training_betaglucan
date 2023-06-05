@@ -1,0 +1,50 @@
+parameters:
+  - mouse
+  - beta-glucan injection
+  - rechallenge with high-dose LPS after 90 days
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Beta-glucan is a polysaccharide found in the cell walls of fungi, bacteria, and some plants. It is known to have immunomodulatory effects and can enhance the innate immune response [1]. Lipopolysaccharide (LPS) is a component of the outer membrane of Gram-negative bacteria and is a potent activator of the innate immune system [2]. The innate immune response involves the activation of pattern recognition receptors (PRRs) such as Toll-like receptors (TLRs) and C-type lectin receptors (CLRs) [3].
+    entities: beta-glucan, LPS, PRRs, TLRs, CLRs
+    assumptions: The mouse has been injected with beta-glucan and will be rechallenged with high-dose LPS after 90 days. The innate immune response will be affected by the previous exposure to beta-glucan.
+    consequence: enhanced activation of PRRs upon LPS rechallenge
+    probability: 80
+    explanation: Beta-glucan is known to have immunomodulatory effects and can enhance the innate immune response. Therefore, it is likely that the mouse's innate immune system will be primed for an enhanced response upon LPS rechallenge.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Dendritic cells (DCs) and macrophages are key players in the innate immune response and express PRRs such as TLRs and CLRs [4]. Activation of these receptors leads to the production of pro-inflammatory cytokines such as TNF-alpha, IL-6, and IL-1beta [5]. Beta-glucan can enhance the phagocytic and antigen-presenting capabilities of DCs and macrophages [6].
+    entities: DCs, macrophages, TNF-alpha, IL-6, IL-1beta
+    assumptions: The enhanced activation of PRRs in step 1 will lead to increased activation of DCs and macrophages.
+    consequence: increased production of pro-inflammatory cytokines by DCs and macrophages
+    probability: 75
+    explanation: The enhanced activation of PRRs due to the previous exposure to beta-glucan is likely to result in increased activation of DCs and macrophages, leading to increased production of pro-inflammatory cytokines.
+    novelty: 20
+
+  - step: 3
+    level: tissue
+    facts: Pro-inflammatory cytokines produced by activated DCs and macrophages can recruit and activate other immune cells such as neutrophils and natural killer (NK) cells [7]. Neutrophils are the first line of defense against bacterial infections and are involved in phagocytosis and the release of antimicrobial peptides [8]. NK cells are cytotoxic lymphocytes that can directly kill infected cells and produce cytokines to regulate the immune response [9].
+    entities: neutrophils, NK cells
+    assumptions: The increased production of pro-inflammatory cytokines in step 2 will lead to the recruitment and activation of neutrophils and NK cells.
+    consequence: enhanced recruitment and activation of neutrophils and NK cells
+    probability: 70
+    explanation: The increased production of pro-inflammatory cytokines by activated DCs and macrophages is likely to result in enhanced recruitment and activation of neutrophils and NK cells.
+    novelty: 20
+
+conclusion:
+  outcome: enhanced innate immune response upon rechallenge with high-dose LPS after 90 days
+  explanation: The previous exposure to beta-glucan is likely to prime the mouse's innate immune system for an enhanced response upon LPS rechallenge. This enhanced response includes increased activation of PRRs, increased production of pro-inflammatory cytokines by DCs and macrophages, and enhanced recruitment and activation of neutrophils and NK cells.
+
+references:
+  "[1]": "Akramiene D, Kondrotas A, Didziapetriene J, Kevelaitis E. 2007. Effects of beta-glucans on the immune system. Medicina (Kaunas). 43(8):597-606."
+  "[2]": "Beutler B. 2000. Endotoxin, toll-like receptor 4, and the afferent limb of innate immunity. Curr Opin Microbiol. 3(1):23-28."
+  "[3]": "Takeuchi O, Akira S. 2010. Pattern recognition receptors and inflammation. Cell. 140(6):805-820."
+  "[4]": "Kawai T, Akira S. 2011. Toll-like receptors and their crosstalk with other innate receptors in infection and immunity. Immunity. 34(5):637-650."
+  "[5]": "Dinarello CA. 2009. Immunological and inflammatory functions of the interleukin-1 family. Annu Rev Immunol. 27:519-550."
+  "[6]": "Chan GC, Chan WK, Sze DM. 2009. The effects of beta-glucan on human immune and cancer cells. J Hematol Oncol. 2:25."
+  "[7]": "Serbina NV, Pamer EG. 2006. Monocyte emigration from bone marrow during bacterial infection requires signals mediated by chemokine receptor CCR2. Nat Immunol. 7(3):311-317."
+  "[8]": "Nathan C. 2006. Neutrophils and immunity: challenges and opportunities. Nat Rev Immunol. 6(3):173-182."
+  "[9]": "Vivier E, Tomasello E, Baratin M, Walzer T, Ugolini S. 2008. Functions of natural killer cells. Nat Immunol. 9(5):503-510."

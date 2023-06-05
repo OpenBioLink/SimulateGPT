@@ -1,0 +1,9 @@
+The output reflects the consensus in the scientific and clinical community.
+The output contains evidence of correct recall of knowledge.
+The output contains evidence of incorrect recall of knowledge.
+The output contains evidence of correct reasoning steps.
+The output contains evidence of incorrect reasoning steps.
+The output contains content it shouldn’t contain.
+The output omits content it shouldn’t omit.
+The answer contains (novel) concepts that are not typically known in the scientific and clinical community.
+I felt qualified to evaluate this topic.

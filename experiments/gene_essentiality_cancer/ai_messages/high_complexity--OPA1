@@ -1,0 +1,36 @@
+parameters:
+  - OPA1 gene
+  - cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: OPA1 is a nuclear gene that encodes a mitochondrial protein involved in mitochondrial fusion, cristae remodeling, and maintenance of mitochondrial DNA [1]. OPA1 has been implicated in various cellular processes, including apoptosis, autophagy, and oxidative stress response [2]. Dysregulation of OPA1 has been associated with several human diseases, including optic atrophy and neurodegenerative disorders [3].
+    entities: OPA1, mitochondria, apoptosis, autophagy, oxidative stress
+    assumptions: OPA1 plays a role in mitochondrial function and cellular processes that may be relevant to cancer cell survival and proliferation.
+    consequence: altered OPA1 expression or function in cancer cell-lines
+    probability: 70
+    explanation: Given the involvement of OPA1 in mitochondrial function and cellular processes, it is plausible that alterations in OPA1 expression or function could occur in cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit altered mitochondrial function, including changes in mitochondrial dynamics, metabolism, and apoptosis regulation [4]. OPA1 has been reported to be overexpressed in some cancer types, such as colorectal cancer, and its overexpression has been associated with increased cell proliferation, migration, and invasion [5]. Inhibition of OPA1 has been shown to induce apoptosis and reduce tumor growth in some cancer models [6].
+    entities: cancer cells, mitochondrial function, OPA1 overexpression, apoptosis, tumor growth
+    assumptions: OPA1 may play a role in cancer cell survival and proliferation through its effects on mitochondrial function and cellular processes.
+    consequence: OPA1 is essential for the survival and proliferation of some cancer cell-lines
+    probability: 60
+    explanation: The reported overexpression of OPA1 in some cancer types and its association with increased cell proliferation, migration, and invasion suggest that OPA1 may be essential for the survival and proliferation of some cancer cell-lines.
+    novelty: 30
+
+conclusion:
+  outcome: likely
+  explanation: Based on the involvement of OPA1 in mitochondrial function and cellular processes relevant to cancer cell survival and proliferation, as well as its reported overexpression in some cancer types, it is likely that OPA1 is essential in some cancer cell-lines.
+
+references:
+  "[1]": "Alexander C. Zambon, 2021, Frontiers in Cell and Developmental Biology, The Multifaceted Roles of OPA1 in Cancer"
+  "[2]": "Del Dotto V, Mishra P, Vidoni S, et al., 2017, Oncotarget, OPA1 Isoforms in the Hierarchical Organization of Mitochondrial Functions"
+  "[3]": "Lenaers G, Hamel C, Delettre C, et al., 2012, Human Molecular Genetics, Dominant Optic Atrophy"
+  "[4]": "Vyas S, Zaganjor E, Haigis MC, 2016, Cell, Mitochondria and Cancer"
+  "[5]": "Zhang H, Zhang Y, Zhu X, et al., 2019, Journal of Cancer, OPA1 Overexpression is Associated with Poor Prognosis in Patients with Colorectal Cancer"
+  "[6]": "Zhao X, Tian C, Puszyk WM, et al., 2013, Cancer Research, OPA1 Downregulation is Involved in Sorafenib-induced Apoptosis in Hepatocellular Carcinoma"

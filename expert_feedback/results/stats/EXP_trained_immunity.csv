@@ -1,0 +1,9 @@
+"question","better_count","same_count","worse_count","chi_square_p","wilcox_rank_p"
+"The.answer.contains..novel..concepts.that.are.not.typically.known.in.the.scientific.and.clinical.community.",1,8,0,0.231098262365644,1
+"The.output.contains.content.it.shouldn.t.contain.",0,8,1,0.231098262365644,1
+"The.output.contains.evidence.of.correct.reasoning.steps.",0,6,3,2.26011926961504e-08,0.148914673178766
+"The.output.contains.evidence.of.correct.recall.of.knowledge.",0,6,3,2.26011926961504e-08,0.148914673178766
+"The.output.contains.evidence.of.incorrect.reasoning.steps.",0,8,1,0.231098262365644,1
+"The.output.contains.evidence.of.incorrect.recall.of.knowledge.",0,8,1,0.231098262365644,1
+"The.output.omits.content.it.shouldn.t.omit.",0,8,1,0.231098262365644,1
+"The.output.reflects.the.consensus.in.the.scientific.and.clinical.community.",0,8,1,0.231098262365644,1

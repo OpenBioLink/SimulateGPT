@@ -1,0 +1,36 @@
+parameters:
+  - gene: S100A7A
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: S100A7A, also known as psoriasin-like 1, is a member of the S100 family of proteins containing two EF-hand calcium-binding motifs [1]. S100A7A has been reported to be overexpressed in various types of cancer, including breast cancer, lung cancer, and head and neck squamous cell carcinoma [2][3][4]. However, its role in cancer progression and whether it is essential for cancer cell survival is not well established.
+    entities: S100A7A, cancer cell-lines
+    assumptions: S100A7A is overexpressed in various cancer cell-lines, but its essentiality for cancer cell survival is unclear.
+    consequence: potential involvement of S100A7A in cancer cell survival and progression
+    probability: 50
+    explanation: The overexpression of S100A7A in various cancer types suggests a potential role in cancer cell survival and progression, but further investigation is needed to determine its essentiality.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival of an organism or cell [5]. In cancer cell-lines, essential genes are often involved in critical cellular processes such as cell cycle regulation, DNA replication, and apoptosis [6]. The role of S100A7A in these processes is not well established.
+    entities: S100A7A, cancer cell-lines, essential genes, cell cycle regulation, DNA replication, apoptosis
+    assumptions: S100A7A's role in critical cellular processes related to cancer cell survival is not well established.
+    consequence: uncertain essentiality of S100A7A in cancer cell-lines
+    probability: 50
+    explanation: The lack of information on S100A7A's involvement in critical cellular processes related to cancer cell survival makes it difficult to determine its essentiality.
+    novelty: 0
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the available information, it is unlikely that S100A7A is essential in cancer cell-lines. While it is overexpressed in various cancer types, its role in critical cellular processes related to cancer cell survival is not well established.
+
+references:
+  "[1]": "Marenholz I, Heizmann CW, Fritz G. 2004. Biochem Biophys Res Commun. S100 proteins in mouse and man: from evolution to function and pathology (including an update of the nomenclature)."
+  "[2]": "Enerbäck C, Porter DA, Seth P, Sgroi D, Gaudet J, Weremowicz S, Morton CC, Schnitt S, Pitts RL, Stampl J, Barnhart K, Polyak K. 2002. Cancer Res. Psoriasin expression in mammary epithelial cells in vitro and in vivo."
+  "[3]": "Zhao F, Hoechst B, Duffy A, Gamrekelashvili J, Fioravanti S, Manns MP, Greten TF, Korangy F. 2012. Int J Cancer. S100A9 a new marker for monocytic human myeloid-derived suppressor cells."
+  "[4]": "Alowami S, Qing G, Emberley E, Snell L, Watson PH. 2003. Mod Pathol. Psoriasin (S100A7) expression is altered during skin tumorigenesis."
+  "[5]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. Cell. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."
+  "[6]": "Blomen VA, Májek P, Jae LT, Bigenzahn JW, Nieuwenhuis J, Staring J, Sacco R, van Diemen FR, Olk N, Stukalov A, Marceau C, Janssen H, Carette JE, Bennett KL, Colinge J, Superti-Furga G, Brummelkamp TR. 2015. Science. Gene essentiality and synthetic lethality in haploid human cells."

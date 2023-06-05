@@ -1,0 +1,35 @@
+parameters:
+  - gene: SUPT16H
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: SUPT16H encodes a subunit of the FACT (facilitates chromatin transcription) complex, which is involved in chromatin remodeling and transcription elongation [1]. The FACT complex is essential for the survival of various cancer cell lines, including lung, breast, and ovarian cancer cells [2]. FACT complex inhibition has been shown to selectively kill cancer cells while sparing normal cells [3].
+    entities: SUPT16H, FACT complex, chromatin remodeling, transcription elongation, cancer cell lines
+    assumptions: Given the role of SUPT16H in the FACT complex and the importance of the FACT complex in cancer cell survival, we can assume that SUPT16H may be essential in cancer cell lines.
+    consequence: increased reliance on SUPT16H in cancer cell lines
+    probability: 80
+    explanation: The involvement of SUPT16H in the FACT complex and the essential role of the FACT complex in cancer cell survival suggest that SUPT16H is likely to be important in cancer cell lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: FACT complex inhibition has been shown to induce cell cycle arrest, apoptosis, and senescence in cancer cells [4]. SUPT16H knockdown has been reported to reduce cell proliferation and induce apoptosis in cancer cells [5].
+    entities: cell cycle arrest, apoptosis, senescence, SUPT16H knockdown, cell proliferation
+    assumptions: Based on the cellular effects of FACT complex inhibition and the consequences of SUPT16H knockdown, we can assume that SUPT16H is essential for cancer cell survival and proliferation.
+    consequence: reduced cancer cell survival and proliferation upon SUPT16H inhibition
+    probability: 80
+    explanation: The cellular effects of FACT complex inhibition and the consequences of SUPT16H knockdown support the notion that SUPT16H is essential for cancer cell survival and proliferation.
+    novelty: 20
+
+conclusion:
+  outcome: likely
+  explanation: The involvement of SUPT16H in the FACT complex, which is essential for cancer cell survival, and the cellular effects of SUPT16H knockdown, such as reduced cell proliferation and increased apoptosis, suggest that SUPT16H is likely essential in cancer cell lines.
+
+references:
+  "[1]": "Orphanides G, Wu WH, Lane WS, Hampsey M, Reinberg D. 1999. Cell. The chromatin-specific transcription elongation factor FACT comprises human SPT16 and SSRP1 proteins."
+  "[2]": "García H, Miecznikowski JC, Safina A, Commane M, Ruusulehto A, Kilpinen S, Leach RW, Attwood K, Li Y, Degan S, Omilian AR, Guryanova O, Papantonopoulou O, Wang J, Buck M, Liu S, Morrison C, Gurova KV. 2013. Oncotarget. Facilitates chromatin transcription complex is an 'accelerator' of tumor transformation and potential marker and target of aggressive cancers."
+  "[3]": "Gasparian AV, Burkhart CA, Purmal AA, Brodsky L, Pal M, Saranadasa M, Bosykh DA, Commane M, Guryanova OA, Pal S, Safina A, Sviridov S, Koman IE, Veith J, Komar AA, Gudkov AV, Gurova KV. 2011. Proc Natl Acad Sci U S A. Curaxins: Anticancer compounds that simultaneously suppress NF-κB and activate p53 by targeting FACT."
+  "[4]": "Safina A, Garcia H, Commane M, Guryanova O, Degan S, Kolesnikova K, Gurova KV. 2013. Oncotarget. Complex mutual regulation of facilitates chromatin transcription (FACT) subunits on both mRNA and protein levels in human cells."
+  "[5]": "Zhang Y, Zhang M, Wu J, Lei G, Li H. 2013. Biochem Biophys Res Commun. Transcriptional regulation of the Ufm1 conjugation system in response to disturbance of the endoplasmic reticulum homeostasis and inhibition of vesicle trafficking."

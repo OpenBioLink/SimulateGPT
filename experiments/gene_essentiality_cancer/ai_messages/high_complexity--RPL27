@@ -1,0 +1,35 @@
+parameters:
+  - gene: RPL27
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: RPL27 encodes a ribosomal protein that is a component of the 60S subunit of the ribosome [1]. Ribosomal proteins are essential for protein synthesis, and their dysregulation has been implicated in various diseases, including cancer [2]. RPL27 has been reported to be overexpressed in some cancer types, such as colorectal cancer [3].
+    entities: RPL27, ribosomal protein, 60S ribosomal subunit, protein synthesis, cancer
+    assumptions: RPL27 is involved in protein synthesis as a component of the ribosome. Its dysregulation may contribute to cancer development or progression.
+    consequence: increased RPL27 expression in cancer cell-lines
+    probability: 80
+    explanation: Given the role of RPL27 in protein synthesis and its overexpression in some cancer types, it is likely that RPL27 expression is increased in cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival or reproduction of an organism or cell [4]. In cancer cell-lines, essential genes are often involved in processes that are critical for cell growth and proliferation [5].
+    entities: essential genes, cancer cell-lines, cell growth, cell proliferation
+    assumptions: RPL27 is involved in protein synthesis, which is critical for cell growth and proliferation. If RPL27 is essential for cancer cell-lines, its inhibition or loss should lead to reduced cell viability or growth.
+    consequence: reduced cancer cell-line viability or growth upon RPL27 inhibition or loss
+    probability: 70
+    explanation: Since RPL27 is involved in protein synthesis, which is crucial for cell growth and proliferation, it is plausible that its inhibition or loss would lead to reduced viability or growth in cancer cell-lines.
+    novelty: 30
+
+conclusion:
+  outcome: likely
+  explanation: Based on the role of RPL27 in protein synthesis and its potential involvement in cancer development or progression, it is likely that RPL27 is essential in cancer cell-lines. Its inhibition or loss may lead to reduced cell viability or growth, suggesting its importance for cancer cell survival or proliferation.
+
+references:
+  "[1]": "Wool, I. G., Chan, Y. L., & Glück, A. (1995). Structure and evolution of mammalian ribosomal proteins. Biochemistry and Cell Biology, 73(11-12), 933-947."
+  "[2]": "Xue, S., & Barna, M. (2012). Specialized ribosomes: a new frontier in gene regulation and organismal biology. Nature Reviews Molecular Cell Biology, 13(6), 355-369."
+  "[3]": "Zhang, Y., Zhang, M., Yu, F., & Lu, S. (2019). Overexpression of ribosomal protein L27 predicts poor prognosis in colorectal cancer. Oncology Letters, 18(4), 3899-3904."
+  "[4]": "Winzeler, E. A., Shoemaker, D. D., Astromoff, A., Liang, H., Anderson, K., Andre, B., ... & Davis, R. W. (1999). Functional characterization of the S. cerevisiae genome by gene deletion and parallel analysis. Science, 285(5429), 901-906."
+  "[5]": "Hart, T., Chandrashekhar, M., Aregger, M., Steinhart, Z., Brown, K. R., MacLeod, G., ... & Moffat, J. (2015). High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities. Cell, 163(6), 1515-1526."

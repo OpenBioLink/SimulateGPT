@@ -1,0 +1,72 @@
+parameters:
+  - age: 53
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage IV colon adenocarcinoma, which is characterized by poorly differentiated cells and metastasis. Poorly differentiated cells are more aggressive and have a higher potential for metastasis [1]. The Wnt signaling pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and tumor growth [2].
+    entities: Wnt signaling pathway, cell proliferation, tumor growth
+    assumptions: The patient's tumor exhibits dysregulated Wnt signaling, leading to increased cell proliferation and tumor growth.
+    consequence: increased tumor growth and metastasis
+    probability: 80
+    explanation: Dysregulated Wnt signaling is common in colon adenocarcinoma and is associated with increased tumor growth and metastasis [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: The optimal standard of care for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and immunotherapy [3]. These treatments aim to reduce tumor growth and metastasis by targeting cancer cells and modulating the immune system.
+    entities: chemotherapy, targeted therapy, immunotherapy, cancer cells, immune system
+    assumptions: The patient receives the optimal standard of care treatment, which effectively targets cancer cells and modulates the immune system.
+    consequence: reduced tumor growth and metastasis
+    probability: 70
+    explanation: The optimal standard of care treatment is designed to reduce tumor growth and metastasis in stage IV colon adenocarcinoma patients [3].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: The effectiveness of treatment can be influenced by the tumor microenvironment, which includes immune cells, blood vessels, and extracellular matrix components [4]. The tumor microenvironment can promote or inhibit tumor growth and metastasis.
+    entities: tumor microenvironment, immune cells, blood vessels, extracellular matrix components
+    assumptions: The patient's tumor microenvironment influences the effectiveness of the optimal standard of care treatment.
+    consequence: variable treatment effectiveness
+    probability: 60
+    explanation: The tumor microenvironment can impact the effectiveness of treatment in colon adenocarcinoma patients [4].
+    novelty: 20
+
+  - step: 4
+    level: organ
+    facts: The liver is a common site for colon cancer metastasis [5]. Metastasis to the liver can impair liver function and impact overall patient health.
+    entities: liver, metastasis, liver function, patient health
+    assumptions: The patient's metastatic colon adenocarcinoma has spread to the liver, impacting liver function and overall health.
+    consequence: impaired liver function and overall health
+    probability: 50
+    explanation: Metastasis to the liver is common in colon adenocarcinoma patients and can impair liver function and overall health [5].
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival in colon adenocarcinoma patients can be influenced by factors such as age, cancer stage, tumor differentiation, and treatment effectiveness [6].
+    entities: progression-free survival, age, cancer stage, tumor differentiation, treatment effectiveness
+    assumptions: The patient's progression-free survival is influenced by their age, cancer stage, tumor differentiation, and treatment effectiveness.
+    consequence: variable progression-free survival
+    probability: 60
+    explanation: Progression-free survival in colon adenocarcinoma patients is influenced by multiple factors, including age, cancer stage, tumor differentiation, and treatment effectiveness [6].
+    novelty: 0
+
+conclusion:
+  outcome: 6-10 months of progression-free survival
+  explanation: Based on the patient's age, cancer stage, tumor differentiation, and the assumption of optimal standard of care treatment, the expected progression-free survival is estimated to be between 6 and 10 months. This estimate takes into account the potential variability in treatment effectiveness and the influence of the tumor microenvironment.
+
+references:
+  "[1]": "Compton CC, Greene FL. 2004. Ann Surg Oncol. The staging of colorectal cancer: 2004 and beyond."
+  "[2]": "Clevers H, Nusse R. 2012. Cell. Wnt/β-catenin signaling and disease."
+  "[3]": "Van Cutsem E, et al. 2016. Ann Oncol. ESMO consensus guidelines for the management of patients with metastatic colorectal cancer."
+  "[4]": "Quail DF, Joyce JA. 2013. Nat Med. Microenvironmental regulation of tumor progression and metastasis."
+  "[5]": "Manfredi S, et al. 2006. Ann Surg. Epidemiology and management of liver metastases from colorectal cancer."
+  "[6]": "Gill S, et al. 2004. J Clin Oncol. Pooled analysis of fluorouracil-based adjuvant therapy for stage II and III colon cancer: who benefits and by how much?"

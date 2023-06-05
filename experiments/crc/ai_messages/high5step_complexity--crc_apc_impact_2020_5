@@ -1,0 +1,73 @@
+parameters:
+  - age: 59
+  - cancer_stage: III
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: rectum
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The RAS-RAF-MEK-ERK pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and survival [1]. Moderately differentiated tumors have intermediate levels of differentiation and are associated with intermediate prognosis [2].
+    entities: RAS, RAF, MEK, ERK, cell proliferation, cell survival
+    assumptions: The patient's tumor has molecular alterations in the RAS-RAF-MEK-ERK pathway, contributing to tumor growth and metastasis.
+    consequence: decreased responsiveness to some targeted therapies
+    probability: 70
+    explanation: Dysregulation of the RAS-RAF-MEK-ERK pathway can lead to decreased responsiveness to some targeted therapies [3].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor-infiltrating lymphocytes (TILs) are associated with better prognosis in colorectal cancer [4]. Moderately differentiated tumors may have intermediate levels of TILs.
+    entities: tumor-infiltrating lymphocytes (TILs)
+    assumptions: The patient's tumor has an intermediate level of TILs, which may contribute to the tumor's response to treatment.
+    consequence: intermediate responsiveness to immunotherapy
+    probability: 60
+    explanation: The presence of TILs can enhance the effectiveness of immunotherapy, and an intermediate level of TILs may result in intermediate responsiveness to immunotherapy [4].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Tumor microenvironment (TME) plays a crucial role in cancer progression and response to therapy [5]. Moderately differentiated tumors may have intermediate levels of stromal cells and extracellular matrix (ECM) components.
+    entities: tumor microenvironment (TME), stromal cells, extracellular matrix (ECM)
+    assumptions: The patient's tumor has an intermediate TME, which may influence the tumor's response to treatment.
+    consequence: intermediate response to chemotherapy and targeted therapies
+    probability: 60
+    explanation: The TME can influence the delivery and effectiveness of chemotherapy and targeted therapies, and an intermediate TME may result in an intermediate response to these treatments [5].
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Metastasis is a major factor contributing to cancer-related deaths [6]. The patient's cancer has metastasized, which may affect the overall treatment response.
+    entities: metastasis
+    assumptions: The patient's metastatic disease may be more difficult to treat than localized disease.
+    consequence: decreased overall treatment response
+    probability: 80
+    explanation: Metastatic disease is generally more difficult to treat than localized disease, as it often involves multiple organs and may be less responsive to therapy [6].
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Optimal standard of care for stage III colon adenocarcinoma typically includes surgery, chemotherapy, and possibly targeted therapy or immunotherapy [7].
+    entities: surgery, chemotherapy, targeted therapy, immunotherapy
+    assumptions: The patient receives optimal standard of care treatment, which may result in a variable response due to the factors discussed in previous steps.
+    consequence: variable progression-free survival
+    probability: 80
+    explanation: The patient's moderately differentiated tumor, metastasis, and intermediate TME may result in a variable response to treatment, leading to a variable progression-free survival.
+    novelty: 0
+
+conclusion:
+  outcome: 8-12 months of progression-free survival
+  explanation: Based on the patient's age, cancer stage, differentiation, metastasis, and treatment, as well as the examples provided, the expected progression-free survival for this patient under optimal standard of care treatment is estimated to be between 8 and 12 months.
+
+references:
+  "[1]": "Downward J. (2003) Nature Reviews Cancer. Targeting RAS signalling pathways in cancer therapy."
+  "[2]": "Compton CC. (2007) Archives of Pathology & Laboratory Medicine. Updated protocol for the examination of specimens from patients with carcinomas of the colon and rectum, excluding carcinoid tumors, lymphomas, sarcomas, and tumors of the vermiform appendix."
+  "[3]": "Holderfield M, et al. (2014) Nature Reviews Drug Discovery. Targeting RAF kinases for cancer therapy: BRAF-mutated melanoma and beyond."
+  "[4]": "Galon J, et al. (2006) Science. Type, density, and location of immune cells within human colorectal tumors predict clinical outcome."
+  "[5]": "Quail DF, Joyce JA. (2013) Nature Medicine. Microenvironmental regulation of tumor progression and metastasis."
+  "[6]": "Valastyan S, Weinberg RA. (2011) Cell. Tumor metastasis: molecular insights and evolving paradigms."
+  "[7]": "Van Cutsem E, et al. (2016) Annals of Oncology. ESMO consensus guidelines for the management of patients with metastatic colorectal cancer."

@@ -1,0 +1,11 @@
+,outcome,outcome_months,system_prompt,gene_combination,mean_life_expectancy,median_life_expectancy,gene_tuple,predicted_life_expectancy,error
+0,decreased,4,high_complexity,PTEN_TP53_NF1_RB1_MGMT_medium_methylated,598.0,598.0,"('PTEN', 'TP53', 'NF1', 'RB1', 'MGMT_medium_methylated')",11,8.660273972602738
+1,increased,4,high_complexity,PTEN_EGFR_MGMT_high_methylated,651.25,599.5,"('PTEN', 'EGFR', 'MGMT_high_methylated')",19,0.7095890410958887
+2,increased,3,high_complexity,PIK3CA_MGMT_high_methylated,478.5,478.5,"('PIK3CA', 'MGMT_high_methylated')",18,2.2684931506849306
+3,decreased,3,high_complexity,TP53_PIK3CA_MGMT_medium_methylated,385.5,385.5,"('TP53', 'PIK3CA', 'MGMT_medium_methylated')",12,0.6739726027397257
+4,decreased,4,high_complexity,PTEN_NF1_MGMT_low_methylated,328.3333333333333,349.0,"('PTEN', 'NF1', 'MGMT_low_methylated')",11,0.4739726027397264
+5,increased,3,high_complexity,PTEN_MGMT_medium_methylated,174.0,66.0,"('PTEN', 'MGMT_medium_methylated')",18,15.830136986301369
+6,decreased,3,high_complexity,TP53_MGMT_medium_methylated,755.1666666666666,740.5,"('TP53', 'MGMT_medium_methylated')",12,12.345205479452055
+7,increased,3,high_complexity,NF1_MGMT_medium_methylated,245.25,243.5,"('NF1', 'MGMT_medium_methylated')",18,9.994520547945205
+8,decreased,3,high_complexity,PTEN_MUC16_MGMT_medium_methylated,188.0,188.0,"('PTEN', 'MUC16', 'MGMT_medium_methylated')",12,5.8191780821917805
+9,decreased,4,high_complexity,EGFR_MGMT_low_methylated,390.25,504.0,"('EGFR', 'MGMT_low_methylated')",11,5.56986301369863

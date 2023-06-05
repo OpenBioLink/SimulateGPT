@@ -1,0 +1,36 @@
+parameters:
+  - gene: RPL37A
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: RPL37A encodes a ribosomal protein that is a component of the 60S subunit of the ribosome [1]. Ribosomal proteins are essential for protein synthesis, and their dysregulation has been implicated in various cancers [2]. RPL37A has been reported to be overexpressed in some cancer types, such as breast cancer [3].
+    entities: RPL37A, ribosomal protein, 60S ribosomal subunit, protein synthesis, cancer
+    assumptions: RPL37A is involved in protein synthesis as a component of the ribosome. Dysregulation of ribosomal proteins can contribute to cancer development.
+    consequence: RPL37A dysregulation may contribute to cancer development.
+    probability: 70
+    explanation: RPL37A is a ribosomal protein, and dysregulation of ribosomal proteins has been implicated in cancer development. Therefore, it is plausible that RPL37A dysregulation may contribute to cancer development.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival of an organism or cell [4]. In cancer cell lines, essential genes are often required for cell proliferation and survival [5]. RPL37A has been identified as a potential essential gene in a genome-wide CRISPR-Cas9 screen in human cancer cell lines [6].
+    entities: essential genes, cancer cell lines, cell proliferation, cell survival, CRISPR-Cas9 screen
+    assumptions: RPL37A may be essential for cancer cell survival and proliferation based on the CRISPR-Cas9 screen results.
+    consequence: RPL37A is likely essential in cancer cell-lines.
+    probability: 80
+    explanation: RPL37A has been identified as a potential essential gene in a genome-wide CRISPR-Cas9 screen in human cancer cell lines, suggesting that it may be required for cancer cell survival and proliferation.
+    novelty: 10
+
+conclusion:
+  outcome: likely
+  explanation: Based on the evidence from the CRISPR-Cas9 screen and the role of RPL37A in protein synthesis, it is likely that RPL37A is essential in cancer cell-lines.
+
+references:
+  "[1]": "Wool IG, Chan YL, Glück A. 1995. Nucleic Acids Res. Structure and evolution of mammalian ribosomal proteins."
+  "[2]": "Pelletier J, Thomas G, Volarević S. 2018. Nat Rev Cancer. Ribosome biogenesis in cancer: new players and therapeutic avenues."
+  "[3]": "Chen X, et al. 2018. Oncol Rep. RPL37A promotes tumorigenesis through an RPL37A-HMGA1-TIMP1 positive feedback loop in human breast cancer."
+  "[4]": "Hart T, et al. 2015. Science. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."
+  "[5]": "Meyers RM, et al. 2017. Cell. Computational correction of copy number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells."
+  "[6]": "Wang T, et al. 2015. Science. Gene Essentiality Profiling Reveals Gene Networks and Synthetic Lethal Interactions with Oncogenic Ras."

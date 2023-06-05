@@ -1,0 +1,53 @@
+parameters:
+  - age: 55
+  - cancer_stage: IV
+  - cancer_type: rectal adenocarcinoma
+  - tumor_location: rectum
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: yes
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage IV rectal adenocarcinoma with moderately differentiated histology, metastasis, and carcinomatosis. Rectal adenocarcinoma is a type of colorectal cancer that arises from the glandular cells lining the rectum [1]. Moderately differentiated tumors have intermediate levels of cellular differentiation and are associated with intermediate prognosis [2]. Metastasis indicates that the cancer has spread to other parts of the body, and carcinomatosis refers to the widespread metastasis of cancer cells in the peritoneal cavity [3].
+    entities: rectal adenocarcinoma, metastasis, carcinomatosis
+    assumptions: The patient receives optimal standard of care treatment, which may include surgery, chemotherapy, and radiation therapy [4]. The treatment aims to control tumor growth, reduce metastasis, and alleviate symptoms.
+    consequence: reduced tumor growth and metastasis
+    probability: 70
+    explanation: Optimal standard of care treatment can effectively control tumor growth and reduce metastasis in many patients with rectal adenocarcinoma [4].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor cells can develop resistance to chemotherapy and radiation therapy through various mechanisms, such as increased drug efflux, DNA repair, and altered drug targets [5]. Carcinomatosis can also make it difficult to deliver effective treatment to all metastatic sites [3].
+    entities: chemotherapy resistance, radiation resistance, carcinomatosis
+    assumptions: The patient's tumor cells may develop resistance to chemotherapy and radiation therapy over time, and the presence of carcinomatosis may limit the effectiveness of treatment.
+    consequence: increased tumor growth and metastasis
+    probability: 60
+    explanation: Despite initial treatment success, tumor cells can develop resistance to therapy, and the presence of carcinomatosis may further limit treatment effectiveness [5].
+    novelty: 20
+
+  - step: 3
+    level: organ
+    facts: The liver and lungs are common sites of metastasis for colorectal cancer [6]. Metastasis to these organs can impair their function and lead to complications such as liver failure and respiratory distress [7].
+    entities: liver metastasis, lung metastasis
+    assumptions: The patient's metastatic rectal adenocarcinoma may spread to the liver and lungs, impairing their function and causing complications.
+    consequence: impaired liver and lung function, increased complications
+    probability: 50
+    explanation: Metastasis to the liver and lungs can impair organ function and lead to complications, further impacting the patient's prognosis [7].
+    novelty: 0
+
+conclusion:
+  outcome: 5 months of progression-free survival
+  explanation: Based on the provided examples and the patient's stage IV rectal adenocarcinoma with moderately differentiated histology, metastasis, and carcinomatosis, the expected progression-free survival under optimal standard of care treatment is estimated to be around 5 months. This estimate takes into account the potential for reduced tumor growth and metastasis due to treatment, the possibility of treatment resistance and limited effectiveness due to carcinomatosis, and the impact of metastasis on organ function and complications.
+
+references:
+  "[1]": "Siegel RL, Miller KD, Jemal A. 2020. CA Cancer J Clin. Colorectal cancer statistics, 2020."
+  "[2]": "Compton CC. 2006. Arch Pathol Lab Med. Optimal pathologic staging: defining stage II disease."
+  "[3]": "Jayne DG, Fook S, Loi C, Seow-Choen F. 2002. Br J Surg. Peritoneal carcinomatosis from colorectal cancer."
+  "[4]": "Glynne-Jones R, Wyrwicz L, Tiret E, et al. 2017. Ann Oncol. Rectal cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up."
+  "[5]": "Holohan C, Van Schaeybroeck S, Longley DB, Johnston PG. 2013. Nat Rev Cancer. Cancer drug resistance: an evolving paradigm."
+  "[6]": "Van Cutsem E, Cervantes A, Nordlinger B, Arnold D. 2014. Ann Oncol. Metastatic colorectal cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up."
+  "[7]": "Manfredi S, Lepage C, Hatem C, Coatmeur O, Faivre J, Bouvier AM. 2006. Ann Oncol. Epidemiology and management of liver metastases from colorectal cancer."

@@ -1,0 +1,51 @@
+parameters:
+  - age: 71
+  - stage: II
+  - location: left side of the colon
+  - histology: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: In colon adenocarcinoma, common molecular alterations include mutations in APC, KRAS, TP53, and PIK3CA genes, as well as microsatellite instability (MSI) and chromosomal instability (CIN) [1]. The effectiveness of therapies can be influenced by these molecular features [2].
+    entities: APC, KRAS, TP53, PIK3CA, MSI, CIN
+    assumptions: The patient's tumor has molecular alterations typical of colon adenocarcinoma, which may influence the response to therapy.
+    consequence: molecular alterations in the tumor
+    probability: 90
+    explanation: Most colon adenocarcinomas exhibit molecular alterations that can impact the response to therapy [1].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor cells can develop resistance to therapy through various mechanisms, such as drug efflux, DNA repair, and evasion of apoptosis [3]. The tumor microenvironment, including immune cells and stromal cells, can also influence therapy response [4].
+    entities: tumor cells, immune cells, stromal cells
+    assumptions: The patient's tumor cells and microenvironment may develop resistance mechanisms to therapy, impacting the progression-free survival.
+    consequence: potential development of therapy resistance
+    probability: 70
+    explanation: Therapy resistance is a common challenge in cancer treatment and can impact progression-free survival [3].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: The stage of the tumor and its histological differentiation can impact the response to therapy and the progression of the disease [5]. Moderately differentiated tumors generally have a better prognosis than poorly differentiated tumors [6].
+    entities: tumor stage, histological differentiation
+    assumptions: The patient's stage II, moderately differentiated tumor may respond better to therapy than a poorly differentiated tumor, leading to a longer progression-free survival.
+    consequence: better therapy response and longer progression-free survival
+    probability: 80
+    explanation: Moderately differentiated tumors generally have a better prognosis than poorly differentiated tumors [6].
+    novelty: 0
+
+conclusion:
+  outcome: 12 months of progression-free survival
+  explanation: Based on the patient's age, stage II colon adenocarcinoma with moderately differentiated histology, and the absence of carcinomatosis, the expected progression-free survival under optimal standard of care treatment is estimated to be 12 months. This estimation is calibrated using the provided examples and considering the general effectiveness of colon adenocarcinoma therapies.
+
+references:
+  "[1]": "Fearon ER, Vogelstein B. 1990. Cell. A genetic model for colorectal tumorigenesis."
+  "[2]": "Punt CJ, Koopman M, Vermeulen L. 2017. Nat Rev Clin Oncol. From tumour heterogeneity to advances in precision treatment of colorectal cancer."
+  "[3]": "Holohan C, Van Schaeybroeck S, Longley DB, Johnston PG. 2013. Nat Rev Cancer. Cancer drug resistance: an evolving paradigm."
+  "[4]": "Quail DF, Joyce JA. 2013. Nat Med. Microenvironmental regulation of tumor progression and metastasis."
+  "[5]": "Benson AB, Venook AP, Al-Hawary MM, et al. 2018. J Natl Compr Canc Netw. NCCN Guidelines Insights: Colon Cancer, Version 2.2018."
+  "[6]": "Compton CC, Fielding LP, Burgart LJ, et al. 2000. Cancer. Prognostic factors in colorectal cancer. College of American Pathologists Consensus Statement 1999."

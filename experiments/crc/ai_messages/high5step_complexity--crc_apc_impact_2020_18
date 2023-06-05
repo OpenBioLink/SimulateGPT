@@ -1,0 +1,72 @@
+parameters:
+  - age: 60
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: present
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage IV colon adenocarcinoma with poorly differentiated histology, metastasis, and carcinomatosis. Poorly differentiated tumors are associated with a higher grade and more aggressive behavior [1]. Metastasis and carcinomatosis indicate advanced disease and a worse prognosis [2].
+    entities: tumor cells, metastatic cells, cancer-associated fibroblasts, immune cells
+    assumptions: The tumor cells have a high proliferation rate and are more resistant to treatment due to their poorly differentiated state. Metastatic cells have already spread to other organs, and carcinomatosis is present.
+    consequence: increased tumor growth and metastatic potential
+    probability: 90
+    explanation: Poorly differentiated tumors are more aggressive and have a higher potential for metastasis, leading to increased tumor growth and metastatic potential [1].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Optimal standard of care treatment for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and immunotherapy [3]. These treatments aim to reduce tumor growth, control metastasis, and improve the patient's immune response against cancer cells.
+    entities: chemotherapy, targeted therapy, immunotherapy, tumor cells, immune cells
+    assumptions: The patient receives optimal standard of care treatment, which may have varying degrees of effectiveness due to the tumor's poorly differentiated state and the presence of metastasis and carcinomatosis.
+    consequence: partial tumor response and slowed metastatic progression
+    probability: 70
+    explanation: Optimal standard of care treatment can lead to a partial tumor response and slowed metastatic progression, but the effectiveness may be limited due to the aggressive nature of the tumor and the presence of metastasis and carcinomatosis [3].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: The tumor microenvironment plays a crucial role in cancer progression and response to therapy [4]. Inflammatory cells, cancer-associated fibroblasts, and immune cells can contribute to tumor growth, metastasis, and treatment resistance.
+    entities: tumor microenvironment, inflammatory cells, cancer-associated fibroblasts, immune cells
+    assumptions: The tumor microenvironment in this patient is likely to be highly complex due to the advanced stage of the disease and the presence of metastasis and carcinomatosis.
+    consequence: increased treatment resistance and tumor progression
+    probability: 80
+    explanation: The complex tumor microenvironment can contribute to increased treatment resistance and tumor progression, making it more challenging to control the disease [4].
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Colon adenocarcinoma can cause various complications, such as bowel obstruction, bleeding, and perforation [5]. The presence of metastasis and carcinomatosis can further exacerbate these complications and affect the patient's overall health.
+    entities: bowel obstruction, bleeding, perforation, metastasis, carcinomatosis
+    assumptions: The patient is at a higher risk of developing complications due to the advanced stage of the disease and the presence of metastasis and carcinomatosis.
+    consequence: increased risk of complications and decreased quality of life
+    probability: 85
+    explanation: The advanced stage of the disease and the presence of metastasis and carcinomatosis increase the risk of complications and negatively impact the patient's quality of life [5].
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival is a measure of the time during which a patient's cancer does not worsen or progress [6]. Factors such as age, cancer stage, differentiation, metastasis, and carcinomatosis can influence progression-free survival.
+    entities: progression-free survival, age, cancer stage, differentiation, metastasis, carcinomatosis
+    assumptions: The patient's age, advanced cancer stage, poorly differentiated histology, metastasis, and carcinomatosis are likely to negatively impact progression-free survival.
+    consequence: reduced progression-free survival
+    probability: 90
+    explanation: The combination of the patient's age, advanced cancer stage, poorly differentiated histology, metastasis, and carcinomatosis is likely to result in a reduced progression-free survival compared to patients with less aggressive disease [6].
+    novelty: 0
+
+conclusion:
+  outcome: 4 months of progression-free survival
+  explanation: Given the patient's age, advanced cancer stage, poorly differentiated histology, metastasis, and carcinomatosis, as well as the potential limitations of optimal standard of care treatment, the expected progression-free survival is estimated to be around 4 months. This estimation is based on the provided examples and the simulation steps, considering the more aggressive nature of the patient's disease.
+
+references:
+  "[1]": "Compton CC, 2007, Archives of Pathology & Laboratory Medicine, Prognostic factors in cancer"
+  "[2]": "Van Cutsem E, et al., 2016, Annals of Oncology, ESMO consensus guidelines for the management of patients with metastatic colorectal cancer"
+  "[3]": "National Comprehensive Cancer Network, 2021, NCCN Clinical Practice Guidelines in Oncology: Colon Cancer"
+  "[4]": "Quail DF, Joyce JA, 2013, Nature Medicine, Microenvironmental regulation of tumor progression and metastasis"
+  "[5]": "Meyerhardt JA, Mayer RJ, 2005, Journal of Clinical Oncology, Systemic therapy for colorectal cancer"
+  "[6]": "Gill S, et al., 2004, Journal of Clinical Oncology, Pooled analysis of fluorouracil-based adjuvant therapy for stage II and III colon cancer: who benefits and by how much?"

@@ -1,0 +1,45 @@
+parameters:
+  - glioblastoma diagnosis
+  - PTEN mutations
+  - EGFR mutations
+  - MGMT methylation status: high
+  - TP53: no mutations
+  - PIK3CA: no mutations
+  - NF1: no mutations
+  - MUC16: no mutations
+  - RB1: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: PTEN is a tumor suppressor gene that negatively regulates the PI3K/AKT/mTOR pathway, which is involved in cell growth, survival, and metabolism [1]. EGFR is a receptor tyrosine kinase that activates the RAS/RAF/MEK/ERK and PI3K/AKT/mTOR pathways, promoting cell proliferation and survival [2]. MGMT is a DNA repair enzyme that removes alkyl groups from the O6 position of guanine, counteracting the effects of alkylating agents like temozolomide [3]. High MGMT methylation is associated with better response to temozolomide treatment in glioblastoma patients [4].
+    entities: PTEN, EGFR, MGMT, PI3K/AKT/mTOR pathway, RAS/RAF/MEK/ERK pathway, temozolomide
+    assumptions: The patient has glioblastoma with PTEN and EGFR mutations and high MGMT methylation. Standard of care with genotype-informed treatment is applied.
+    consequence: Increased sensitivity to temozolomide treatment due to high MGMT methylation, but potentially more aggressive tumor growth due to PTEN and EGFR mutations.
+    probability: 80
+    explanation: High MGMT methylation is known to improve the response to temozolomide treatment, while PTEN and EGFR mutations can lead to more aggressive tumor growth by activating oncogenic pathways.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Glioblastoma is characterized by rapid cell proliferation, invasion, and angiogenesis [5]. Standard of care for glioblastoma includes surgery, radiation therapy, and chemotherapy with temozolomide [6]. Genotype-informed treatment may involve targeted therapies against specific molecular alterations, such as EGFR inhibitors for EGFR-mutated tumors [7].
+    entities: glioblastoma cells, temozolomide, radiation therapy, surgery, EGFR inhibitors
+    assumptions: The patient receives standard of care with genotype-informed treatment, which may include EGFR inhibitors.
+    consequence: Reduced tumor growth and improved survival due to the combination of standard of care and genotype-informed treatment.
+    probability: 70
+    explanation: The combination of standard of care and genotype-informed treatment, such as EGFR inhibitors, may help control tumor growth and improve survival in glioblastoma patients with specific molecular alterations.
+    novelty: 30
+
+conclusion:
+  outcome: increased survival, +4 months
+  explanation: The patient's survival is more likely to be increased relative to the median overall glioblastoma survival (15 months) due to the high MGMT methylation status, which improves the response to temozolomide treatment, and the potential use of genotype-informed treatment, such as EGFR inhibitors. The survival is estimated to deviate from the median by 4 months, resulting in a total survival of 19 months.
+
+references:
+  "[1]": "Li J, Yen C, Liaw D, et al. 1997. Science. PTEN, a putative protein tyrosine phosphatase gene mutated in human brain, breast, and prostate cancer."
+  "[2]": "Yarden Y, Sliwkowski MX. 2001. Nature Reviews Molecular Cell Biology. Untangling the ErbB signalling network."
+  "[3]": "Kaina B, Christmann M, Naumann S, Roos WP. 2007. DNA Repair. MGMT: key node in the battle against genotoxicity, carcinogenicity and apoptosis induced by alkylating agents."
+  "[4]": "Hegi ME, Diserens AC, Gorlia T, et al. 2005. New England Journal of Medicine. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[5]": "Furnari FB, Fenton T, Bachoo RM, et al. 2007. Genes & Development. Malignant astrocytic glioma: genetics, biology, and paths to treatment."
+  "[6]": "Stupp R, Mason WP, van den Bent MJ, et al. 2005. New England Journal of Medicine. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."
+  "[7]": "Wen PY, Kesari S. 2008. New England Journal of Medicine. Malignant gliomas in adults."

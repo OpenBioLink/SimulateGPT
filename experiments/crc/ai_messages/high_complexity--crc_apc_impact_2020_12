@@ -1,0 +1,54 @@
+parameters:
+  - age: 55
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: left side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Standard of care treatment for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and immunotherapy [1]. Chemotherapy drugs, such as 5-fluorouracil (5-FU), oxaliplatin, and irinotecan, target rapidly dividing cancer cells [2]. Targeted therapies, such as bevacizumab and cetuximab, inhibit specific molecular pathways involved in tumor growth and progression [3]. Immunotherapies, such as pembrolizumab, enhance the immune system's ability to recognize and attack cancer cells [4].
+    entities: 5-fluorouracil, oxaliplatin, irinotecan, bevacizumab, cetuximab, pembrolizumab
+    assumptions: The patient receives optimal standard of care treatment, which includes chemotherapy, targeted therapy, and immunotherapy.
+    consequence: Decreased tumor growth and progression due to the combined effects of chemotherapy, targeted therapy, and immunotherapy.
+    probability: 80
+    explanation: The combination of chemotherapy, targeted therapy, and immunotherapy is expected to effectively target cancer cells and slow down tumor growth and progression in most patients.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Poorly differentiated tumors are generally more aggressive and less responsive to treatment than moderately differentiated tumors [5]. The presence of metastasis indicates that the cancer has spread to other organs, which can make treatment more challenging [6].
+    entities: poorly differentiated tumor, metastasis
+    assumptions: The patient's tumor is poorly differentiated and has metastasized.
+    consequence: Reduced treatment effectiveness due to the aggressive nature of the tumor and the presence of metastasis.
+    probability: 70
+    explanation: Poorly differentiated tumors and metastasis are known to negatively impact treatment outcomes, making it more difficult to achieve optimal results.
+    novelty: 0
+
+  - step: 3
+    level: organism
+    facts: Age can influence treatment outcomes, with younger patients generally having better outcomes than older patients [7]. The absence of carcinomatosis may also contribute to better treatment outcomes, as carcinomatosis is associated with poorer prognosis [8].
+    entities: age, carcinomatosis
+    assumptions: The patient is 55 years old and has no signs of carcinomatosis.
+    consequence: Improved treatment effectiveness due to the patient's relatively young age and the absence of carcinomatosis.
+    probability: 60
+    explanation: The patient's age and the absence of carcinomatosis may contribute to better treatment outcomes compared to older patients or those with carcinomatosis.
+    novelty: 0
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Considering the patient's age, cancer stage, tumor differentiation, metastasis, and absence of carcinomatosis, as well as the effectiveness of the optimal standard of care treatment, the patient is expected to have a progression-free survival of approximately 10 months. This estimate is based on the provided examples and the simulation steps, taking into account the molecular, cellular, and organism-level factors that influence tumor progression and treatment outcomes.
+
+references:
+  "[1]": "National Comprehensive Cancer Network. (2021). NCCN Clinical Practice Guidelines in Oncology: Colon Cancer. Version 2.2021."
+  "[2]": "Longley, D. B., Harkin, D. P., & Johnston, P. G. (2003). 5-fluorouracil: mechanisms of action and clinical strategies. Nature Reviews Cancer, 3(5), 330-338."
+  "[3]": "Van Cutsem, E., Cervantes, A., & Nordlinger, B. (2014). Metastatic colorectal cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. Annals of Oncology, 25(suppl_3), iii1-iii9."
+  "[4]": "Le, D. T., Uram, J. N., & Wang, H. (2015). PD-1 blockade in tumors with mismatch-repair deficiency. New England Journal of Medicine, 372(26), 2509-2520."
+  "[5]": "Compton, C. C. (2007). Prognostic factors in cancer. In Prognostic Factors in Cancer (pp. 43-86). Wiley-Liss."
+  "[6]": "Van Cutsem, E., & Oliveira, J. (2009). Advanced colorectal cancer: ESMO clinical recommendations for diagnosis, treatment and follow-up. Annals of Oncology, 20(suppl_4), 61-63."
+  "[7]": "Sargent, D. J., Goldberg, R. M., & Jacobson, S. D. (2001). A pooled analysis of adjuvant chemotherapy for resected colon cancer in elderly patients. New England Journal of Medicine, 345(15), 1091-1097."
+  "[8]": "Franko, J., Shi, Q., & Meyers, J. P. (2012). Prognosis of patients with peritoneal metastatic colorectal cancer given systemic therapy: an analysis of individual patient data from prospective randomised trials from the Analysis and Research in Cancers of the Digestive System (ARCAD) database. The Lancet Oncology, 17(12), 1709-1719."

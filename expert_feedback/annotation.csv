@@ -1,0 +1,9 @@
+experiment,prompt
+mouse_immunology,Cyanide
+mouse_immunology,YUMM_1_7
+trained_immunity,tolerance_LPS
+trained_immunity,training_LPS
+trained_immunity,training_betaglucan
+sepsis_treatment,sepsis_hyperinflammation
+sepsis_treatment,sepsis_immunoparalysis
+glioblastoma_survival,generated_PTEN_EGFR_MGMT_high_methylated\

@@ -1,0 +1,54 @@
+parameters:
+  - age: 64
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - tumor_differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: yes
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Standard of care treatment for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and immunotherapy [1]. Chemotherapy drugs, such as 5-fluorouracil, oxaliplatin, and irinotecan, target rapidly dividing cancer cells [2]. Targeted therapies, such as bevacizumab and cetuximab, inhibit specific molecular pathways involved in tumor growth and progression [3]. Immunotherapies, such as pembrolizumab, enhance the immune system's ability to recognize and attack cancer cells [4].
+    entities: chemotherapy, targeted therapy, immunotherapy, cancer cells, immune system
+    assumptions: The patient receives optimal standard of care treatment, which includes a combination of chemotherapy, targeted therapy, and immunotherapy.
+    consequence: Decreased tumor growth and progression due to the effects of chemotherapy, targeted therapy, and immunotherapy.
+    probability: 80
+    explanation: The combination of chemotherapy, targeted therapy, and immunotherapy is expected to effectively target cancer cells and slow down tumor growth and progression in most patients with stage IV colon adenocarcinoma.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor heterogeneity and the presence of cancer stem cells can contribute to treatment resistance and disease progression [5]. Additionally, the tumor microenvironment, including immune cells, stromal cells, and extracellular matrix, can influence treatment response and cancer progression [6].
+    entities: tumor heterogeneity, cancer stem cells, treatment resistance, tumor microenvironment, immune cells, stromal cells, extracellular matrix
+    assumptions: The patient's tumor exhibits heterogeneity and contains cancer stem cells, which may contribute to treatment resistance. The tumor microenvironment also plays a role in treatment response and disease progression.
+    consequence: Partial treatment resistance and continued disease progression despite optimal standard of care treatment.
+    probability: 60
+    explanation: Tumor heterogeneity, cancer stem cells, and the tumor microenvironment can contribute to treatment resistance and disease progression, even in patients receiving optimal standard of care treatment.
+    novelty: 50
+
+  - step: 3
+    level: organ
+    facts: Metastasis and carcinomatosis can further complicate treatment and contribute to poorer prognosis [7]. The presence of metastasis indicates that cancer cells have spread to other organs, while carcinomatosis refers to the widespread dissemination of cancer cells throughout the peritoneal cavity [8].
+    entities: metastasis, carcinomatosis, prognosis
+    assumptions: The patient's cancer has metastasized and shows signs of carcinomatosis, which can negatively impact treatment response and prognosis.
+    consequence: Reduced progression-free survival due to the presence of metastasis and carcinomatosis.
+    probability: 70
+    explanation: Metastasis and carcinomatosis can lead to a more aggressive disease course and poorer treatment response, resulting in reduced progression-free survival.
+    novelty: 0
+
+conclusion:
+  outcome: 6 months of progression-free survival
+  explanation: Given the patient's stage IV colon adenocarcinoma with moderately differentiated differentiation histology, metastasis, and carcinomatosis, and considering the effectiveness of optimal standard of care treatment, the expected progression-free survival is estimated to be 6 months. This estimate takes into account the potential for partial treatment resistance due to tumor heterogeneity, cancer stem cells, and the tumor microenvironment, as well as the negative impact of metastasis and carcinomatosis on prognosis.
+
+references:
+  "[1]": "National Comprehensive Cancer Network. (2021). NCCN Clinical Practice Guidelines in Oncology: Colon Cancer. Version 2.2021."
+  "[2]": "Longley, D. B., Harkin, D. P., & Johnston, P. G. (2003). 5-fluorouracil: mechanisms of action and clinical strategies. Nature Reviews Cancer, 3(5), 330-338."
+  "[3]": "Van Cutsem, E., & Cervantes, A. (2011). Advanced colorectal cancer: ESMO Clinical Practice Guidelines for treatment. Annals of Oncology, 22(suppl_6), vi61-vi63."
+  "[4]": "Le, D. T., et al. (2017). Mismatch repair deficiency predicts response of solid tumors to PD-1 blockade. Science, 357(6349), 409-413."
+  "[5]": "Meacham, C. E., & Morrison, S. J. (2013). Tumour heterogeneity and cancer cell plasticity. Nature, 501(7467), 328-337."
+  "[6]": "Quail, D. F., & Joyce, J. A. (2013). Microenvironmental regulation of tumor progression and metastasis. Nature Medicine, 19(11), 1423-1437."
+  "[7]": "Franko, J., Shi, Q., & Meyers, J. P. (2012). Prognosis of patients with peritoneal metastatic colorectal cancer given systemic therapy: an analysis of individual patient data from prospective randomised trials from the Analysis and Research in Cancers of the Digestive System (ARCAD) database. The Lancet Oncology, 17(12), 1709-1719."
+  "[8]": "Jayne, D. G., & Fook, S. (2002). Peritoneal carcinomatosis from colorectal cancer. British Journal of Surgery, 89(12), 1545-1550."

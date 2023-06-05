@@ -1,0 +1,71 @@
+parameters:
+  - age: 55
+  - cancer_stage: IV
+  - cancer_type: rectal adenocarcinoma
+  - tumor_differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: yes
+  - treatment_plan: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The RAS/RAF/MEK/ERK and PI3K/AKT/mTOR pathways are commonly dysregulated in colorectal cancer, leading to uncontrolled cell proliferation and survival [1]. Moderately differentiated tumors have intermediate levels of differentiation and are associated with intermediate prognosis compared to poorly and well-differentiated tumors [2].
+    entities: RAS, RAF, MEK, ERK, PI3K, AKT, mTOR
+    assumptions: The patient's tumor has molecular alterations in the RAS/RAF/MEK/ERK and/or PI3K/AKT/mTOR pathways, contributing to tumor progression. The moderately differentiated histology suggests an intermediate prognosis.
+    consequence: Dysregulated signaling pathways promote tumor growth and metastasis.
+    probability: 80
+    explanation: The dysregulation of these pathways is common in colorectal cancer and contributes to tumor progression.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor cells can evade the immune system by expressing immune checkpoint molecules such as PD-L1, which binds to PD-1 on T cells and inhibits their activation [3].
+    entities: tumor cells, immune system, PD-L1, PD-1, T cells
+    assumptions: The patient's tumor cells may express immune checkpoint molecules, allowing them to evade immune surveillance.
+    consequence: Immune evasion contributes to tumor growth and metastasis.
+    probability: 70
+    explanation: Immune checkpoint expression is a common mechanism of immune evasion in cancer.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Carcinomatosis is the presence of multiple small metastases throughout the peritoneal cavity, which can lead to complications such as bowel obstruction and ascites [4].
+    entities: peritoneal cavity, metastases, bowel obstruction, ascites
+    assumptions: The patient's carcinomatosis indicates widespread metastatic disease, which may be more difficult to treat and control.
+    consequence: Carcinomatosis contributes to a more aggressive disease course and poorer prognosis.
+    probability: 85
+    explanation: Carcinomatosis is associated with a more advanced stage of cancer and increased complications.
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Optimal standard of care for stage IV rectal adenocarcinoma typically includes chemotherapy, targeted therapy, and/or immunotherapy, depending on the molecular profile of the tumor and patient factors [5].
+    entities: chemotherapy, targeted therapy, immunotherapy
+    assumptions: The patient receives optimal standard of care treatment, which may include a combination of chemotherapy, targeted therapy, and immunotherapy.
+    consequence: Treatment slows tumor growth and metastasis, improving progression-free survival.
+    probability: 75
+    explanation: Optimal standard of care treatment is designed to target the specific molecular alterations in the tumor and improve patient outcomes.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Age, tumor differentiation, and presence of carcinomatosis are factors that can influence progression-free survival in colorectal cancer patients [6].
+    entities: age, tumor differentiation, carcinomatosis, progression-free survival
+    assumptions: The patient's age (55), moderately differentiated tumor, and presence of carcinomatosis are factors that may impact their progression-free survival.
+    consequence: The patient's progression-free survival is likely to be shorter than that of patients with more favorable prognostic factors.
+    probability: 70
+    explanation: The patient's age, tumor differentiation, and presence of carcinomatosis are known factors that can influence progression-free survival.
+    novelty: 0
+
+conclusion:
+  outcome: The expected progression-free survival for this patient is approximately 6 months.
+  explanation: Based on the patient's age, tumor differentiation, presence of carcinomatosis, and the effectiveness of optimal standard of care treatment, their progression-free survival is likely to be shorter than that of patients with more favorable prognostic factors.
+
+references:
+  "[1]": "Yokota T, Ura T, Shibata N, et al. 2011. Journal of Biomedicine and Biotechnology. BRAF Mutation Is a Powerful Prognostic Factor in Advanced and Recurrent Colorectal Cancer."
+  "[2]": "Compton CC. 2006. Archives of Pathology & Laboratory Medicine. Colorectal Carcinoma: Diagnostic, Prognostic, and Molecular Features."
+  "[3]": "Topalian SL, Drake CG, Pardoll DM. 2015. Cancer Cell. Immune Checkpoint Blockade: A Common Denominator Approach to Cancer Therapy."
+  "[4]": "Sugarbaker PH. 2001. Cancer Treatment and Research. Peritoneal Carcinomatosis: Principles of Management."
+  "[5]": "Van Cutsem E, Cervantes A, Adam R, et al. 2016. Annals of Oncology. ESMO consensus guidelines for the management of patients with metastatic colorectal cancer."
+  "[6]": "Gill S, Loprinzi CL, Sargent DJ, et al. 2004. Journal of Clinical Oncology. Pooled Analysis of Fluorouracil-Based Adjuvant Therapy for Stage II and III Colon Cancer: Who Benefits and by How Much?"

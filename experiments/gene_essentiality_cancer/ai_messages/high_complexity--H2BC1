@@ -1,0 +1,37 @@
+parameters:
+  - gene: H2BC1
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: H2BC1 encodes a histone protein, specifically histone H2B type 1-C [1]. Histones are essential for the packaging of DNA into nucleosomes and chromatin, which is crucial for DNA replication, transcription, and repair [2]. Histone H2B is involved in the regulation of gene expression and chromatin dynamics [3]. Cancer cells often exhibit alterations in histone modifications and chromatin structure [4].
+    entities: H2BC1, histone H2B type 1-C, DNA, nucleosomes, chromatin, cancer cells
+    assumptions: Given the role of histone H2B in gene regulation and chromatin dynamics, it is possible that H2BC1 could be essential in cancer cell-lines.
+    consequence: altered H2BC1 expression or function in cancer cell-lines
+    probability: 70
+    explanation: The involvement of histone H2B in gene regulation and chromatin dynamics, as well as the known alterations in histone modifications and chromatin structure in cancer cells, suggest that H2BC1 could play a role in cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival or reproduction of an organism or cell [5]. In cancer cell-lines, essential genes are often involved in processes such as cell proliferation, survival, and resistance to apoptosis [6]. Histone H2B has been shown to be involved in cell cycle progression and apoptosis [7].
+    entities: essential genes, cell proliferation, survival, resistance to apoptosis, cell cycle progression
+    assumptions: If H2BC1 is essential in cancer cell-lines, it would likely be involved in processes such as cell proliferation, survival, and resistance to apoptosis.
+    consequence: H2BC1 involvement in cell proliferation, survival, and resistance to apoptosis in cancer cell-lines
+    probability: 60
+    explanation: The known involvement of histone H2B in cell cycle progression and apoptosis, as well as the general characteristics of essential genes in cancer cell-lines, suggest that H2BC1 could be involved in cell proliferation, survival, and resistance to apoptosis in cancer cell-lines.
+    novelty: 30
+
+conclusion:
+  outcome: likely
+  explanation: Based on the role of histone H2B in gene regulation and chromatin dynamics, as well as its involvement in cell cycle progression and apoptosis, it is likely that H2BC1 is essential in cancer cell-lines.
+
+references:
+  "[1]": "NCBI Gene. (n.d.). H2BC1 histone cluster 1 H2B family member c [Homo sapiens (human)] - Gene - NCBI. Retrieved from https://www.ncbi.nlm.nih.gov/gene/85236"
+  "[2]": "Luger, K., Mäder, A. W., Richmond, R. K., Sargent, D. F., & Richmond, T. J. (1997). Crystal structure of the nucleosome core particle at 2.8 Å resolution. Nature, 389(6648), 251-260."
+  "[3]": "Bannister, A. J., & Kouzarides, T. (2011). Regulation of chromatin by histone modifications. Cell Research, 21(3), 381-395."
+  "[4]": "Feinberg, A. P., & Tycko, B. (2004). The history of cancer epigenetics. Nature Reviews Cancer, 4(2), 143-153."
+  "[5]": "Hart, T., Chandrashekhar, M., Aregger, M., Steinhart, Z., Brown, K. R., MacLeod, G., ... & Moffat, J. (2015). High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities. Cell, 163(6), 1515-1526."
+  "[6]": "Kaelin Jr, W. G. (2005). The concept of synthetic lethality in the context of anticancer therapy. Nature Reviews Cancer, 5(9), 689-698."
+  "[7]": "Xu, M., Long, C., Chen, X., Huang, C., Chen, S., & Zhu, B. (2010). Partitioning of histone H3-H4 tetramers during DNA replication-dependent chromatin assembly. Science, 328(5974), 94-98."

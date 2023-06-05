@@ -1,0 +1,30 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage IV colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage IV colon adenocarcinoma on the right side of the colon, with poorly differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: initiation of optimal standard of care treatment
+    probability: 100
+    explanation: Given the diagnosis, the patient will receive an optimal standard of care treatment plan, which may include surgery, chemotherapy, radiation therapy, and targeted therapy.
+  - step: 3
+    level: cellular
+    consequence: reduction in tumor size and metastatic potential
+    probability: 80
+    explanation: The optimal standard of care treatment plan is expected to reduce the size of the primary tumor and decrease the metastatic potential of the cancer cells, leading to a temporary halt in disease progression.
+  - step: 4
+    level: molecular
+    consequence: development of treatment resistance
+    probability: 70
+    explanation: Due to the poorly differentiated histology and aggressive nature of stage IV colon adenocarcinoma, there is a high probability that the cancer cells will develop resistance to the treatment over time, leading to disease progression.
+  - step: 5
+    level: cellular
+    consequence: tumor regrowth and metastasis
+    probability: 60
+    explanation: As the cancer cells develop resistance to the treatment, the tumor may regrow and metastasize to other organs, leading to disease progression.
+
+conclusion:
+  outcome: 6 months of progression-free survival
+  explanation: Based on the provided examples and the patient's clinical characteristics, the expected progression-free survival under an optimal standard of care treatment plan is estimated to be around 6 months. This estimation takes into account the patient's younger age, stage IV diagnosis, poorly differentiated histology, and absence of carcinomatosis. However, it is important to note that individual responses to treatment may vary, and the actual progression-free survival could be different for this patient.

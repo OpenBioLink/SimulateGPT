@@ -1,0 +1,52 @@
+parameters:
+  - age: 72
+  - cancer_stage: III
+  - cancer_location: left side of the colon
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: yes
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The Wnt signaling pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and tumor growth [1]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [2]. Carcinomatosis is associated with a worse prognosis [3].
+    entities: Wnt signaling pathway, cell proliferation, tumor growth
+    assumptions: The patient's tumor has dysregulated Wnt signaling, leading to increased cell proliferation and tumor growth. The moderately differentiated histology suggests a better prognosis than poorly differentiated tumors, but the presence of carcinomatosis indicates a worse prognosis.
+    consequence: The optimal standard of care treatment plan will target the dysregulated Wnt signaling pathway and other molecular processes to reduce tumor growth and metastasis.
+    probability: 80
+    explanation: The treatment plan is likely to be effective in reducing tumor growth and metastasis due to its targeting of the dysregulated Wnt signaling pathway and other molecular processes.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Chemotherapy, such as FOLFOX or FOLFIRI, is a common treatment for stage III colon adenocarcinoma [4]. These treatments target rapidly dividing cancer cells, leading to cell death and reduced tumor growth [5].
+    entities: chemotherapy, FOLFOX, FOLFIRI, cancer cells, cell death
+    assumptions: The patient receives chemotherapy as part of the optimal standard of care treatment plan, targeting rapidly dividing cancer cells and leading to cell death.
+    consequence: The chemotherapy treatment reduces tumor growth and metastasis, improving the patient's prognosis.
+    probability: 70
+    explanation: Chemotherapy is effective in reducing tumor growth and metastasis by targeting rapidly dividing cancer cells and inducing cell death.
+    novelty: 10
+
+  - step: 3
+    level: tissue
+    facts: Tumor microenvironment plays a crucial role in cancer progression and response to therapy [6]. Inflammation and immune cell infiltration can impact the effectiveness of treatment [7].
+    entities: tumor microenvironment, inflammation, immune cell infiltration
+    assumptions: The patient's tumor microenvironment, including inflammation and immune cell infiltration, influences the effectiveness of the optimal standard of care treatment plan.
+    consequence: The patient's tumor microenvironment may either enhance or hinder the effectiveness of the treatment, impacting the progression-free survival.
+    probability: 60
+    explanation: The tumor microenvironment can either enhance or hinder the effectiveness of treatment, depending on factors such as inflammation and immune cell infiltration.
+    novelty: 40
+
+conclusion:
+  outcome: Based on the provided examples and the simulation, the expected progression-free survival for this patient is approximately 8 months.
+  explanation: The patient's moderately differentiated tumor and the presence of carcinomatosis suggest a prognosis between examples 2 and 3. The optimal standard of care treatment plan, including chemotherapy, is expected to reduce tumor growth and metastasis, but the tumor microenvironment may influence the effectiveness of the treatment.
+
+references:
+  "[1]": "Clevers H, Nusse R. 2012. Cell. Wnt/β-Catenin Signaling and Disease."
+  "[2]": "Compton CC. 2007. J Clin Oncol. Optimal Pathologic Staging: Defining Stage II Disease."
+  "[3]": "Franko J, et al. 2012. Ann Surg Oncol. Prognostic Value of Peritoneal Cancer Index and Small Bowel Involvement for Patients With Colorectal Carcinomatosis."
+  "[4]": "Van Cutsem E, et al. 2016. Ann Oncol. ESMO consensus guidelines for the management of patients with metastatic colorectal cancer."
+  "[5]": "Longley DB, et al. 2003. Nat Rev Cancer. 5-Fluorouracil: mechanisms of action and clinical strategies."
+  "[6]": "Quail DF, Joyce JA. 2013. Nat Med. Microenvironmental regulation of tumor progression and metastasis."
+  "[7]": "Gajewski TF, et al. 2013. Nat Immunol. Cancer immunotherapy strategies based on overcoming barriers within the tumor microenvironment."

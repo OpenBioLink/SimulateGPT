@@ -1,0 +1,41 @@
+parameters:
+  - age: 71
+  - cancer_stage: III
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage III colon adenocarcinoma, which is characterized by moderately differentiated cells and metastasis. Moderately differentiated tumors have intermediate aggressiveness and growth rates compared to poorly and well-differentiated tumors[1]. The absence of carcinomatosis indicates that the cancer has not spread extensively throughout the peritoneal cavity[2].
+    entities: cancer cells, metastatic cells, tumor microenvironment
+    assumptions: The optimal standard of care treatment plan will include surgery, chemotherapy, and possibly radiation therapy, depending on the specific case[3]. The treatment will aim to remove the primary tumor, control metastatic growth, and prevent further spread.
+    consequence: The treatment will lead to a reduction in tumor size and a decrease in metastatic potential.
+    probability: 80
+    explanation: The optimal standard of care treatment plan is designed to target the primary tumor and metastatic cells, reducing the overall tumor burden and preventing further spread. However, individual responses to treatment can vary.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: The tumor microenvironment plays a crucial role in cancer progression and response to therapy[4]. Factors such as immune cell infiltration, angiogenesis, and extracellular matrix remodeling can influence treatment outcomes[5].
+    entities: immune cells, blood vessels, extracellular matrix
+    assumptions: The optimal standard of care treatment plan will also target the tumor microenvironment, aiming to improve immune cell infiltration, inhibit angiogenesis, and modulate extracellular matrix remodeling.
+    consequence: The treatment will lead to a more favorable tumor microenvironment, which can enhance the effectiveness of the therapy and improve progression-free survival.
+    probability: 70
+    explanation: Targeting the tumor microenvironment can improve treatment outcomes, but individual responses to therapy and the complexity of the tumor microenvironment can lead to variable results.
+    novelty: 40
+
+conclusion:
+  outcome: Based on the provided examples and the simulation, the expected progression-free survival for this patient is approximately 10 months.
+  explanation: The patient's age, stage III colon adenocarcinoma, moderately differentiated histology, and absence of carcinomatosis suggest a more favorable prognosis compared to patients with poorly differentiated tumors or carcinomatosis. The optimal standard of care treatment plan, targeting both the tumor and its microenvironment, is expected to improve progression-free survival. However, individual responses to treatment and the complexity of the tumor microenvironment can lead to variable outcomes.
+
+references:
+  "[1]": "Compton CC, Fielding LP, Burgart LJ, et al. 2000. American Joint Committee on Cancer Prognostic Factors Consensus Conference: Colorectal Working Group. Cancer 88:1739-57."
+  "[2]": "Jayne DG, Fook S, Loi C, Seow-Choen F. 2002. Peritoneal carcinomatosis from colorectal cancer. Br J Surg 89:1545-50."
+  "[3]": "National Comprehensive Cancer Network. 2021. NCCN Clinical Practice Guidelines in Oncology: Colon Cancer. Version 2.2021."
+  "[4]": "Hanahan D, Weinberg RA. 2011. Hallmarks of cancer: the next generation. Cell 144:646-74."
+  "[5]": "Quail DF, Joyce JA. 2013. Microenvironmental regulation of tumor progression and metastasis. Nat Med 19:1423-37."

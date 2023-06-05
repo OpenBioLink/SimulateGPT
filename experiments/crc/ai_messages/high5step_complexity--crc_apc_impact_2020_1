@@ -1,0 +1,71 @@
+parameters:
+  - age: 68
+  - cancer_stage: II
+  - cancer_type: rectal adenocarcinoma
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The Wnt signaling pathway is often dysregulated in colorectal cancer, leading to increased cell proliferation and tumor growth [1]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [2].
+    entities: Wnt signaling pathway, cell proliferation, tumor growth
+    assumptions: The patient's tumor has a moderately differentiated histology, which may result in a better prognosis than a poorly differentiated tumor.
+    consequence: Dysregulated Wnt signaling pathway leading to increased cell proliferation and tumor growth.
+    probability: 80
+    explanation: The majority of colorectal cancers have dysregulated Wnt signaling pathways, which contribute to tumor growth.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Optimal standard of care for stage II rectal adenocarcinoma typically includes surgery, radiation therapy, and chemotherapy [3]. These treatments aim to remove or shrink the tumor and prevent further metastasis.
+    entities: surgery, radiation therapy, chemotherapy
+    assumptions: The patient receives optimal standard of care treatment, which may effectively control tumor growth and metastasis.
+    consequence: Reduced tumor growth and prevention of further metastasis.
+    probability: 70
+    explanation: Optimal standard of care treatment has been shown to be effective in controlling tumor growth and preventing further metastasis in many cases.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Tumor microenvironment plays a crucial role in cancer progression and response to therapy [4]. Inflammatory cells and cytokines can promote or inhibit tumor growth and metastasis.
+    entities: tumor microenvironment, inflammatory cells, cytokines
+    assumptions: The patient's tumor microenvironment may influence the effectiveness of the treatment and the progression of the disease.
+    consequence: Modulation of tumor microenvironment, impacting treatment effectiveness and disease progression.
+    probability: 60
+    explanation: The tumor microenvironment can have a significant impact on treatment effectiveness and disease progression, but its specific role varies between patients.
+    novelty: 20
+
+  - step: 4
+    level: organ
+    facts: Rectal adenocarcinoma can cause local symptoms such as pain, bleeding, and bowel obstruction [5]. Effective treatment can alleviate these symptoms and improve the patient's quality of life.
+    entities: pain, bleeding, bowel obstruction
+    assumptions: The patient experiences local symptoms due to the tumor, and effective treatment may alleviate these symptoms.
+    consequence: Alleviation of local symptoms and improved quality of life.
+    probability: 70
+    explanation: Effective treatment of rectal adenocarcinoma can alleviate local symptoms and improve the patient's quality of life.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival is influenced by factors such as age, cancer stage, differentiation, and treatment effectiveness [6]. In the provided examples, patients with moderately differentiated tumors and no carcinomatosis had progression-free survival ranging from 7 to 14 months.
+    entities: progression-free survival, age, cancer stage, differentiation, treatment effectiveness
+    assumptions: The patient's age, cancer stage, differentiation, and treatment effectiveness will influence their progression-free survival.
+    consequence: Expected progression-free survival in months.
+    probability: 75
+    explanation: Based on the provided examples and the patient's characteristics, an estimation of progression-free survival can be made.
+    novelty: 10
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Considering the patient's age, stage II rectal adenocarcinoma with moderately differentiated histology, metastasis, and no signs of carcinomatosis, as well as the effectiveness of optimal standard of care treatment, the expected progression-free survival is estimated to be around 10 months.
+
+references:
+  "[1]": "Clevers H, Nusse R. 2012. Cell. Wnt/β-Catenin Signaling and Disease."
+  "[2]": "Compton CC. 2007. J Clin Oncol. Colorectal Carcinoma: Diagnostic, Prognostic, and Molecular Features."
+  "[3]": "National Comprehensive Cancer Network. 2021. NCCN Clinical Practice Guidelines in Oncology: Rectal Cancer."
+  "[4]": "Quail DF, Joyce JA. 2013. Nat Med. Microenvironmental regulation of tumor progression and metastasis."
+  "[5]": "American Cancer Society. 2021. Signs and Symptoms of Colorectal Cancer."
+  "[6]": "Gill S, et al. 2004. J Clin Oncol. Pooled Analysis of Fluorouracil-Based Adjuvant Therapy for Stage II and III Colon Cancer: Who Benefits and by How Much?"

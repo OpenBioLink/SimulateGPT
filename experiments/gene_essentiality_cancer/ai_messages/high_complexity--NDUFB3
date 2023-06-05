@@ -1,0 +1,36 @@
+parameters:
+  - gene: NDUFB3
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: NDUFB3 is a subunit of the mitochondrial complex I (NADH:ubiquinone oxidoreductase) [1]. Complex I is the first enzyme of the mitochondrial respiratory chain and is involved in the transfer of electrons from NADH to ubiquinone, contributing to the generation of ATP through oxidative phosphorylation [2]. Dysregulation of mitochondrial function and metabolism has been implicated in cancer development and progression [3].
+    entities: NDUFB3, mitochondrial complex I, NADH, ubiquinone, ATP, oxidative phosphorylation
+    assumptions: NDUFB3 is expressed in cancer cell-lines and contributes to the function of mitochondrial complex I.
+    consequence: altered NDUFB3 expression or function may affect mitochondrial complex I activity and ATP production in cancer cell-lines
+    probability: 80
+    explanation: Given the role of NDUFB3 in mitochondrial complex I and the importance of mitochondrial function in cancer, it is plausible that changes in NDUFB3 expression or function could impact cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit increased glycolysis and decreased oxidative phosphorylation, known as the Warburg effect [4]. This metabolic shift allows cancer cells to generate ATP and other metabolic intermediates necessary for rapid proliferation [5]. However, some cancer cells still rely on oxidative phosphorylation for ATP production [6].
+    entities: cancer cells, glycolysis, oxidative phosphorylation, Warburg effect, ATP, metabolic intermediates
+    assumptions: NDUFB3's role in mitochondrial complex I may influence the balance between glycolysis and oxidative phosphorylation in cancer cell-lines.
+    consequence: NDUFB3 may be essential in cancer cell-lines that rely on oxidative phosphorylation for ATP production
+    probability: 60
+    explanation: Since some cancer cells rely on oxidative phosphorylation for ATP production, NDUFB3's role in mitochondrial complex I could make it essential in these specific cancer cell-lines.
+    novelty: 40
+
+conclusion:
+  outcome: likely
+  explanation: NDUFB3 is a subunit of mitochondrial complex I, which is involved in ATP production through oxidative phosphorylation. Although cancer cells often exhibit increased glycolysis and decreased oxidative phosphorylation, some cancer cell-lines still rely on oxidative phosphorylation for ATP production. Therefore, NDUFB3 is likely essential in these specific cancer cell-lines.
+
+references:
+  "[1]": "Carroll J, Fearnley IM, Skehel JM, Shannon RJ, Hirst J, Walker JE. 2006. Proc Natl Acad Sci U S A. Bovine complex I is a complex of 45 different subunits."
+  "[2]": "Hirst J. 2013. Annu Rev Biochem. Mitochondrial complex I."
+  "[3]": "Zong WX, Rabinowitz JD, White E. 2016. Nat Rev Cancer. Mitochondria and Cancer."
+  "[4]": "Vander Heiden MG, Cantley LC, Thompson CB. 2009. Science. Understanding the Warburg effect: the metabolic requirements of cell proliferation."
+  "[5]": "Pavlova NN, Thompson CB. 2016. Cell Metab. The Emerging Hallmarks of Cancer Metabolism."
+  "[6]": "Zhang J, Pavlova NN, Thompson CB. 2017. Cell Metab. Cancer cell metabolism: the essential role of the nonessential amino acid, glutamine."

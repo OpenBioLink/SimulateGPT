@@ -1,0 +1,23 @@
+Below are 4 examples of patients with clinical characterization and their associated progression-free survivals:
+
+Example 1: A 61 year old patient was diagnosed with stage IV rectal adenocarcinoma at the rectum. His/her tumor exhibited poorly differentiated differentiation histology, had metastasized and showed no signs of carcinomatosis.
+The patient had 2 months of progression-free survival.
+
+
+Example 2: A 58 year old patient was diagnosed with stage III colon adenocarcinoma on the left side of the colon. His/her tumor exhibited poorly differentiated differentiation histology, had metastasized and showed no signs of carcinomatosis.
+The patient had 14 months of progression-free survival.
+
+
+Example 3: A 67 year old patient was diagnosed with stage III colon adenocarcinoma on the right side of the colon. His/her tumor exhibited moderately differentiated differentiation histology, had metastasized and showed signs of carcinomatosis.
+The patient had 9 months of progression-free survival.
+
+
+Example 4: A 59 year old patient was diagnosed with stage III colon adenocarcinoma on the left side of the colon. His/her tumor exhibited moderately differentiated differentiation histology, had metastasized and showed no signs of carcinomatosis.
+The patient had 7 months of progression-free survival.
+---
+
+Now I need your help with the following case. Use the examples above to calibrate your answer and focus on novelty, if possible.
+
+Consider a 57 year old patient who is diagnosed with stage III colon adenocarcinoma on the right side of the colon. The tumor exhibits poorly differentiated differentiation histology, has metastasized and shows no signs of carcinomatosis.
+
+Given the general effectiveness of colon adenocarcinoma therapies, explore how the disease progresses under an optimal standard of care treatment plan, focusing on the molecular and higher-level processes impacting tumor progression. As the final outcome, report the expected progression-free survival in months.

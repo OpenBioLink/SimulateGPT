@@ -1,0 +1,49 @@
+parameters:
+  - mouse model
+  - high-dose LPS injection
+  - 90-day interval between injections
+  - innate immune response
+  - rechallenge with high-dose LPS
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: LPS (lipopolysaccharide) is a component of the outer membrane of Gram-negative bacteria and is a potent activator of the innate immune system [1]. LPS binds to TLR4 (Toll-like receptor 4) on immune cells, leading to the activation of NF-κB and the production of pro-inflammatory cytokines such as TNF-α, IL-1β, and IL-6 [2].
+    entities: LPS, TLR4, NF-κB, TNF-α, IL-1β, IL-6
+    assumptions: The first high-dose LPS injection activates the innate immune response in the mouse.
+    consequence: Increased production of pro-inflammatory cytokines.
+    probability: 95
+    explanation: LPS is a well-known activator of the innate immune response, and its interaction with TLR4 leads to the production of pro-inflammatory cytokines [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Macrophages and neutrophils are key players in the innate immune response to LPS [3]. After the initial LPS challenge, the immune system may develop a state of endotoxin tolerance, characterized by a reduced response to subsequent LPS exposure [4].
+    entities: macrophages, neutrophils, endotoxin tolerance
+    assumptions: The mouse develops endotoxin tolerance after the first high-dose LPS injection.
+    consequence: Reduced responsiveness of macrophages and neutrophils to the second high-dose LPS injection.
+    probability: 80
+    explanation: Endotoxin tolerance is a well-documented phenomenon in which the immune system becomes less responsive to LPS after an initial exposure [4].
+    novelty: 20
+
+  - step: 3
+    level: organ
+    facts: The spleen and liver are important organs in the clearance of LPS from the bloodstream [5]. The development of endotoxin tolerance may lead to changes in the function of these organs, such as altered clearance rates of LPS [6].
+    entities: spleen, liver, LPS clearance
+    assumptions: The endotoxin tolerance affects the function of the spleen and liver in LPS clearance.
+    consequence: Altered LPS clearance rates in the spleen and liver after the second high-dose LPS injection.
+    probability: 70
+    explanation: Endotoxin tolerance can lead to changes in the function of organs involved in LPS clearance, potentially affecting the clearance rates of LPS after the second injection [6].
+    novelty: 40
+
+conclusion:
+  outcome: The innate immune response upon rechallenge with high-dose LPS after 90 days is characterized by reduced responsiveness of macrophages and neutrophils, and potentially altered LPS clearance rates in the spleen and liver.
+  explanation: The development of endotoxin tolerance after the first high-dose LPS injection leads to a reduced response of the innate immune system to the second LPS challenge, with potential changes in the function of organs involved in LPS clearance.
+
+references:
+  "[1]": "Raetz CR, Whitfield C. 2002. Annual Review of Biochemistry. Lipopolysaccharide endotoxins."
+  "[2]": "Lu YC, Yeh WC, Ohashi PS. 2008. Immunity. LPS/TLR4 signal transduction pathway."
+  "[3]": "Mogensen TH. 2009. Clinical Microbiology Reviews. Pathogen recognition and inflammatory signaling in innate immune defenses."
+  "[4]": "Biswas SK, Lopez-Collazo E. 2009. Immunological Reviews. Endotoxin tolerance: new mechanisms, molecules and clinical significance."
+  "[5]": "Yao Z, Mates JM, Cheplowitz AM, Hammer LP, Maiseyeu A, Phillips GS, Wewers MD, Rajaram MV, Robinson JM, Anderson CL, Ganesan LP. 2016. Journal of Immunology. Blood-borne lipopolysaccharide is rapidly eliminated by liver sinusoidal endothelial cells via high-density lipoprotein."
+  "[6]": "Wang J, Li R, Peng Z, Hu B, Rao X, Li J. 2018. Frontiers in Immunology. Pathogen recognition receptors and endotoxin tolerance."

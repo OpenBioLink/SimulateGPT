@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage III colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage III colon adenocarcinoma on the right side of the colon, with poorly differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: initiation of standard of care treatment
+    probability: 100
+    explanation: Given the general effectiveness of colon adenocarcinoma therapies, the patient undergoes an optimal standard of care treatment plan, which typically includes surgery, chemotherapy, and possibly radiation therapy.
+  - step: 3
+    level: cellular
+    consequence: reduction in tumor size and metastatic potential
+    probability: 85
+    explanation: The standard of care treatment plan targets cancer cells, leading to a reduction in tumor size and a decrease in the potential for further metastasis. However, the poorly differentiated histology may make the tumor more aggressive and resistant to treatment.
+  - step: 4
+    level: molecular
+    consequence: molecular changes in response to treatment
+    probability: 80
+    explanation: As the tumor cells are exposed to chemotherapy and radiation, molecular changes occur within the cells, including DNA damage, cell cycle arrest, and apoptosis. However, the poorly differentiated histology may result in a higher likelihood of treatment resistance and tumor recurrence.
+  - step: 5
+    level: cellular
+    consequence: potential emergence of treatment-resistant cells
+    probability: 60
+    explanation: Due to the poorly differentiated histology and the aggressive nature of the tumor, there is a possibility that some cancer cells may develop resistance to the standard of care treatment, leading to tumor recurrence and progression.
+  - step: 6
+    level: organ
+    consequence: monitoring for tumor recurrence and progression
+    probability: 100
+    explanation: The patient will be closely monitored for signs of tumor recurrence and progression through regular imaging and blood tests, allowing for early detection and intervention if necessary.
+
+conclusion:
+  outcome: 8 months of progression-free survival
+  explanation: Based on the provided examples and considering the patient's age, tumor location, histology, and metastasis status, an estimated progression-free survival of 8 months is expected under an optimal standard of care treatment plan. This estimate takes into account the aggressive nature of the tumor due to its poorly differentiated histology and the potential for treatment resistance.

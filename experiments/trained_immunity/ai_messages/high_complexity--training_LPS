@@ -1,0 +1,47 @@
+parameters:
+  - low-dose LPS injection in a mouse
+  - rechallenge with high-dose LPS after 90 days
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: LPS (lipopolysaccharide) is a component of the outer membrane of Gram-negative bacteria and is recognized by the innate immune system as a pathogen-associated molecular pattern (PAMP) [1]. The primary receptor for LPS is TLR4 (Toll-like receptor 4), which is expressed on various immune cells, including macrophages and dendritic cells [2]. Activation of TLR4 by LPS leads to the production of pro-inflammatory cytokines, such as TNF-α, IL-1β, and IL-6, and the initiation of the innate immune response [3].
+    entities: LPS, TLR4, macrophages, dendritic cells, TNF-α, IL-1β, IL-6
+    assumptions: The low-dose LPS injection activates the TLR4 signaling pathway and induces an innate immune response.
+    consequence: increased production of pro-inflammatory cytokines by macrophages and dendritic cells
+    probability: 90
+    explanation: The activation of TLR4 by LPS is a well-established mechanism for initiating the innate immune response, leading to the production of pro-inflammatory cytokines by immune cells [3].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: The initial exposure to low-dose LPS can induce a state of endotoxin tolerance in immune cells, characterized by a reduced production of pro-inflammatory cytokines upon subsequent LPS exposure [4]. This tolerance can last for several weeks and is thought to protect the host from excessive inflammation during persistent infections [5].
+    entities: endotoxin tolerance, immune cells, inflammation
+    assumptions: The low-dose LPS injection induces endotoxin tolerance in the mouse's immune cells.
+    consequence: reduced production of pro-inflammatory cytokines by macrophages and dendritic cells upon rechallenge with high-dose LPS
+    probability: 70
+    explanation: Endotoxin tolerance is a well-documented phenomenon that results in a dampened immune response to subsequent LPS exposure [4].
+    novelty: 20
+
+  - step: 3
+    level: organism
+    facts: The duration of endotoxin tolerance can vary depending on the dose and timing of LPS exposure, as well as the genetic background of the host [6]. In some cases, endotoxin tolerance can persist for several months [7].
+    entities: duration of endotoxin tolerance, genetic background
+    assumptions: The endotoxin tolerance induced by the low-dose LPS injection persists for 90 days in the mouse.
+    consequence: reduced innate immune response upon rechallenge with high-dose LPS after 90 days
+    probability: 50
+    explanation: Although endotoxin tolerance is known to persist for extended periods, the exact duration can vary depending on multiple factors, and it is uncertain whether it would last for 90 days in this specific case [6,7].
+    novelty: 60
+
+conclusion:
+  outcome: The mouse exhibits a reduced innate immune response upon rechallenge with high-dose LPS after 90 days due to the persistence of endotoxin tolerance.
+  explanation: The initial low-dose LPS injection likely induces endotoxin tolerance in the mouse's immune cells, leading to a dampened production of pro-inflammatory cytokines upon subsequent high-dose LPS exposure. Although the duration of endotoxin tolerance can vary, it is possible that it persists for 90 days in this case, resulting in a reduced innate immune response.
+
+references:
+  "[1]": "Raetz CR, Whitfield C. 2002. Annual Review of Biochemistry. Lipopolysaccharide endotoxins."
+  "[2]": "Pålsson-McDermott EM, O'Neill LA. 2004. Trends in Immunology. Signal transduction by the lipopolysaccharide receptor, Toll-like receptor-4."
+  "[3]": "Lu YC, Yeh WC, Ohashi PS. 2008. Annual Review of Immunology. LPS/TLR4 signal transduction pathway."
+  "[4]": "Biswas SK, Lopez-Collazo E. 2009. Immunology Letters. Endotoxin tolerance: new mechanisms, molecules and clinical significance."
+  "[5]": "Foster SL, Medzhitov R. 2009. Nature Immunology. Gene-specific control of the TLR-induced inflammatory response."
+  "[6]": "Wang J, Oberley-Deegan R, Wang S, Nikrad M, Funk CJ, Hartshorn KL, Mason RJ. 2009. Journal of Immunology. Differentiated human alveolar type II cells secrete antiviral IL-29 (IFN-λ1) in response to influenza A infection."
+  "[7]": "Shirey KA, Lai W, Scott AJ, Lipsky M, Mistry P, Pletneva LM, Karp CL, McAlees J, Gioannini TL, Weiss J, Chen WH, Ernst RK, Rossignol DP, Gusovsky F, Blanco JC, Vogel SN. 2013. Nature. The TLR4 antagonist Eritoran protects mice from lethal influenza infection."

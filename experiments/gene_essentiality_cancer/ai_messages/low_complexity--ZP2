@@ -1,0 +1,22 @@
+simulation:
+  - step: 1
+    level: molecular
+    consequence: ZP2 gene expression in cancer cell lines
+    probability: 50
+    explanation: ZP2 (Zona Pellucida Glycoprotein 2) is a gene that encodes a protein involved in the formation of the zona pellucida, an extracellular matrix surrounding oocytes. Its expression in cancer cell lines is uncertain, as it is primarily associated with reproductive processes.
+
+  - step: 2
+    level: molecular
+    consequence: ZP2 protein function in cancer cell lines
+    probability: 20
+    explanation: If ZP2 is expressed in cancer cell lines, its function may be unrelated to its role in the zona pellucida. However, the probability of ZP2 playing a significant role in cancer cell lines is low, as its primary function is in reproductive processes.
+
+  - step: 3
+    level: cellular
+    consequence: ZP2 essentiality in cancer cell survival
+    probability: 10
+    explanation: If ZP2 has a function in cancer cell lines, it may contribute to cell survival or proliferation. However, the probability of ZP2 being essential for cancer cell survival is low, given its primary role in reproductive processes and the lack of evidence linking it to cancer cell survival.
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the low probability of ZP2 being expressed, having a significant function in cancer cell lines, and being essential for cancer cell survival, it is unlikely that the ZP2 gene is essential in cancer cell lines.

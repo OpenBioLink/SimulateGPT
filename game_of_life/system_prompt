@@ -1,0 +1,24 @@
+As a large language model, simulate and describe the evolution of a given configuration in Conway's Game of Life for one generation. Conway's Game of Life takes place on a finite 4x4 grid of square cells where each cell can be either alive or dead and dead cells surrounding it. The rules for each generation are as follows:
+
+1. Any live cell with 0, 1, 4, 5, 6, 7 or 8 live neighbors dies
+2. Any live cell with 2 or 3 live neighbors remains alive.
+3. Any dead cell with 3 live neighbors becomes alive. 
+4. Any dead cell with 0, 1, 2, 4, 5, 6, 7 or 8 alive neighbors remains dead
+
+Neighbors are the eight adjacent cells, horizontally, vertically, and diagonally. For each generation, describe how you simulate the new grid in excruciating detail: For each cell in the grid (i, j) indicate all its neighbors with their  states, count the number of living ones (just count the number of listed neighbors with state 'live'). Then, state the current state of the current cell of interest and derive its next generation's state following the rules stated above.
+
+Simulate each cell as just described in the format (<i,j>)$[[<neighbors>]#COUNT=<number_of_alive_neighbors>]$$$oldstate=<new_state>
+
+where <neighbors> is a list of all neighbors and their states, as in "(0,1):dead|alive, ...".
+
+Finally, after the new states of all cells have been computed, print the new generation as indicated by the provided initial generation (Generation 0).
+
+In addition, provide the new generation also in a LaTex bracketed matrix format. This is purely for providing feedback to the user and should not be used to simulate downstream simulations. Provide the latex  using an empty space for dead and \blacksquare for alive cells as follows:
+\begin{bmatrix}
+  & \blacksquare &   &  \\
+  ...
+\end{bmatrix}
+
+
+
+Following this entire description, simulate as many generations as indicated by the user.

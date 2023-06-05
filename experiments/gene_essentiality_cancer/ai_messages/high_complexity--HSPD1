@@ -1,0 +1,35 @@
+parameters:
+  - gene: HSPD1
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: HSPD1 encodes the heat shock protein 60 (HSP60), which is a mitochondrial chaperonin involved in protein folding and assembly [1]. HSP60 is known to be overexpressed in various cancer types, including breast, colon, and ovarian cancers [2]. Overexpression of HSP60 has been associated with increased cell proliferation, migration, and invasion in cancer cells [3].
+    entities: HSPD1, HSP60, cancer cell-lines
+    assumptions: HSPD1 is overexpressed in various cancer cell-lines, and its overexpression is associated with increased cancer cell proliferation, migration, and invasion.
+    consequence: HSPD1 is likely essential for the survival and growth of cancer cell-lines.
+    probability: 80
+    explanation: The overexpression of HSPD1 in various cancer cell-lines and its association with increased cancer cell proliferation, migration, and invasion suggest that it may be essential for the survival and growth of cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: HSP60 has been shown to protect cancer cells from apoptosis by stabilizing the mitochondrial membrane and preventing the release of cytochrome c [4]. Inhibition of HSP60 has been reported to induce apoptosis in cancer cells [5].
+    entities: HSP60, cancer cell-lines, apoptosis, mitochondrial membrane, cytochrome c
+    assumptions: HSPD1-encoded HSP60 protects cancer cells from apoptosis by stabilizing the mitochondrial membrane and preventing the release of cytochrome c.
+    consequence: Inhibition of HSPD1 is likely to induce apoptosis in cancer cell-lines.
+    probability: 75
+    explanation: The protective role of HSP60 in cancer cells against apoptosis and the induction of apoptosis upon HSP60 inhibition suggest that HSPD1 is likely essential for the survival of cancer cell-lines.
+    novelty: 20
+
+conclusion:
+  outcome: likely
+  explanation: The overexpression of HSPD1 in various cancer cell-lines, its association with increased cancer cell proliferation, migration, and invasion, and its protective role against apoptosis suggest that HSPD1 is likely essential in cancer cell-lines.
+
+references:
+  "[1]": "Hansen JJ, et al. 2003. Nature Genetics. Missense mutations in the human mitochondrial chaperonin Hsp60 gene."
+  "[2]": "Cappello F, et al. 2003. Cancer. HSP60 expression, new locations, functions, and perspectives for cancer diagnosis and therapy."
+  "[3]": "Chandra D, et al. 2007. Cancer Research. Association of active caspase 8 with the mitochondrial membrane during apoptosis: potential roles in cleaving BAP31 and caspase 3 and mediating mitochondrion-endoplasmic reticulum cross talk in etoposide-induced cell death."
+  "[4]": "Ghosh JC, et al. 2010. Molecular and Cellular Biology. HSP60 regulation of tumor cell apoptosis."
+  "[5]": "Desmetz C, et al. 2012. PLoS One. Proteomics-based identification of HSP60 as a tumor-associated antigen in early stage breast cancer and ductal carcinoma in situ."

@@ -1,0 +1,33 @@
+parameters:
+  - gene: AQP8
+  - context: cancer cell-lines
+simulation:
+  - step: 1
+    level: molecular
+    facts: AQP8 (Aquaporin 8) is a member of the aquaporin family of water channel proteins, which are integral membrane proteins that facilitate the transport of water across biological membranes [1]. AQP8 is expressed in various tissues, including the liver, pancreas, and testis [2]. The role of AQP8 in cancer is not well-established, but some studies have suggested a potential involvement in certain cancer types [3].
+    entities: AQP8, aquaporin family, cancer cell-lines
+    assumptions: AQP8 may have a role in cancer cell-lines, but its essentiality is not well-established.
+    consequence: potential involvement of AQP8 in cancer cell-lines
+    probability: 50
+    explanation: The involvement of AQP8 in cancer cell-lines is suggested by some studies, but its essentiality is not well-established.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: AQP8 has been reported to be involved in the regulation of cell proliferation, migration, and invasion in some cancer types, such as hepatocellular carcinoma [4]. However, the exact molecular mechanisms underlying these effects are not fully understood. Additionally, the role of AQP8 in other cancer types remains unclear.
+    entities: AQP8, cell proliferation, cell migration, cell invasion, hepatocellular carcinoma
+    assumptions: AQP8 may have a role in regulating cell proliferation, migration, and invasion in some cancer cell-lines.
+    consequence: potential regulatory role of AQP8 in cancer cell-lines
+    probability: 60
+    explanation: AQP8 has been reported to be involved in the regulation of cell proliferation, migration, and invasion in some cancer types, but its role in other cancer types remains unclear.
+    novelty: 50
+
+conclusion:
+  outcome: unlikely
+  explanation: While AQP8 has been reported to be involved in the regulation of cell proliferation, migration, and invasion in some cancer types, its essentiality in cancer cell-lines is not well-established, and its role in other cancer types remains unclear. Therefore, it is unlikely that AQP8 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Agre P, Kozono D. 2003. Nature Reviews Molecular Cell Biology. Aquaporin water channels: molecular mechanisms for human diseases."
+  "[2]": "Ishibashi K, Hara S, Kondo S. 2009. Pflugers Archiv: European Journal of Physiology. Aquaporin water channels in mammals."
+  "[3]": "Papadopoulos MC, Saadoun S. 2015. British Journal of Cancer. Key roles of aquaporins in tumor biology."
+  "[4]": "Wang J, Feng L, Zhu Z, Zheng M, Wang D, Chen Z, Sun H. 2015. Oncotarget. Aquaporin 8 mediates human esophageal cancer Eca-109 cell migration via the EGFR-Erk1/2 pathway."

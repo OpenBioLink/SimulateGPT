@@ -1,0 +1,55 @@
+parameters:
+  - glioblastoma diagnosis
+  - genetic alterations:
+    - PTEN: mutations found
+    - MGMT methylation status: medium
+    - EGFR: no mutations found
+    - TP53: no mutations found
+    - PIK3CA: no mutations found
+    - NF1: no mutations found
+    - MUC16: no mutations found
+    - RB1: no mutations found
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: PTEN is a tumor suppressor gene that negatively regulates the PI3K/AKT/mTOR pathway, which is involved in cell growth, survival, and metabolism [1]. MGMT is a DNA repair enzyme that removes alkyl groups from the O6 position of guanine, and its methylation status can affect the response to alkylating agents like temozolomide [2]. EGFR, TP53, PIK3CA, NF1, MUC16, and RB1 are other genes that can be mutated in glioblastoma, but they are not mutated in this patient [3].
+    entities: PTEN, MGMT, EGFR, TP53, PIK3CA, NF1, MUC16, RB1, PI3K/AKT/mTOR pathway
+    assumptions: The patient's glioblastoma has PTEN mutations and medium MGMT methylation status, which may affect the tumor's response to treatment.
+    consequence: decreased PTEN function, altered MGMT methylation status
+    probability: 100
+    explanation: The presence of PTEN mutations and medium MGMT methylation status in the patient's glioblastoma will likely lead to decreased PTEN function and altered MGMT methylation status.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Loss of PTEN function can lead to increased activation of the PI3K/AKT/mTOR pathway, promoting cell growth, survival, and metabolism [1]. Medium MGMT methylation status may result in a partial response to alkylating agents like temozolomide [2].
+    entities: PTEN, MGMT, PI3K/AKT/mTOR pathway, temozolomide
+    assumptions: The decreased PTEN function and altered MGMT methylation status will affect the cellular processes in the glioblastoma.
+    consequence: increased PI3K/AKT/mTOR pathway activation, partial response to temozolomide
+    probability: 90
+    explanation: The decreased PTEN function may lead to increased activation of the PI3K/AKT/mTOR pathway, promoting cell growth and survival, while the medium MGMT methylation status may result in a partial response to temozolomide.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Glioblastoma is an aggressive brain tumor with a poor prognosis [4]. Standard of care includes surgery, radiation, and chemotherapy with temozolomide [5]. Genotype-informed treatment may involve targeted therapies for specific genetic alterations [6].
+    entities: glioblastoma, surgery, radiation, chemotherapy, temozolomide, targeted therapies
+    assumptions: The patient will receive standard of care with genotype-informed treatment, which may be influenced by the genetic alterations in their glioblastoma.
+    consequence: potential benefit from targeted therapies, partial response to temozolomide
+    probability: 70
+    explanation: The patient may benefit from targeted therapies due to the genetic alterations in their glioblastoma, but the medium MGMT methylation status may result in a partial response to temozolomide.
+    novelty: 0
+
+conclusion:
+  outcome: increased survival, +3 months
+  explanation: The patient's glioblastoma has genetic alterations that may allow for genotype-informed treatment, potentially increasing their survival by a few months. However, the medium MGMT methylation status may result in a partial response to temozolomide, limiting the overall survival benefit.
+
+references:
+  "[1]": "Song MS, Salmena L, Pandolfi PP. 2012. Nature Reviews Molecular Cell Biology. The functions and regulation of the PTEN tumour suppressor."
+  "[2]": "Hegi ME, Diserens AC, Gorlia T, et al. 2005. New England Journal of Medicine. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[3]": "Cancer Genome Atlas Research Network. 2008. Nature. Comprehensive genomic characterization defines human glioblastoma genes and core pathways."
+  "[4]": "Ostrom QT, Gittleman H, Liao P, et al. 2014. Neuro-Oncology. CBTRUS statistical report: primary brain and central nervous system tumors diagnosed in the United States in 2007-2011."
+  "[5]": "Stupp R, Mason WP, van den Bent MJ, et al. 2005. New England Journal of Medicine. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."
+  "[6]": "Wen PY, Reardon DA. 2016. Journal of Clinical Oncology. Neuro-oncology in 2015: Progress in glioma diagnosis, classification and treatment."

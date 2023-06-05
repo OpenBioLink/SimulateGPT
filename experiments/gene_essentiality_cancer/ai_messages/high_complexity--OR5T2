@@ -1,0 +1,33 @@
+parameters:
+  - gene: OR5T2
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: OR5T2 is an olfactory receptor gene, which is part of the G protein-coupled receptor (GPCR) family. Olfactory receptors are mainly expressed in the olfactory epithelium and are involved in the detection of odorants [1]. Some olfactory receptors have been found to be expressed in other tissues and have been implicated in various physiological and pathological processes, including cancer [2].
+    entities: OR5T2, GPCR, olfactory receptor, olfactory epithelium
+    assumptions: OR5T2 expression may be present in cancer cell-lines, but its role in cancer is not well-established.
+    consequence: OR5T2 expression in cancer cell-lines
+    probability: 50
+    explanation: Given that some olfactory receptors are expressed in other tissues and have been implicated in cancer, it is possible that OR5T2 is expressed in cancer cell-lines. However, the probability is not high due to the lack of direct evidence.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are critical for the survival and proliferation of cells. In cancer cell-lines, essential genes are often involved in processes such as cell cycle regulation, DNA replication, and cell signaling pathways [3].
+    entities: essential genes, cell cycle regulation, DNA replication, cell signaling pathways
+    assumptions: If OR5T2 is essential in cancer cell-lines, it should be involved in critical cellular processes.
+    consequence: OR5T2 involvement in critical cellular processes in cancer cell-lines
+    probability: 20
+    explanation: The primary function of OR5T2 is related to olfactory signaling, which is not directly involved in critical cellular processes in cancer cell-lines. Therefore, the probability of OR5T2 being essential in cancer cell-lines is low.
+    novelty: 0
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the known functions of OR5T2 as an olfactory receptor and the lack of evidence for its involvement in critical cellular processes in cancer cell-lines, it is unlikely that OR5T2 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Buck L, Axel R. 1991. Cell. A novel multigene family may encode odorant receptors: a molecular basis for odor recognition."
+  "[2]": "Flegel C, Manteniotis S, Osthold S, Hatt H, Gisselmann G. 2013. Frontiers in Physiology. Expression profile of ectopic olfactory receptors determined by deep sequencing."
+  "[3]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. Science. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."

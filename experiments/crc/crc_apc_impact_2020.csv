@@ -1,0 +1,19 @@
+,STAGE_AT_DIAGNOSIS,CANCER_TYPE_DETAILED,TUMOR_LOCATION,DIFFERENTIATION,CARCINOMATOSIS,AGE_AT_MET,PFS_MONTHS,PFS_MONTHS_STD,COUNT
+0,II,Colon Adenocarcinoma,Left,Moderately differentiated,No,71.0,13.149999999999999,8.59581293421396,6
+1,II,Rectal Adenocarcinoma,Rectum,Moderately differentiated,No,67.8,7.0,4.245585943070756,5
+3,III,Colon Adenocarcinoma,Left,Moderately differentiated,Yes,71.75,13.200000000000001,4.2868014494103495,4
+5,III,Colon Adenocarcinoma,Rectum,Moderately differentiated,No,59.0,6.3999999999999995,3.7142742673816285,4
+6,III,Colon Adenocarcinoma,Right,Moderately differentiated,No,70.625,9.3,5.119413331344018,8
+8,III,Colon Adenocarcinoma,Right,Poorly differentiated,No,56.75,4.6,14.194012822313498,4
+9,III,Rectal Adenocarcinoma,Rectum,Moderately differentiated,No,62.35,7.7,4.781477419771997,20
+10,IV,Colon Adenocarcinoma,Left,Moderately differentiated,No,56.43037974683544,8.1,5.756503455662434,79
+11,IV,Colon Adenocarcinoma,Left,Moderately differentiated,Yes,56.93939393939394,8.3,7.831916780363888,33
+12,IV,Colon Adenocarcinoma,Left,Poorly differentiated,No,55.05,6.449999999999999,3.7625404351735265,20
+13,IV,Colon Adenocarcinoma,Left,Poorly differentiated,Yes,49.5,6.550000000000001,7.071255299814278,12
+14,IV,Colon Adenocarcinoma,Rectum,Moderately differentiated,No,58.30769230769231,9.1,4.407671051991528,13
+15,IV,Colon Adenocarcinoma,Right,Moderately differentiated,No,59.541666666666664,7.85,5.238719728823361,48
+16,IV,Colon Adenocarcinoma,Right,Moderately differentiated,Yes,64.45,7.95,3.970430176879287,20
+17,IV,Colon Adenocarcinoma,Right,Poorly differentiated,No,52.88235294117647,7.5,8.038770940591238,17
+18,IV,Colon Adenocarcinoma,Right,Poorly differentiated,Yes,57.333333333333336,6.6,6.016839115447285,18
+19,IV,Rectal Adenocarcinoma,Rectum,Moderately differentiated,No,56.371428571428574,8.2,5.928608889220516,35
+20,IV,Rectal Adenocarcinoma,Rectum,Moderately differentiated,Yes,55.36363636363637,6.2,3.0001515113255683,11

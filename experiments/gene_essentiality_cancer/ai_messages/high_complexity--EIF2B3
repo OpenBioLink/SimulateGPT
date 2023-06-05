@@ -1,0 +1,35 @@
+parameters:
+  - gene: EIF2B3
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: EIF2B3 encodes a subunit of the eukaryotic translation initiation factor 2B (eIF2B) complex, which is involved in protein synthesis regulation [1]. eIF2B is a guanine nucleotide exchange factor (GEF) that catalyzes the exchange of GDP for GTP on eIF2, a key step in translation initiation [2]. Dysregulation of protein synthesis has been implicated in cancer development and progression [3].
+    entities: EIF2B3, eIF2B, eIF2, protein synthesis, cancer
+    assumptions: EIF2B3 plays a role in protein synthesis regulation through its involvement in the eIF2B complex. Dysregulation of protein synthesis may contribute to cancer development and progression.
+    consequence: altered EIF2B3 expression or function in cancer cell-lines
+    probability: 60
+    explanation: Given the role of EIF2B3 in protein synthesis regulation and the implication of dysregulated protein synthesis in cancer, it is plausible that EIF2B3 expression or function could be altered in cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival or reproduction of an organism or cell [4]. In cancer cell-lines, essential genes may be involved in processes such as cell proliferation, survival, and metabolism [5].
+    entities: essential genes, cancer cell-lines, cell proliferation, survival, metabolism
+    assumptions: Altered EIF2B3 expression or function in cancer cell-lines may affect the essentiality of the gene in these cells.
+    consequence: EIF2B3 is essential in cancer cell-lines
+    probability: 50
+    explanation: The involvement of EIF2B3 in protein synthesis regulation, a process that can be dysregulated in cancer, suggests that it may be essential in cancer cell-lines. However, without direct evidence of its essentiality in these cells, the probability remains uncertain.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: While EIF2B3 plays a role in protein synthesis regulation, which can be dysregulated in cancer, there is insufficient evidence to confidently conclude that it is likely essential in cancer cell-lines. The probability of EIF2B3 being essential in cancer cell-lines remains uncertain, and thus, the outcome is "unlikely."
+
+references:
+  "[1]": "Gomez E, Mohammad SS, Pavitt GD. 2002. Molecular Biology of the Cell. eIF2B, a mediator of general and gene-specific translational control."
+  "[2]": "Pavitt GD, Ramaiah KVA, Kimball SR, Hinnebusch AG. 1998. Molecular and Cellular Biology. eIF2 independently binds two distinct eIF2B subcomplexes that catalyze and regulate guanine-nucleotide exchange."
+  "[3]": "Silvera D, Formenti SC, Schneider RJ. 2010. Nature Reviews Cancer. The role of protein synthesis regulation in cancer."
+  "[4]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. Science. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."
+  "[5]": "Kaelin WG Jr. 2005. New England Journal of Medicine. The concept of synthetic lethality in the context of anticancer therapy."

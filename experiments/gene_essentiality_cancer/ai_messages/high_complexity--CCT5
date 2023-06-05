@@ -1,0 +1,36 @@
+parameters:
+  - gene: CCT5
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: CCT5 encodes a subunit of the chaperonin-containing T-complex (CCT) which is involved in the folding of actin and tubulin, essential components of the cytoskeleton [1]. CCT complex is known to be involved in the folding of various proteins, including those involved in cell division and signal transduction [2]. Some studies have reported the overexpression of CCT subunits in various cancer types [3].
+    entities: CCT5, CCT complex, actin, tubulin, cytoskeleton, cell division, signal transduction
+    assumptions: Given the involvement of CCT5 in the folding of actin and tubulin, and the role of the CCT complex in cell division and signal transduction, it is possible that CCT5 may play a role in cancer cell-lines.
+    consequence: increased CCT5 expression in cancer cell-lines
+    probability: 70
+    explanation: The involvement of CCT5 in the folding of essential cytoskeletal proteins and its association with cell division and signal transduction suggests that it may be important in cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit increased cell division and altered signal transduction pathways [4]. The cytoskeleton plays a crucial role in cell division, migration, and invasion, which are key processes in cancer progression [5]. CCT complex has been reported to be essential for the survival of cancer cells [6].
+    entities: cancer cells, cell division, signal transduction, cytoskeleton, cell migration, cell invasion, cancer progression, CCT complex
+    assumptions: Based on the increased expression of CCT5 in cancer cell-lines and its involvement in essential cellular processes, it is reasonable to assume that CCT5 may be essential for cancer cell survival and proliferation.
+    consequence: CCT5 is essential for cancer cell survival and proliferation
+    probability: 65
+    explanation: The increased expression of CCT5 in cancer cell-lines, its role in the folding of essential cytoskeletal proteins, and the importance of the cytoskeleton in cancer cell processes suggest that CCT5 may be essential for cancer cell survival and proliferation.
+    novelty: 20
+
+conclusion:
+  outcome: likely
+  explanation: Based on the simulation, it is likely that CCT5 is essential in cancer cell-lines due to its involvement in the folding of essential cytoskeletal proteins, its association with cell division and signal transduction, and the importance of the cytoskeleton in cancer cell processes.
+
+references:
+  "[1]": "Kubota H, Hynes G, Willison K. 1995. The chaperonin containing t-complex polypeptide 1 (TCP-1). Multisubunit machinery assisting in protein folding and assembly in the eukaryotic cytosol. Eur J Biochem. The eight-subunit chaperonin containing TCP-1."
+  "[2]": "Yokota S, Yanagi H, Yura T, Kubota H. 1999. Cytosolic chaperonin-containing t-complex polypeptide 1 changes the content of a particular subunit species concomitant with substrate binding and folding activities during the cell cycle. Eur J Biochem. Cell cycle-dependent expression of the chaperonin containing TCP-1."
+  "[3]": "Guest ST, Kratche ZR, Bollig-Fischer A, Haddad R, Ethier SP. 2015. Two members of the TRiC chaperonin complex, CCT2 and TCP1 are essential for survival of breast cancer cells and are linked to driving oncogenes. Exp Cell Res. Essentiality of TRiC/CCT subunits in breast cancer cells."
+  "[4]": "Hanahan D, Weinberg RA. 2011. Hallmarks of cancer: the next generation. Cell. The hallmarks of cancer."
+  "[5]": "Fletcher DA, Mullins RD. 2010. Cell mechanics and the cytoskeleton. Nature. The role of the cytoskeleton in cell mechanics."
+  "[6]": "Yam AY, Xia Y, Lin HT, Burlingame A, Gerstein M, Frydman J. 2008. Defining the TRiC/CCT interactome links chaperonin function to stabilization of newly made proteins with complex topologies. Nat Struct Mol Biol. The TRiC/CCT interactome and its role in protein folding."

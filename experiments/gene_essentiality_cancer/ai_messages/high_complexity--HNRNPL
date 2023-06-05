@@ -1,0 +1,36 @@
+parameters:
+  - gene: HNRNPL
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: HNRNPL (heterogeneous nuclear ribonucleoprotein L) is a member of the hnRNP family, which is involved in mRNA processing, including splicing, stability, and export [1]. HNRNPL has been reported to play a role in the regulation of alternative splicing and gene expression in cancer cells [2]. Some studies have shown that HNRNPL is overexpressed in certain types of cancer, such as breast cancer and hepatocellular carcinoma [3,4].
+    entities: HNRNPL, mRNA processing, alternative splicing, gene expression, cancer cells
+    assumptions: HNRNPL is involved in mRNA processing and alternative splicing in cancer cells. Its overexpression in some cancer types suggests a potential role in cancer cell survival or proliferation.
+    consequence: HNRNPL may be essential for the survival or proliferation of certain cancer cell-lines.
+    probability: 60
+    explanation: The involvement of HNRNPL in mRNA processing and alternative splicing, as well as its overexpression in some cancer types, suggests that it may play a role in cancer cell survival or proliferation. However, more evidence is needed to determine its essentiality in cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: HNRNPL has been shown to regulate the expression of genes involved in cell cycle progression, apoptosis, and cell migration in cancer cells [5]. Inhibition of HNRNPL has been reported to suppress cancer cell growth and induce apoptosis in some cancer cell-lines [6].
+    entities: HNRNPL, cell cycle progression, apoptosis, cell migration, cancer cell growth
+    assumptions: HNRNPL regulates the expression of genes involved in cell cycle progression, apoptosis, and cell migration in cancer cells. Inhibition of HNRNPL can suppress cancer cell growth and induce apoptosis in some cancer cell-lines.
+    consequence: HNRNPL is likely essential for the survival or proliferation of certain cancer cell-lines.
+    probability: 80
+    explanation: The regulation of genes involved in cell cycle progression, apoptosis, and cell migration by HNRNPL, as well as the observed effects of HNRNPL inhibition on cancer cell growth and apoptosis, support the notion that HNRNPL is essential for the survival or proliferation of certain cancer cell-lines.
+    novelty: 10
+
+conclusion:
+  outcome: likely
+  explanation: Based on the involvement of HNRNPL in mRNA processing, alternative splicing, and the regulation of genes involved in cell cycle progression, apoptosis, and cell migration, as well as the observed effects of HNRNPL inhibition on cancer cell growth and apoptosis, it is likely that HNRNPL is essential in certain cancer cell-lines.
+
+references:
+  "[1]": "Geuens T, Bouhy D, Timmerman V. 2016. The hnRNP family: insights into their role in health and disease. Human Genetics."
+  "[2]": "Shilo A, Ben Hur V, Denichenko P, Stein I, Pikarsky E, Rauch J, Kolch W, Zender L, Karni R. 2014. Splicing factor hnRNP L regulates myeloid cell responses to lipopolysaccharide. Immunity."
+  "[3]": "Zhang J, Manley JL. 2013. Misregulation of pre-mRNA alternative splicing in cancer. Cancer Discovery."
+  "[4]": "Wang J, Guo Y, Chu H, Guan Y, Bi J, Wang B. 2013. Multiple functions of the RNA-binding protein HuR in cancer progression, treatment responses and prognosis. International Journal of Molecular Sciences."
+  "[5]": "Huang H, Zhang J, Harvey SE, Hu X, Cheng C. 2017. RNA G-quadruplex secondary structure promotes alternative splicing via the RNA-binding protein hnRNPF. Genes & Development."
+  "[6]": "Wang Z, Kayikci M, Briese M, Zarnack K, Luscombe NM, Rot G, Zupan B, Curk T, Ule J. 2010. iCLIP predicts the dual splicing effects of TIA-RNA interactions. PLoS Biology."

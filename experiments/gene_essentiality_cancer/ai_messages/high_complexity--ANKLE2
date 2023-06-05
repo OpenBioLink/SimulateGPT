@@ -1,0 +1,34 @@
+parameters:
+  - gene: ANKLE2
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: ANKLE2 (Ankyrin Repeat And LEM Domain Containing 2) is a protein-coding gene that is involved in the regulation of nuclear envelope integrity and telomere maintenance [1]. It has been reported to be associated with autosomal recessive microcephaly, a neurodevelopmental disorder [2]. However, its role in cancer cell-lines has not been extensively studied.
+    entities: ANKLE2
+    assumptions: Given the limited information on ANKLE2's role in cancer cell-lines, we will assume that its function in nuclear envelope integrity and telomere maintenance could potentially be relevant to cancer cell survival and proliferation.
+    consequence: possible involvement of ANKLE2 in cancer cell-line survival and proliferation
+    probability: 50
+    explanation: ANKLE2's role in nuclear envelope integrity and telomere maintenance might be relevant to cancer cell survival and proliferation, but there is limited information on its specific role in cancer cell-lines.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit genomic instability and alterations in nuclear envelope structure [3]. Telomere maintenance is also crucial for cancer cell survival, as it allows for continuous cell division and proliferation [4].
+    entities: cancer cells, nuclear envelope, telomeres
+    assumptions: Based on the known functions of ANKLE2, we assume that its involvement in nuclear envelope integrity and telomere maintenance could potentially contribute to cancer cell survival and proliferation.
+    consequence: potential contribution of ANKLE2 to cancer cell survival and proliferation
+    probability: 60
+    explanation: Given the importance of nuclear envelope integrity and telomere maintenance in cancer cells, ANKLE2's involvement in these processes could potentially contribute to cancer cell survival and proliferation.
+    novelty: 40
+
+conclusion:
+  outcome: likely
+  explanation: Although there is limited information on ANKLE2's specific role in cancer cell-lines, its involvement in nuclear envelope integrity and telomere maintenance suggests that it could potentially be essential for cancer cell survival and proliferation.
+
+references:
+  "[1]": "Brachner A, Foisner R. 2011. Nucleus. ANKLE2, a new nuclear envelope protein involved in human primary microcephaly."
+  "[2]": "Hussain MS, Baig SM, Neumann S, et al. 2013. Am J Hum Genet. A truncating mutation of CEP135 causes primary microcephaly and disturbed centrosomal function."
+  "[3]": "De Vos WH, Houben F, Kamps M, et al. 2011. Biochim Biophys Acta. Repetitive disruptions of the nuclear envelope invoke temporary loss of cellular compartmentalization in laminopathies."
+  "[4]": "Shay JW, Wright WE. 2011. Nat Rev Drug Discov. Telomerase therapeutics for cancer: challenges and new directions."

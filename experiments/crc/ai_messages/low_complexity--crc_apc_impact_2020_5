@@ -1,0 +1,40 @@
+simulation:
+  - step: 1
+    level: organ
+    consequence: stage III colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage III colon adenocarcinoma at the rectum, with moderately differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: cellular
+    consequence: tumor cell proliferation and invasion
+    probability: 100
+    explanation: The moderately differentiated tumor cells continue to proliferate and invade surrounding tissues, leading to metastasis.
+  - step: 3
+    level: molecular
+    consequence: activation of oncogenic pathways
+    probability: 100
+    explanation: The tumor cells activate oncogenic pathways, such as the Wnt/β-catenin, PI3K/Akt/mTOR, and RAS/RAF/MEK/ERK pathways, which promote cell proliferation, survival, and migration.
+  - step: 4
+    level: organism
+    consequence: initiation of optimal standard of care treatment
+    probability: 100
+    explanation: The patient receives an optimal standard of care treatment plan, which may include surgery, chemotherapy, and targeted therapy, depending on the specific molecular characteristics of the tumor.
+  - step: 5
+    level: molecular
+    consequence: inhibition of oncogenic pathways
+    probability: 80
+    explanation: The standard of care treatment plan targets and inhibits the oncogenic pathways, leading to reduced tumor cell proliferation, survival, and migration.
+  - step: 6
+    level: cellular
+    consequence: tumor cell death and reduced metastasis
+    probability: 80
+    explanation: As a result of the inhibition of oncogenic pathways, tumor cells undergo apoptosis, and the rate of metastasis is reduced.
+  - step: 7
+    level: organ
+    consequence: tumor size reduction and stabilization
+    probability: 80
+    explanation: The combined effects of tumor cell death and reduced metastasis lead to a reduction in tumor size and stabilization of the disease.
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Based on the provided examples and the patient's characteristics, the expected progression-free survival under an optimal standard of care treatment plan is estimated to be around 10 months. This estimate takes into account the patient's age, tumor location, differentiation histology, and absence of carcinomatosis, as well as the general effectiveness of colon adenocarcinoma therapies.

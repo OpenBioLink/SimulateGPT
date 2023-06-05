@@ -1,0 +1,74 @@
+parameters:
+  - age: 56
+  - cancer_stage: IV
+  - cancer_type: rectal adenocarcinoma
+  - tumor_differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The Wnt signaling pathway is often dysregulated in colorectal cancer, leading to increased cell proliferation and tumor growth [1]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [2]. 
+    entities: Wnt signaling pathway, cell proliferation, tumor growth
+    assumptions: The patient's tumor has moderately differentiated histology, which may result in a better response to treatment compared to poorly differentiated tumors.
+    consequence: decreased tumor growth rate
+    probability: 70
+    explanation: Moderately differentiated tumors are more likely to respond to treatment, leading to a decreased tumor growth rate.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Optimal standard of care treatment for stage IV rectal adenocarcinoma typically includes chemotherapy, radiation therapy, and targeted therapy [3]. These treatments can induce cell death (apoptosis) in cancer cells and reduce tumor size [4].
+    entities: chemotherapy, radiation therapy, targeted therapy, apoptosis, tumor size
+    assumptions: The patient receives optimal standard of care treatment, which effectively induces apoptosis in cancer cells.
+    consequence: reduced tumor size
+    probability: 80
+    explanation: The combination of chemotherapy, radiation therapy, and targeted therapy can effectively reduce tumor size by inducing apoptosis in cancer cells.
+    novelty: 10
+
+  - step: 3
+    level: tissue
+    facts: Tumor microenvironment plays a crucial role in cancer progression and response to therapy [5]. Inflammatory cells and cytokines can promote or inhibit tumor growth [6].
+    entities: tumor microenvironment, inflammatory cells, cytokines
+    assumptions: The patient's tumor microenvironment is influenced by the treatment, leading to changes in inflammatory cells and cytokines.
+    consequence: altered tumor microenvironment
+    probability: 60
+    explanation: Treatment can impact the tumor microenvironment, leading to changes in inflammatory cells and cytokines that may affect tumor growth.
+    novelty: 40
+
+  - step: 4
+    level: organ
+    facts: Metastasis is a major factor contributing to cancer-related deaths [7]. Stage IV rectal adenocarcinoma indicates the presence of distant metastases [8].
+    entities: metastasis, distant metastases
+    assumptions: The patient's metastatic lesions are also targeted by the optimal standard of care treatment.
+    consequence: reduced metastatic burden
+    probability: 50
+    explanation: The treatment may effectively target metastatic lesions, reducing the overall metastatic burden.
+    novelty: 30
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival is influenced by factors such as age, cancer stage, tumor differentiation, and treatment response [9].
+    entities: progression-free survival, age, cancer stage, tumor differentiation, treatment response
+    assumptions: The patient's progression-free survival is influenced by their age, cancer stage, tumor differentiation, and response to treatment.
+    consequence: increased progression-free survival
+    probability: 60
+    explanation: Given the patient's moderately differentiated tumor and optimal standard of care treatment, their progression-free survival may be increased compared to patients with poorly differentiated tumors.
+    novelty: 20
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Based on the patient's age, cancer stage, tumor differentiation, and optimal standard of care treatment, the expected progression-free survival is estimated to be 10 months. This is higher than the 2 months observed in Example 1, which had a poorly differentiated tumor, but lower than the 14 months observed in Example 2, which had a stage III tumor.
+
+references:
+  "[1]": "Clevers H, Nusse R. 2012. Cell. Wnt/β-Catenin Signaling and Disease."
+  "[2]": "Compton CC. 2006. J Clin Oncol. Optimal Pathologic Staging: Defining Stage II Disease."
+  "[3]": "National Comprehensive Cancer Network. 2021. NCCN Clinical Practice Guidelines in Oncology: Rectal Cancer."
+  "[4]": "Galluzzi L, et al. 2018. Nat Rev Drug Discov. Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018."
+  "[5]": "Quail DF, Joyce JA. 2013. Nat Med. Microenvironmental regulation of tumor progression and metastasis."
+  "[6]": "Mantovani A, et al. 2008. Nature. Cancer-related inflammation."
+  "[7]": "Valastyan S, Weinberg RA. 2011. Cell. Tumor metastasis: molecular insights and evolving paradigms."
+  "[8]": "American Joint Committee on Cancer. 2017. AJCC Cancer Staging Manual, 8th Edition."
+  "[9]": "Gill S, et al. 2004. J Clin Oncol. Pooled analysis of fluorouracil-based adjuvant therapy for stage II and III colon cancer: who benefits and by how much?"

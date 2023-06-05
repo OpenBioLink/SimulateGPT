@@ -1,0 +1,40 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage IV colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage IV colon adenocarcinoma on the left side of the colon, with poorly differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: metastasis to distant organs
+    probability: 100
+    explanation: Stage IV colon adenocarcinoma indicates that the cancer has spread to distant organs, such as the liver, lungs, or peritoneum.
+  - step: 3
+    level: cellular
+    consequence: poorly differentiated tumor cells
+    probability: 100
+    explanation: The tumor exhibits poorly differentiated differentiation histology, which means that the cancer cells are more aggressive and less responsive to treatment compared to moderately differentiated cells.
+  - step: 4
+    level: molecular
+    consequence: increased genetic instability
+    probability: 80
+    explanation: Poorly differentiated tumors often have increased genetic instability, leading to a higher likelihood of acquiring resistance to therapy and promoting tumor progression.
+  - step: 5
+    level: organism
+    consequence: initiation of optimal standard of care treatment
+    probability: 100
+    explanation: The patient receives the optimal standard of care treatment for stage IV colon adenocarcinoma, which may include chemotherapy, targeted therapy, immunotherapy, and/or surgery.
+  - step: 6
+    level: cellular
+    consequence: partial tumor response to treatment
+    probability: 70
+    explanation: Given the general effectiveness of colon adenocarcinoma therapies and the patient's age, there is a high probability that the tumor will partially respond to the treatment, leading to a temporary halt in tumor progression.
+  - step: 7
+    level: molecular
+    consequence: development of treatment resistance
+    probability: 60
+    explanation: Due to the poorly differentiated nature of the tumor and increased genetic instability, there is a significant chance that the tumor will develop resistance to the treatment over time, leading to disease progression.
+
+conclusion:
+  outcome: 6 months of progression-free survival
+  explanation: Considering the patient's age, stage IV colon adenocarcinoma diagnosis, poorly differentiated differentiation histology, and the general effectiveness of colon adenocarcinoma therapies, the expected progression-free survival under an optimal standard of care treatment plan is estimated to be around 6 months. This estimate is based on the provided examples and the assumption that the patient receives the best possible care.

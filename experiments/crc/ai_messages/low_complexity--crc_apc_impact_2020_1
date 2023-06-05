@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: initiation of standard of care treatment
+    probability: 100
+    explanation: The 68-year-old patient with stage II rectal adenocarcinoma will receive the optimal standard of care treatment, which typically includes surgery, radiation therapy, and chemotherapy.
+  - step: 2
+    level: organ
+    consequence: tumor resection
+    probability: 95
+    explanation: The patient undergoes surgery to remove the primary tumor in the rectum. This step has a high probability of success, as stage II tumors are generally localized and have not yet invaded nearby organs.
+  - step: 3
+    level: cellular
+    consequence: reduction of metastatic cells
+    probability: 80
+    explanation: Radiation therapy and chemotherapy are administered to target and kill any remaining cancer cells, including metastatic cells. The moderately differentiated histology of the tumor suggests a moderate response to treatment.
+  - step: 4
+    level: molecular
+    consequence: DNA damage and apoptosis in cancer cells
+    probability: 75
+    explanation: Radiation therapy and chemotherapy cause DNA damage in cancer cells, leading to cell cycle arrest and apoptosis. The moderately differentiated histology of the tumor indicates that the cancer cells may be more responsive to treatment than poorly differentiated cells.
+  - step: 5
+    level: cellular
+    consequence: immune system activation
+    probability: 70
+    explanation: The dying cancer cells release antigens, which activate the patient's immune system to recognize and eliminate any remaining cancer cells.
+  - step: 6
+    level: organism
+    consequence: monitoring for recurrence
+    probability: 100
+    explanation: The patient will be closely monitored for any signs of tumor recurrence or new metastases during follow-up appointments.
+
+conclusion:
+  outcome: 18 months of progression-free survival
+  explanation: Based on the patient's age, stage II rectal adenocarcinoma diagnosis, moderately differentiated histology, and absence of carcinomatosis, the patient is expected to have a better progression-free survival than the provided examples. Under the optimal standard of care treatment plan, the patient is likely to experience 18 months of progression-free survival. This estimate is based on the effectiveness of the treatment plan and the patient's tumor characteristics, which suggest a moderate response to therapy.

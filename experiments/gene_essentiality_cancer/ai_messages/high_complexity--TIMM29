@@ -1,0 +1,36 @@
+parameters:
+  - gene: TIMM29
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: TIMM29 (translocase of inner mitochondrial membrane 29) is a protein-coding gene that is involved in the import of proteins into the mitochondrial inner membrane [1]. It is a subunit of the TIM23 complex, which is responsible for the translocation of preproteins across the inner mitochondrial membrane [2]. The mitochondrial function is crucial for cellular energy production and apoptosis regulation, which are essential processes in cancer cells [3].
+    entities: TIMM29, TIM23 complex, mitochondrial inner membrane, preproteins, cancer cells
+    assumptions: TIMM29 plays a role in mitochondrial protein import, which is important for cellular energy production and apoptosis regulation in cancer cells.
+    consequence: disruption of TIMM29 function may affect cancer cell survival and proliferation
+    probability: 70
+    explanation: Given the role of TIMM29 in mitochondrial protein import and the importance of mitochondrial function in cancer cells, it is plausible that disrupting TIMM29 function could affect cancer cell survival and proliferation.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit increased energy demands and altered metabolism compared to normal cells [4]. Mitochondrial dysfunction can lead to decreased energy production and increased reactive oxygen species (ROS) generation, which can induce cell death [5]. Additionally, the mitochondrial pathway of apoptosis is a key mechanism for the elimination of cancer cells [6].
+    entities: cancer cells, mitochondrial dysfunction, energy production, ROS, apoptosis
+    assumptions: Disruption of TIMM29 function may lead to mitochondrial dysfunction, which could affect energy production, ROS generation, and apoptosis in cancer cells.
+    consequence: cancer cells with disrupted TIMM29 function may exhibit decreased survival and proliferation
+    probability: 60
+    explanation: If TIMM29 disruption leads to mitochondrial dysfunction, it could negatively impact cancer cell survival and proliferation due to decreased energy production, increased ROS generation, and enhanced apoptosis.
+    novelty: 0
+
+conclusion:
+  outcome: likely
+  explanation: Based on the role of TIMM29 in mitochondrial protein import and the importance of mitochondrial function in cancer cells, it is likely that TIMM29 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Mick et al. 2012. J Biol Chem. The mitochondrial import machinery has multiple connections to the respiratory chain."
+  "[2]": "Chacinska et al. 2009. Nat Rev Mol Cell Biol. Importing mitochondrial proteins: machineries and mechanisms."
+  "[3]": "Zong et al. 2016. Nat Rev Cancer. Mitochondria in cancer."
+  "[4]": "Hanahan et al. 2011. Cell. Hallmarks of cancer: the next generation."
+  "[5]": "Wallace et al. 2010. Nat Rev Cancer. Mitochondria and cancer: Warburg addressed."
+  "[6]": "Green et al. 2004. Science. The pathophysiology of mitochondrial cell death."

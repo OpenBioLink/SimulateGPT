@@ -1,0 +1,42 @@
+parameters:
+  - glioblastoma diagnosis
+  - PIK3CA mutations
+  - MGMT methylation status: high
+  - EGFR: no mutations
+  - TP53: no mutations
+  - NF1: no mutations
+  - MUC16: no mutations
+  - PTEN: no mutations
+  - RB1: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: PIK3CA mutations are associated with increased activation of the PI3K/AKT/mTOR signaling pathway, leading to increased cell proliferation and survival [1]. High MGMT methylation status is associated with improved response to temozolomide, a standard chemotherapy drug for glioblastoma [2].
+    entities: PIK3CA, MGMT, PI3K/AKT/mTOR pathway, temozolomide
+    assumptions: The patient receives standard of care treatment, including temozolomide, and the genotype-informed treatment takes into account the PIK3CA mutations and MGMT methylation status.
+    consequence: increased sensitivity to temozolomide, increased cell proliferation and survival due to PIK3CA mutations
+    probability: 80
+    explanation: The high MGMT methylation status increases the patient's sensitivity to temozolomide, while the PIK3CA mutations may promote tumor growth and survival.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Glioblastoma cells with PIK3CA mutations may be more resistant to apoptosis and have increased invasive potential [3]. Temozolomide treatment can induce apoptosis in glioblastoma cells, especially in those with high MGMT methylation status [4].
+    entities: glioblastoma cells, apoptosis, invasive potential, temozolomide
+    assumptions: The patient's glioblastoma cells have PIK3CA mutations and high MGMT methylation status, and they receive temozolomide treatment.
+    consequence: increased apoptosis in glioblastoma cells due to temozolomide, increased invasive potential due to PIK3CA mutations
+    probability: 70
+    explanation: Temozolomide treatment may induce apoptosis in glioblastoma cells with high MGMT methylation status, while PIK3CA mutations may increase the invasive potential of the tumor.
+    novelty: 30
+
+conclusion:
+  outcome: increased survival, +3 months
+  explanation: The patient's high MGMT methylation status suggests an increased sensitivity to temozolomide, which may improve their response to treatment and extend their survival. However, the presence of PIK3CA mutations may promote tumor growth and invasive potential, which could counteract some of the benefits of temozolomide treatment. Overall, the patient's survival is more likely to be increased relative to the median overall glioblastoma survival (15 months) by an estimated 3 months.
+
+references:
+  "[1]": "Samuels Y, et al. 2004. Science. Mutant PIK3CA promotes cell growth and invasion of human cancer cells."
+  "[2]": "Hegi ME, et al. 2005. N Engl J Med. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[3]": "Zhao HF, et al. 2017. Oncotarget. PIK3CA mutations promote glioma cell invasion and migration."
+  "[4]": "Roos WP, et al. 2007. Oncogene. Apoptosis in malignant glioma cells triggered by the temozolomide-induced DNA lesion O6-methylguanine."

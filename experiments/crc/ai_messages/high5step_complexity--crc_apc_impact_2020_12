@@ -1,0 +1,73 @@
+parameters:
+  - age: 55
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: left side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: In colon adenocarcinoma, common molecular alterations include mutations in APC, KRAS, TP53, and PIK3CA genes, as well as microsatellite instability (MSI) and chromosomal instability (CIN) [1].
+    entities: APC, KRAS, TP53, PIK3CA, MSI, CIN
+    assumptions: The patient's tumor has one or more of the common molecular alterations found in colon adenocarcinoma.
+    consequence: The presence of molecular alterations contributes to tumor growth and progression.
+    probability: 90
+    explanation: The high probability is due to the common occurrence of these molecular alterations in colon adenocarcinoma.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Poorly differentiated tumors have a higher proliferation rate and are more aggressive than moderately differentiated tumors [2]. They also tend to be more resistant to chemotherapy [3].
+    entities: tumor cells, chemotherapy
+    assumptions: The patient's poorly differentiated tumor has a higher proliferation rate and is more aggressive than a moderately differentiated tumor.
+    consequence: The tumor is more likely to progress and be resistant to chemotherapy.
+    probability: 80
+    explanation: Poorly differentiated tumors are known to be more aggressive and resistant to treatment.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Stage IV colon adenocarcinoma indicates that the cancer has metastasized to distant organs [4]. The left side of the colon is associated with a better prognosis compared to the right side [5].
+    entities: metastasis, left colon, right colon
+    assumptions: The patient's cancer has metastasized, but the left-sided location may offer a slightly better prognosis.
+    consequence: The metastasis will complicate treatment, but the left-sided location may provide a small advantage in prognosis.
+    probability: 70
+    explanation: Stage IV cancer is more difficult to treat due to metastasis, but left-sided colon cancer has been associated with better outcomes.
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Optimal standard of care for stage IV colon adenocarcinoma typically includes surgery, chemotherapy, and targeted therapy [6].
+    entities: surgery, chemotherapy, targeted therapy
+    assumptions: The patient receives optimal standard of care treatment, including surgery, chemotherapy, and targeted therapy.
+    consequence: The treatment may slow down tumor progression and improve progression-free survival.
+    probability: 60
+    explanation: Optimal standard of care treatment can improve outcomes, but the effectiveness varies among patients.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Age is a factor in cancer prognosis, with younger patients generally having better outcomes [7].
+    entities: age
+    assumptions: The patient's relatively young age of 55 may contribute to a better prognosis.
+    consequence: The patient's progression-free survival may be slightly better than that of an older patient with the same cancer characteristics.
+    probability: 60
+    explanation: Younger patients generally have better outcomes, but individual factors can still influence prognosis.
+    novelty: 0
+
+conclusion:
+  outcome: Based on the provided examples and the patient's characteristics, the expected progression-free survival is approximately 6-8 months.
+  explanation: The patient has stage IV colon adenocarcinoma with poorly differentiated histology, which is more aggressive and resistant to treatment. However, the left-sided location and the patient's relatively young age may provide some advantage in prognosis. The optimal standard of care treatment may slow down tumor progression, but the effectiveness varies among patients.
+
+references:
+  "[1]": "Fearon ER, Vogelstein B. 1990. Cell. A genetic model for colorectal tumorigenesis."
+  "[2]": "Compton CC. 2006. J Clin Oncol. Optimal pathologic staging: defining stage II disease."
+  "[3]": "O'Connor ES, et al. 2011. J Gastrointest Surg. The differential effect of age on survival in patients with colon and rectal cancer."
+  "[4]": "American Cancer Society. 2020. Colorectal Cancer Stages."
+  "[5]": "Yamauchi M, et al. 2012. J Clin Oncol. Assessment of colorectal cancer molecular features along bowel subsites challenges the conception of distinct dichotomy of proximal versus distal colorectum."
+  "[6]": "National Comprehensive Cancer Network. 2021. NCCN Clinical Practice Guidelines in Oncology: Colon Cancer."
+  "[7]": "Smith-Gagen J, et al. 2014. J Adolesc Young Adult Oncol. The effects of age at colorectal cancer diagnosis on 5-year disease-specific survival."

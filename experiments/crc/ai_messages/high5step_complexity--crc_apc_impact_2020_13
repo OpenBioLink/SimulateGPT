@@ -1,0 +1,71 @@
+parameters:
+  - age: 50
+  - cancer_stage: IV
+  - cancer_location: left side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: present
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage IV colon adenocarcinoma with poorly differentiated histology, metastasis, and carcinomatosis. Poorly differentiated tumors are associated with more aggressive behavior and worse prognosis [1]. Metastasis and carcinomatosis indicate advanced disease and further complicate treatment [2].
+    entities: tumor cells, metastatic cells, peritoneal cells
+    assumptions: The optimal standard of care treatment plan is applied, which may include surgery, chemotherapy, and targeted therapy.
+    consequence: decreased tumor cell proliferation and metastatic cell growth
+    probability: 70
+    explanation: The optimal standard of care treatment plan is designed to target and reduce tumor cell proliferation and metastatic cell growth, but the effectiveness may vary depending on the individual patient's response to treatment.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Chemotherapy and targeted therapy can induce apoptosis in tumor cells and metastatic cells [3]. However, poorly differentiated tumors may be more resistant to treatment due to their aggressive nature and genetic heterogeneity [1].
+    entities: tumor cells, metastatic cells, apoptosis
+    assumptions: The patient's tumor cells and metastatic cells are exposed to chemotherapy and targeted therapy.
+    consequence: increased apoptosis in tumor cells and metastatic cells
+    probability: 60
+    explanation: Chemotherapy and targeted therapy can induce apoptosis in tumor cells and metastatic cells, but the effectiveness may be reduced in poorly differentiated tumors.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Tumor shrinkage and reduced metastatic burden can result from effective treatment [4]. However, the presence of carcinomatosis indicates that cancer cells have spread to the peritoneal cavity, which can be more difficult to treat [2].
+    entities: tumor, metastatic sites, peritoneal cavity
+    assumptions: The patient's tumor and metastatic sites are responding to treatment.
+    consequence: decreased tumor size and reduced metastatic burden
+    probability: 50
+    explanation: The treatment may lead to tumor shrinkage and reduced metastatic burden, but the presence of carcinomatosis complicates the treatment response.
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Effective treatment can improve organ function and overall health in cancer patients [5]. However, stage IV colon adenocarcinoma with carcinomatosis can cause significant organ dysfunction and complications [2].
+    entities: colon, liver, lungs, peritoneal cavity, other affected organs
+    assumptions: The patient's organ function is impacted by the tumor and metastatic sites.
+    consequence: partial improvement in organ function and overall health
+    probability: 40
+    explanation: The treatment may lead to partial improvement in organ function and overall health, but the advanced stage of the disease and presence of carcinomatosis may limit the extent of improvement.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival is influenced by factors such as age, cancer stage, differentiation, metastasis, and treatment response [6]. The patient's age (50) is relatively young, but the advanced stage, poorly differentiated histology, metastasis, and carcinomatosis may negatively impact progression-free survival.
+    entities: progression-free survival
+    assumptions: The patient's progression-free survival is influenced by the factors mentioned above.
+    consequence: reduced progression-free survival compared to patients with less advanced disease
+    probability: 80
+    explanation: The patient's advanced stage, poorly differentiated histology, metastasis, and carcinomatosis are likely to result in a reduced progression-free survival compared to patients with less advanced disease, despite the optimal standard of care treatment plan.
+    novelty: 0
+
+conclusion:
+  outcome: 4 months of progression-free survival
+  explanation: Given the patient's advanced stage, poorly differentiated histology, metastasis, and carcinomatosis, the expected progression-free survival is estimated to be 4 months, despite the optimal standard of care treatment plan. This estimate is based on the provided examples and the patient's clinical characteristics.
+
+references:
+  "[1]": "Compton CC, 2007, J Clin Oncol, Prognostic factors in cancer"
+  "[2]": "Sugarbaker PH, 1999, Cancer Treat Res, Peritoneal carcinomatosis: principles of management"
+  "[3]": "Wong RS, 2015, J Exp Clin Cancer Res, Apoptosis in cancer: from pathogenesis to treatment"
+  "[4]": "Therasse P, 2000, J Natl Cancer Inst, New guidelines to evaluate the response to treatment in solid tumors"
+  "[5]": "Singer S, 2013, Ann Oncol, Quality of life in patients with advanced cancer"
+  "[6]": "Gill S, 2004, J Clin Oncol, Pooled analysis of fluorouracil-based adjuvant therapy for stage II and III colon cancer"

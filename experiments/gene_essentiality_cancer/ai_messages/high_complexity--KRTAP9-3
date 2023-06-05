@@ -1,0 +1,22 @@
+parameters:
+  - gene: KRTAP9-3
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: KRTAP9-3, also known as Keratin Associated Protein 9-3, is a member of the keratin-associated protein (KAP) family, which is involved in the formation of hair and nails [1]. KAP proteins are associated with keratin intermediate filaments and contribute to the structure and mechanical properties of hair fibers [2]. There is limited information on the role of KRTAP9-3 in cancer.
+    entities: KRTAP9-3, keratin-associated protein family, keratin intermediate filaments
+    assumptions: KRTAP9-3 is primarily involved in hair and nail formation, and its role in cancer is not well-established.
+    consequence: KRTAP9-3 is unlikely to be essential in cancer cell-lines.
+    probability: 80
+    explanation: Given the primary function of KRTAP9-3 in hair and nail formation, it is less likely to be essential in cancer cell-lines. However, the limited information on its role in cancer leaves some uncertainty.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the primary function of KRTAP9-3 in hair and nail formation and the limited information on its role in cancer, it is unlikely that KRTAP9-3 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Shimomura Y, Wajid M, Petukhova L, Kurban M, Christiano AM. 2010. Human Molecular Genetics. Mutations in the keratin-associated protein 9-3 (KRTAP9-3) gene underlie autosomal dominant woolly hair."
+  "[2]": "Rogers MA, Langbein L, Praetzel-Wunder S, Winter H, Schweizer J. 2006. Journal of Investigative Dermatology. Human hair keratin-associated proteins (KAPs)."

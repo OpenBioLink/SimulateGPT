@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage III colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage III colon adenocarcinoma on the right side of the colon, with moderately differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: tumor growth and metastasis
+    probability: 100
+    explanation: The tumor has already metastasized, indicating that cancer cells have spread to nearby lymph nodes or other organs. The moderately differentiated histology suggests that the tumor cells are somewhat similar to normal cells, which may affect the response to treatment.
+  - step: 3
+    level: cellular
+    consequence: initiation of standard of care treatment
+    probability: 100
+    explanation: The patient receives an optimal standard of care treatment plan, which typically includes surgery to remove the primary tumor, followed by chemotherapy and/or radiation therapy to target any remaining cancer cells and prevent further growth and metastasis.
+  - step: 4
+    level: molecular
+    consequence: treatment-induced cell death
+    probability: 80
+    explanation: The standard of care treatment plan is generally effective in killing cancer cells and preventing further growth. However, the moderately differentiated histology may result in some cancer cells being more resistant to treatment, reducing the overall effectiveness.
+  - step: 5
+    level: cellular
+    consequence: reduction in tumor size and metastatic potential
+    probability: 75
+    explanation: As a result of the treatment-induced cell death, the primary tumor size is expected to decrease, and the metastatic potential of the cancer cells may be reduced. However, the moderately differentiated histology and the patient's age may contribute to a less favorable response to treatment.
+  - step: 6
+    level: organ
+    consequence: slowed disease progression
+    probability: 70
+    explanation: The standard of care treatment plan is expected to slow down the disease progression, but the patient's age and moderately differentiated histology may still result in a less favorable outcome compared to younger patients or those with better-differentiated tumors.
+
+conclusion:
+  outcome: 8 months of progression-free survival
+  explanation: Based on the provided examples and considering the patient's age, tumor characteristics, and the general effectiveness of colon adenocarcinoma therapies, the expected progression-free survival for this patient under an optimal standard of care treatment plan is estimated to be around 8 months. This estimate takes into account the moderately differentiated histology and the patient's age, which may contribute to a less favorable response to treatment compared to younger patients or those with better-differentiated tumors.

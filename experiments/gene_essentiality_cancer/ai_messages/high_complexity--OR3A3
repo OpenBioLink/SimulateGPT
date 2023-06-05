@@ -1,0 +1,33 @@
+parameters:
+  - gene: OR3A3
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: OR3A3 is an olfactory receptor gene, which is part of the G protein-coupled receptor (GPCR) family. Olfactory receptors are primarily expressed in the olfactory epithelium and are involved in the detection of odorants [1]. Some olfactory receptors have been found to be ectopically expressed in cancer cells and may play a role in cancer progression [2].
+    entities: OR3A3, GPCR, olfactory receptor, olfactory epithelium, cancer cells
+    assumptions: OR3A3 is an olfactory receptor gene and may be expressed in cancer cell-lines.
+    consequence: potential ectopic expression of OR3A3 in cancer cell-lines
+    probability: 50
+    explanation: While olfactory receptors are primarily involved in odorant detection, some have been found to be ectopically expressed in cancer cells. It is possible that OR3A3 could be expressed in cancer cell-lines.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: The essentiality of a gene in cancer cell-lines is determined by its role in cell survival, proliferation, and other critical cellular processes. Essential genes are those whose loss-of-function leads to reduced cell viability or proliferation [3].
+    entities: cell survival, cell proliferation, essential genes, loss-of-function
+    assumptions: OR3A3 may be ectopically expressed in cancer cell-lines, but its role in cell survival and proliferation is unknown.
+    consequence: unknown essentiality of OR3A3 in cancer cell-lines
+    probability: 50
+    explanation: The essentiality of OR3A3 in cancer cell-lines depends on its role in cell survival and proliferation, which is currently unknown.
+    novelty: 50
+
+conclusion:
+  outcome: unlikely
+  explanation: Given that OR3A3 is an olfactory receptor gene primarily involved in odorant detection and not directly related to cell survival or proliferation, it is unlikely to be essential in cancer cell-lines. However, further research is needed to confirm its role in cancer cell-lines.
+
+references:
+  "[1]": "Buck L, Axel R. 1991. Cell. A novel multigene family may encode odorant receptors: a molecular basis for odor recognition."
+  "[2]": "Flegel C, Manteniotis S, Osthold S, Hatt H, Gisselmann G. 2013. Frontiers in Oncology. Expression profile of ectopic olfactory receptors determined by deep sequencing."
+  "[3]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. Science. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."

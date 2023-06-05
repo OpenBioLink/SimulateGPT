@@ -1,0 +1,34 @@
+parameters:
+  - gene: TMPRSS11F
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: TMPRSS11F, also known as transmembrane protease serine 11F, is a member of the type II transmembrane serine protease family [1]. These proteases are involved in various biological processes, including cell adhesion, migration, and invasion [2]. However, the specific function of TMPRSS11F in cancer cell-lines is not well-established.
+    entities: TMPRSS11F, type II transmembrane serine proteases
+    assumptions: TMPRSS11F may have a role in cancer cell-lines due to its association with the type II transmembrane serine protease family.
+    consequence: potential involvement of TMPRSS11F in cancer cell-line processes
+    probability: 50
+    explanation: The association of TMPRSS11F with the type II transmembrane serine protease family suggests that it may have a role in cancer cell-lines, but its specific function is not well-established.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are critical for the survival and growth of an organism or cell [3]. In cancer cell-lines, essential genes are often involved in processes such as cell proliferation, survival, and metabolism [4]. To determine if TMPRSS11F is essential in cancer cell-lines, we would need to examine its role in these processes and its impact on cell survival and growth.
+    entities: essential genes, cell proliferation, cell survival, cell metabolism
+    assumptions: If TMPRSS11F is involved in critical processes for cancer cell-line survival and growth, it may be considered an essential gene.
+    consequence: evaluation of TMPRSS11F's role in critical processes for cancer cell-line survival and growth
+    probability: 50
+    explanation: The essentiality of TMPRSS11F in cancer cell-lines depends on its involvement in critical processes for cell survival and growth.
+    novelty: 50
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the limited information available on TMPRSS11F's specific function in cancer cell-lines and its potential involvement in critical processes for cell survival and growth, it is unlikely that TMPRSS11F is an essential gene in cancer cell-lines.
+
+references:
+  "[1]": "Szabo R, Bugge TH. (2011) Membrane-anchored serine proteases in vertebrate cell and developmental biology. Annu Rev Cell Dev Biol. 27:213-35."
+  "[2]": "Antalis TM, Bugge TH, Wu Q. (2011) Membrane-anchored serine proteases in health and disease. Prog Mol Biol Transl Sci. 99:1-50."
+  "[3]": "Hart T, Moffat J. (2016) BAGEL: a computational framework for identifying essential genes from pooled library screens. BMC Bioinformatics. 17:164."
+  "[4]": "Blomen VA, Májek P, Jae LT, Bigenzahn JW, Nieuwenhuis J, Staring J, Sacco R, van Diemen FR, Olk N, Stukalov A, Marceau C, Janssen H, Carette JE, Bennett KL, Colinge J, Superti-Furga G, Brummelkamp TR. (2015) Gene essentiality and synthetic lethality in haploid human cells. Science. 350:1092-6."

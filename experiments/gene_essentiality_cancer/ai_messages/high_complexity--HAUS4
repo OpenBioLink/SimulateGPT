@@ -1,0 +1,36 @@
+parameters:
+  - gene: HAUS4
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: HAUS4 is a subunit of the human Augmin complex, which is involved in microtubule nucleation and spindle assembly during mitosis [1]. Disruption of the Augmin complex can lead to defects in spindle assembly and chromosome segregation, which can contribute to genomic instability [2]. Genomic instability is a hallmark of cancer and can promote tumor progression [3].
+    entities: HAUS4, Augmin complex, microtubule nucleation, spindle assembly, mitosis, genomic instability
+    assumptions: Given the role of HAUS4 in the Augmin complex and its involvement in mitosis, it is possible that HAUS4 is essential for proper cell division in cancer cell-lines.
+    consequence: disruption of HAUS4 function in cancer cell-lines
+    probability: 70
+    explanation: Disruption of HAUS4 function could lead to defects in spindle assembly and chromosome segregation, contributing to genomic instability in cancer cell-lines.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often rely on specific genes and pathways for their survival and proliferation, which are referred to as "cancer dependencies" [4]. Essential genes are those that are required for the survival of an organism or cell type [5]. In cancer cell-lines, essential genes can be identified through functional genomic screens, such as CRISPR-Cas9 knockout screens [6].
+    entities: cancer dependencies, essential genes, functional genomic screens, CRISPR-Cas9 knockout screens
+    assumptions: If HAUS4 is essential in cancer cell-lines, it would be expected to be identified as a cancer dependency in functional genomic screens.
+    consequence: identification of HAUS4 as a cancer dependency in functional genomic screens
+    probability: 60
+    explanation: If HAUS4 is essential for cancer cell survival and proliferation, it would likely be identified as a cancer dependency in functional genomic screens.
+    novelty: 50
+
+conclusion:
+  outcome: likely
+  explanation: Given the role of HAUS4 in the Augmin complex and its involvement in mitosis, as well as the potential identification of HAUS4 as a cancer dependency in functional genomic screens, it is likely that HAUS4 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Uehara R, et al. 2009. Nature. Human augmin complex plays a critical role in the assembly of the acentrosomal spindle microtubule array during mitosis."
+  "[2]": "Goshima G, et al. 2008. Science. Augmin: a protein complex required for centrosome-independent microtubule generation within the spindle."
+  "[3]": "Hanahan D, Weinberg RA. 2011. Cell. Hallmarks of cancer: the next generation."
+  "[4]": "Kaelin WG Jr. 2005. N Engl J Med. The concept of synthetic lethality in the context of anticancer therapy."
+  "[5]": "Hart T, et al. 2015. Science. High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities."
+  "[6]": "Shalem O, et al. 2014. Science. Genome-scale CRISPR-Cas9 knockout screening in human cells."

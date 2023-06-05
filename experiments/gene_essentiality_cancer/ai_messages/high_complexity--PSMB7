@@ -1,0 +1,35 @@
+parameters:
+  - gene: PSMB7
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: PSMB7 encodes a subunit of the 20S proteasome, which is involved in the degradation of ubiquitinated proteins [1]. The proteasome plays a crucial role in maintaining cellular homeostasis by regulating protein turnover, cell cycle progression, and apoptosis [2]. Proteasome inhibition has been shown to be an effective strategy for cancer therapy, as it can induce apoptosis in cancer cells [3].
+    entities: PSMB7, 20S proteasome, ubiquitinated proteins, protein turnover, cell cycle progression, apoptosis
+    assumptions: Given the role of PSMB7 in the 20S proteasome, its expression and function may be important for cancer cell survival and proliferation.
+    consequence: If PSMB7 is essential for cancer cell-lines, its inhibition or loss of function should lead to decreased cancer cell survival and proliferation.
+    probability: 80
+    explanation: The involvement of PSMB7 in the 20S proteasome and its role in cellular homeostasis, cell cycle progression, and apoptosis suggest that it may be essential for cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit increased protein synthesis and turnover, which can lead to an increased dependency on the proteasome for survival [4]. Inhibition of the proteasome has been shown to selectively induce apoptosis in cancer cells, while sparing normal cells [5].
+    entities: cancer cells, protein synthesis, protein turnover, proteasome, apoptosis, normal cells
+    assumptions: Cancer cell-lines may be more dependent on PSMB7 function due to their increased protein synthesis and turnover.
+    consequence: Cancer cell-lines are more likely to be sensitive to PSMB7 inhibition or loss of function, making PSMB7 essential for their survival and proliferation.
+    probability: 75
+    explanation: The increased dependency of cancer cells on the proteasome for survival and the selective induction of apoptosis upon proteasome inhibition support the likelihood that PSMB7 is essential in cancer cell-lines.
+    novelty: 10
+
+conclusion:
+  outcome: likely
+  explanation: The role of PSMB7 in the 20S proteasome and its involvement in cellular homeostasis, cell cycle progression, and apoptosis, combined with the increased dependency of cancer cells on the proteasome for survival, suggest that PSMB7 is likely essential in cancer cell-lines.
+
+references:
+  "[1]": "Tomko RJ Jr, Hochstrasser M. 2013. Molecular Biology and Evolution. Molecular architecture and assembly of the eukaryotic proteasome."
+  "[2]": "Ciechanover A, Kwon YT. 2015. Cell Research. Degradation of misfolded proteins in neurodegenerative diseases: therapeutic targets and strategies."
+  "[3]": "Adams J. 2004. Cancer Cell. The proteasome: a suitable antineoplastic target."
+  "[4]": "Vogel C, Marcotte EM. 2012. Nature Reviews Cancer. Insights into the regulation of protein abundance from proteomic and transcriptomic analyses."
+  "[5]": "Kisselev AF, van der Linden WA, Overkleeft HS. 2012. Chemical Biology. Proteasome inhibitors: an expanding army attacking a unique target."

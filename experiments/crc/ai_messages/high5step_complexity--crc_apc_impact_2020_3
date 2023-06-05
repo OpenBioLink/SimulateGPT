@@ -1,0 +1,71 @@
+parameters:
+  - age: 72
+  - cancer_stage: III
+  - cancer_location: left side of the colon
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: yes
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The Wnt signaling pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and tumor growth [1]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [2]. Carcinomatosis indicates the presence of cancerous cells in the peritoneal cavity, which can lead to a worse prognosis [3].
+    entities: Wnt signaling pathway, cell proliferation, tumor growth
+    assumptions: The patient's tumor has dysregulated Wnt signaling, leading to increased cell proliferation and tumor growth. The moderately differentiated histology suggests a better prognosis than poorly differentiated tumors.
+    consequence: The dysregulated Wnt signaling pathway contributes to tumor progression.
+    probability: 80
+    explanation: The Wnt signaling pathway is commonly dysregulated in colon adenocarcinoma, and its dysregulation is associated with increased cell proliferation and tumor growth.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Optimal standard of care for stage III colon adenocarcinoma typically includes surgery to remove the primary tumor, followed by adjuvant chemotherapy to target any remaining cancer cells and reduce the risk of recurrence [4].
+    entities: surgery, adjuvant chemotherapy, cancer cells, recurrence
+    assumptions: The patient undergoes surgery and adjuvant chemotherapy as part of their optimal standard of care treatment plan.
+    consequence: The primary tumor is removed, and the risk of recurrence is reduced.
+    probability: 90
+    explanation: Surgery and adjuvant chemotherapy are effective in removing the primary tumor and reducing the risk of recurrence in stage III colon adenocarcinoma patients.
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Carcinomatosis can lead to the formation of new tumors in the peritoneal cavity, which can be difficult to treat [3].
+    entities: carcinomatosis, peritoneal cavity, new tumors
+    assumptions: The patient's carcinomatosis leads to the formation of new tumors in the peritoneal cavity.
+    consequence: New tumors form in the peritoneal cavity, complicating treatment.
+    probability: 70
+    explanation: Carcinomatosis is associated with the formation of new tumors in the peritoneal cavity, which can be difficult to treat.
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: Metastasis in stage III colon adenocarcinoma typically involves regional lymph nodes [5].
+    entities: metastasis, regional lymph nodes
+    assumptions: The patient's cancer has metastasized to regional lymph nodes.
+    consequence: The metastasis to regional lymph nodes increases the risk of recurrence and complicates treatment.
+    probability: 80
+    explanation: Metastasis to regional lymph nodes is common in stage III colon adenocarcinoma and increases the risk of recurrence and treatment complexity.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Age is a prognostic factor in colon cancer, with older patients generally having a worse prognosis [6].
+    entities: age, prognosis
+    assumptions: The patient's age of 72 negatively impacts their prognosis.
+    consequence: The patient's age contributes to a worse prognosis and shorter progression-free survival.
+    probability: 70
+    explanation: Older age is associated with a worse prognosis in colon cancer patients.
+    novelty: 0
+
+conclusion:
+  outcome: The patient is expected to have a progression-free survival of approximately 6-9 months.
+  explanation: The patient's moderately differentiated tumor, carcinomatosis, metastasis to regional lymph nodes, and older age contribute to a worse prognosis and shorter progression-free survival compared to patients without these factors.
+
+references:
+  "[1]": "Clevers H, Nusse R. 2012. Cell. Wnt/β-Catenin Signaling and Disease."
+  "[2]": "Compton CC. 2007. J Clin Oncol. Prognostic Factors in Cancer."
+  "[3]": "Jayne DG, Fook S, Loi C, Seow-Choen F. 2002. Br J Surg. Peritoneal carcinomatosis from colorectal cancer."
+  "[4]": "Benson AB, Venook AP, Al-Hawary MM, et al. 2018. J Natl Compr Canc Netw. NCCN Guidelines Insights: Colon Cancer, Version 2.2018."
+  "[5]": "Siegel RL, Miller KD, Jemal A. 2020. CA Cancer J Clin. Cancer statistics, 2020."
+  "[6]": "Sargent DJ, Goldberg RM, Jacobson SD, et al. 2001. J Clin Oncol. A pooled analysis of adjuvant chemotherapy for resected colon cancer in elderly patients."

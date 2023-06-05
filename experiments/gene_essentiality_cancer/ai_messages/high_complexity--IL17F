@@ -1,0 +1,34 @@
+parameters:
+  - IL17F gene
+  - cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: IL17F is a member of the interleukin-17 (IL-17) family of cytokines, which are involved in immune responses and inflammation [1]. IL17F has been reported to play a role in various inflammatory diseases, such as asthma and psoriasis [2]. However, its role in cancer is not well-established.
+    entities: IL17F, cytokines, immune responses, inflammation
+    assumptions: IL17F may have a role in cancer cell-lines, but its involvement is not well-understood.
+    consequence: potential involvement of IL17F in cancer cell-lines
+    probability: 50
+    explanation: The role of IL17F in cancer is not well-established, but its involvement in immune responses and inflammation suggests that it may have a role in cancer cell-lines.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Some studies have reported that IL17F can promote tumor growth and angiogenesis in certain types of cancer, such as colorectal cancer [3]. However, other studies have shown that IL17F can have anti-tumor effects in other cancer types, such as breast cancer [4]. This suggests that the role of IL17F in cancer is context-dependent and may vary between different cancer types.
+    entities: IL17F, tumor growth, angiogenesis, colorectal cancer, breast cancer
+    assumptions: The role of IL17F in cancer cell-lines may be context-dependent and vary between different cancer types.
+    consequence: context-dependent role of IL17F in cancer cell-lines
+    probability: 70
+    explanation: The conflicting reports on the role of IL17F in different cancer types suggest that its involvement in cancer cell-lines may be context-dependent.
+    novelty: 60
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the available evidence, it is unlikely that IL17F is essential in cancer cell-lines, as its role in cancer is not well-established and appears to be context-dependent.
+
+references:
+  "[1]": "Gaffen SL, Jain R, Garg AV, Cua DJ. 2014. The IL-23-IL-17 immune axis: from mechanisms to therapeutic testing. Nature Reviews Immunology."
+  "[2]": "Iwakura Y, Ishigame H, Saijo S, Nakae S. 2011. Functional specialization of interleukin-17 family members. Immunity."
+  "[3]": "Wu X, Yang T, Liu X, Guo JN, Xie T, Ding Y, Lin M, Yang H. 2013. IL-17 promotes tumor angiogenesis through Stat3 pathway mediated upregulation of VEGF in gastric cancer. Tumour Biology."
+  "[4]": "Benchetrit F, Ciree A, Vives V, Warnier G, Gey A, Sautès-Fridman C, Fossiez F, Haicheur N, Fridman WH, Tartour E. 2002. Interleukin-17 inhibits tumor cell growth by means of a T-cell-dependent mechanism. Blood."

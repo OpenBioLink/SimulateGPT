@@ -1,0 +1,6 @@
+*.pyc
+.snakemake
+.snakemake_*
+.ipynb_checkpoints
+logs/
+*.tar.gz

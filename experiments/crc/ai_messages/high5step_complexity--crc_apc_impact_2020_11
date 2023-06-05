@@ -1,0 +1,76 @@
+parameters:
+  - age: 57
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: left side of the colon
+  - tumor_differentiation: moderately differentiated
+  - metastasis: present
+  - carcinomatosis: present
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The RAS-RAF-MEK-ERK pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and survival [1]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [2]. Carcinomatosis indicates the presence of cancerous cells in the peritoneal cavity, which can lead to poorer outcomes [3].
+    entities: RAS, RAF, MEK, ERK, cancer cells, peritoneal cavity
+    assumptions: The patient's tumor has dysregulated RAS-RAF-MEK-ERK signaling, contributing to tumor growth and metastasis. The moderately differentiated tumor may respond better to treatment than a poorly differentiated tumor.
+    consequence: Decreased cancer cell proliferation and survival due to treatment.
+    probability: 70
+    explanation: The optimal standard of care treatment plan is likely to target the dysregulated molecular pathways, leading to decreased cancer cell proliferation and survival.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor-infiltrating lymphocytes (TILs) are associated with better prognosis in colon cancer [4]. The presence of TILs can enhance the effectiveness of immunotherapy [5].
+    entities: TILs, cancer cells, immunotherapy
+    assumptions: The patient's tumor has TILs, which may improve the response to treatment.
+    consequence: Enhanced immune response against cancer cells due to the presence of TILs.
+    probability: 60
+    explanation: The presence of TILs can enhance the immune response against cancer cells, potentially improving the effectiveness of immunotherapy.
+    novelty: 20
+
+  - step: 3
+    level: tissue
+    facts: Angiogenesis is a key process in tumor growth and metastasis [6]. Anti-angiogenic therapies can inhibit tumor growth and metastasis [7].
+    entities: blood vessels, tumor, anti-angiogenic therapies
+    assumptions: The patient's tumor relies on angiogenesis for growth and metastasis. The optimal standard of care treatment plan includes anti-angiogenic therapies.
+    consequence: Inhibition of tumor growth and metastasis due to anti-angiogenic therapies.
+    probability: 70
+    explanation: Anti-angiogenic therapies can inhibit the formation of new blood vessels, limiting tumor growth and metastasis.
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: The liver is a common site of metastasis for colon cancer [8]. Metastasis to the liver can lead to liver dysfunction and poorer outcomes [9].
+    entities: liver, metastasis, liver dysfunction
+    assumptions: The patient's cancer has metastasized to the liver, potentially leading to liver dysfunction.
+    consequence: Decreased liver function due to metastasis.
+    probability: 60
+    explanation: Metastasis to the liver can lead to liver dysfunction, which can negatively impact the patient's overall health and response to treatment.
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Progression-free survival is influenced by factors such as age, cancer stage, tumor differentiation, and treatment response [10].
+    entities: progression-free survival, age, cancer stage, tumor differentiation, treatment response
+    assumptions: The patient's age, cancer stage, tumor differentiation, and treatment response will influence their progression-free survival.
+    consequence: Progression-free survival of 10 months.
+    probability: 60
+    explanation: Based on the provided examples and the patient's characteristics, a progression-free survival of 10 months is estimated, considering the moderately differentiated tumor, carcinomatosis, and stage IV cancer.
+    novelty: 20
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: The patient's moderately differentiated tumor, stage IV cancer, and presence of carcinomatosis contribute to an estimated progression-free survival of 10 months under an optimal standard of care treatment plan.
+
+references:
+  "[1]": "Downward J. (2003) Nature Reviews Cancer. Targeting RAS signalling pathways in cancer therapy."
+  "[2]": "Compton CC. (2006) Archives of Pathology & Laboratory Medicine. Prognostic factors in cancer."
+  "[3]": "Jayne DG, Fook S, Loi C, Seow-Choen F. (2002) British Journal of Surgery. Peritoneal carcinomatosis from colorectal cancer."
+  "[4]": "Galon J, Costes A, Sanchez-Cabo F, et al. (2006) Science. Type, density, and location of immune cells within human colorectal tumors predict clinical outcome."
+  "[5]": "Topalian SL, Taube JM, Anders RA, Pardoll DM. (2016) Cancer Cell. Mechanism-driven biomarkers to guide immune checkpoint blockade in cancer therapy."
+  "[6]": "Carmeliet P, Jain RK. (2000) Nature. Angiogenesis in cancer and other diseases."
+  "[7]": "Folkman J. (2007) Nature Reviews Drug Discovery. Angiogenesis: an organizing principle for drug discovery?"
+  "[8]": "Manfredi S, Lepage C, Hatem C, Coatmeur O, Faivre J, Bouvier AM. (2006) Annals of Oncology. Epidemiology and management of liver metastases from colorectal cancer."
+  "[9]": "Van Cutsem E, Cervantes A, Adam R, et al. (2016) Annals of Oncology. ESMO consensus guidelines for the management of patients with metastatic colorectal cancer."
+  "[10]": "Gill S, Loprinzi CL, Sargent DJ, et al. (2004) Journal of Clinical Oncology. Pooled analysis of fluorouracil-based adjuvant therapy for stage II and III colon cancer: who benefits and by how much?"

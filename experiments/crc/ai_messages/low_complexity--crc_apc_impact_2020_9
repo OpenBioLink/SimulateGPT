@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage III rectal adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage III rectal adenocarcinoma, which means the cancer has spread to nearby lymph nodes but not to distant organs.
+  - step: 2
+    level: cellular
+    consequence: moderately differentiated tumor cells
+    probability: 100
+    explanation: The tumor exhibits moderately differentiated histology, indicating that the cancer cells are somewhat similar to normal cells, but still show some abnormal features.
+  - step: 3
+    level: organism
+    consequence: metastasis without carcinomatosis
+    probability: 100
+    explanation: The cancer has metastasized, meaning it has spread to other parts of the body, but there are no signs of carcinomatosis, which is the widespread dissemination of cancer cells in the body cavity.
+  - step: 4
+    level: molecular
+    consequence: initiation of standard of care treatment
+    probability: 100
+    explanation: The patient receives an optimal standard of care treatment plan, which typically includes a combination of surgery, radiation therapy, and chemotherapy to target the cancer cells and prevent further spread.
+  - step: 5
+    level: cellular
+    consequence: reduction in tumor size and metastatic spread
+    probability: 80
+    explanation: The standard of care treatment is generally effective in reducing the size of the primary tumor and limiting the spread of metastatic cancer cells, although individual responses may vary.
+  - step: 6
+    level: organism
+    consequence: monitoring for disease progression
+    probability: 100
+    explanation: The patient undergoes regular follow-up appointments and imaging studies to monitor for any signs of disease progression or recurrence.
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Based on the provided examples and the patient's stage III rectal adenocarcinoma diagnosis with moderately differentiated histology and no signs of carcinomatosis, the expected progression-free survival under an optimal standard of care treatment plan is estimated to be around 10 months. This estimate takes into account the general effectiveness of rectal adenocarcinoma therapies and the patient's specific clinical characteristics.

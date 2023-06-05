@@ -1,0 +1,42 @@
+parameters:
+  - TP53 mutations
+  - PIK3CA mutations
+  - MGMT methylation status: medium
+  - EGFR: no mutations
+  - NF1: no mutations
+  - MUC16: no mutations
+  - PTEN: no mutations
+  - RB1: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: TP53 is a tumor suppressor gene that regulates cell cycle and apoptosis. Mutations in TP53 are associated with poor prognosis in glioblastoma [1]. PIK3CA is an oncogene that encodes the p110α catalytic subunit of PI3K, which is involved in cell proliferation, survival, and migration. PIK3CA mutations are associated with increased tumor aggressiveness [2]. MGMT is a DNA repair enzyme that counteracts the effects of alkylating agents. Medium MGMT methylation status suggests partial sensitivity to alkylating agents [3].
+    entities: TP53, PIK3CA, MGMT, alkylating agents
+    assumptions: The patient has TP53 and PIK3CA mutations, which are associated with poor prognosis and increased tumor aggressiveness. The patient has medium MGMT methylation status, suggesting partial sensitivity to alkylating agents.
+    consequence: increased tumor aggressiveness and partial sensitivity to alkylating agents
+    probability: 80
+    explanation: The presence of TP53 and PIK3CA mutations increases the likelihood of tumor aggressiveness, while medium MGMT methylation status suggests partial sensitivity to alkylating agents.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Standard of care for glioblastoma includes surgery, radiation therapy, and chemotherapy with temozolomide, an alkylating agent [4]. Genotype-informed treatment may include targeted therapies for specific mutations, such as PI3K inhibitors for PIK3CA mutations [5].
+    entities: surgery, radiation therapy, temozolomide, PI3K inhibitors
+    assumptions: The patient receives standard of care treatment, including surgery, radiation therapy, and temozolomide. The patient may also receive targeted therapy with PI3K inhibitors due to the presence of PIK3CA mutations.
+    consequence: partial tumor control and potential benefit from PI3K inhibitors
+    probability: 70
+    explanation: Standard of care treatment may provide partial tumor control due to the patient's medium MGMT methylation status. The patient may also benefit from PI3K inhibitors targeting the PIK3CA mutation.
+    novelty: 0
+
+conclusion:
+  outcome: decreased, -3 months
+  explanation: The presence of TP53 and PIK3CA mutations increases tumor aggressiveness, which may decrease the patient's survival relative to the median overall glioblastoma survival. Despite partial sensitivity to alkylating agents and potential benefit from PI3K inhibitors, the patient's survival is estimated to be decreased by 3 months compared to the median survival of 15 months.
+
+references:
+  "[1]": "Ohgaki H, Kleihues P. 2009. Clinical Neuropathology. Genetic pathways to primary and secondary glioblastoma."
+  "[2]": "Samuels Y, et al. 2004. Science. High frequency of mutations of the PIK3CA gene in human cancers."
+  "[3]": "Hegi ME, et al. 2005. New England Journal of Medicine. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[4]": "Stupp R, et al. 2005. New England Journal of Medicine. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."
+  "[5]": "Janku F, et al. 2018. Nature Reviews Clinical Oncology. PI3K/AKT/mTOR inhibitors in patients with breast and gynecologic malignancies harboring PIK3CA mutations."

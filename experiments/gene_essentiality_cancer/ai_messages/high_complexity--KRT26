@@ -1,0 +1,22 @@
+parameters:
+  - gene: KRT26
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: KRT26 (Keratin 26) is a type II keratin protein, which is part of the intermediate filament family of proteins. These proteins are involved in the structural integrity of cells and tissues, particularly in epithelial cells [1]. KRT26 is expressed in the hair follicle and has been associated with hair growth [2]. There is limited evidence linking KRT26 to cancer.
+    entities: KRT26, keratin proteins, intermediate filaments, epithelial cells, hair follicle
+    assumptions: KRT26 has a similar function to other keratin proteins and is involved in the structural integrity of cells and tissues. Its primary expression is in the hair follicle, and it may not have a significant role in cancer cell-lines.
+    consequence: KRT26 is unlikely to be essential in cancer cell-lines.
+    probability: 80
+    explanation: Given the limited evidence linking KRT26 to cancer and its primary expression in the hair follicle, it is unlikely that KRT26 plays a significant role in cancer cell-lines.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the known functions and expression patterns of KRT26, it is unlikely to be essential in cancer cell-lines.
+
+references:
+  "[1]": "Moll R, Divo M, Langbein L. 2008. The human keratins: biology and pathology. Histochemistry and Cell Biology."
+  "[2]": "Shimomura Y, Wajid M, Petukhova L, Kurban M, Christiano AM. 2010. Autosomal-dominant woolly hair resulting from disruption of keratin 74 (KRT74), a potential determinant of human hair texture. American Journal of Human Genetics."

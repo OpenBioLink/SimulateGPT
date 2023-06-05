@@ -1,0 +1,5 @@
+conclusion:
+  outcome:
+    survival_relative_to_median: 'decreased'
+    survival_deviation_months: -4
+  explanation: The presence of mutations in PTEN, TP53, NF1, and RB1 genes are associated with a more aggressive glioblastoma phenotype and poorer prognosis. Although MGMT methylation status is medium, which could potentially improve the response to temozolomide treatment, the overall impact of the identified mutations is likely to result in a decreased survival relative to the median overall glioblastoma survival. Based on the available information, we estimate a decrease of 4 months from the median survival of 15 months.

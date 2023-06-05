@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage IV colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage IV colon adenocarcinoma at the rectum, with moderately differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: initiation of optimal standard of care treatment
+    probability: 100
+    explanation: Given the general effectiveness of colon adenocarcinoma therapies, the patient starts an optimal standard of care treatment plan, which may include surgery, chemotherapy, radiation therapy, and targeted therapy.
+  - step: 3
+    level: cellular
+    consequence: reduction in tumor size and metastatic spread
+    probability: 80
+    explanation: The optimal standard of care treatment plan targets cancer cells and reduces the size of the primary tumor and metastatic lesions, slowing down the progression of the disease.
+  - step: 4
+    level: molecular
+    consequence: inhibition of cancer cell proliferation and survival pathways
+    probability: 75
+    explanation: The treatment plan, particularly chemotherapy and targeted therapy, inhibits key molecular pathways involved in cancer cell proliferation and survival, leading to cancer cell death and reduced tumor growth.
+  - step: 5
+    level: cellular
+    consequence: development of treatment resistance
+    probability: 60
+    explanation: Over time, some cancer cells may develop resistance to the treatment plan, either through genetic mutations or activation of alternative survival pathways, leading to reduced treatment effectiveness.
+  - step: 6
+    level: organ
+    consequence: disease progression
+    probability: 55
+    explanation: As treatment resistance develops, the disease may progress, with the primary tumor and metastatic lesions growing and potentially causing symptoms and complications.
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Based on the provided examples and the patient's stage IV colon adenocarcinoma diagnosis with moderately differentiated differentiation histology, metastasis, and no signs of carcinomatosis, the expected progression-free survival under an optimal standard of care treatment plan is estimated to be around 10 months. This estimate takes into account the effectiveness of the treatment plan in reducing tumor size and metastatic spread, as well as the potential development of treatment resistance and disease progression.

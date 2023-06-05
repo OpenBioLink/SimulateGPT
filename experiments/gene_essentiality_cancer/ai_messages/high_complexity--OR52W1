@@ -1,0 +1,34 @@
+parameters:
+  - gene: OR52W1
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: OR52W1 is an olfactory receptor gene, which is part of the G protein-coupled receptor (GPCR) family [1]. Olfactory receptors are primarily involved in the detection of odor molecules in the olfactory system [2]. Some olfactory receptors have been reported to be expressed in non-olfactory tissues and have been implicated in various physiological and pathological processes, including cancer [3].
+    entities: OR52W1, GPCR, olfactory receptors
+    assumptions: OR52W1 expression may be present in cancer cell-lines.
+    consequence: potential involvement of OR52W1 in cancer cell-line processes
+    probability: 50
+    explanation: The expression of OR52W1 in cancer cell-lines is uncertain, and its potential involvement in cancer cell-line processes is based on the known functions of olfactory receptors in non-olfactory tissues.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: The essentiality of a gene in cancer cell-lines is typically determined by its role in cell survival, proliferation, or other critical cellular processes [4]. There is limited evidence linking OR52W1 to such processes in cancer cell-lines.
+    entities: OR52W1, cancer cell-lines, cell survival, cell proliferation
+    assumptions: OR52W1 may have a role in cancer cell-line survival or proliferation.
+    consequence: OR52W1 is unlikely essential in cancer cell-lines
+    probability: 80
+    explanation: The lack of evidence linking OR52W1 to critical cellular processes in cancer cell-lines suggests that it is unlikely to be essential for their survival or proliferation.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the limited evidence linking OR52W1 to critical cellular processes in cancer cell-lines, it is unlikely that OR52W1 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Niimura Y, Nei M. 2003. Evolution of olfactory receptor genes in the human genome. Proceedings of the National Academy of Sciences. 100(21): 12235-12240."
+  "[2]": "Buck L, Axel R. 1991. A novel multigene family may encode odorant receptors: a molecular basis for odor recognition. Cell. 65(1): 175-187."
+  "[3]": "Flegel C, Manteniotis S, Osthold S, Hatt H, Gisselmann G. 2013. Expression profile of ectopic olfactory receptors determined by deep sequencing. PLoS One. 8(2): e55368."
+  "[4]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities. Cell. 163(6): 1515-1526."

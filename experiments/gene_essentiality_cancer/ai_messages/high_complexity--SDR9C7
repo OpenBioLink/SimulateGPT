@@ -1,0 +1,35 @@
+parameters:
+  - gene: SDR9C7
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: SDR9C7 (short-chain dehydrogenase/reductase family 9C member 7) is a member of the SDR family, which is involved in the metabolism of various substrates, including steroids, fatty acids, and retinoids [1]. The specific function of SDR9C7 is not well characterized, but it has been suggested to play a role in the metabolism of retinoids [2]. Retinoids are known to regulate cell proliferation, differentiation, and apoptosis, which are processes often dysregulated in cancer [3].
+    entities: SDR9C7, SDR family, steroids, fatty acids, retinoids, cell proliferation, cell differentiation, apoptosis
+    assumptions: SDR9C7 may be involved in the metabolism of retinoids, which can influence cancer-related processes.
+    consequence: potential involvement of SDR9C7 in cancer-related processes
+    probability: 60
+    explanation: The involvement of SDR9C7 in retinoid metabolism suggests a possible connection to cancer-related processes, but the specific function of SDR9C7 is not well characterized.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are required for the survival or reproduction of an organism or cell [4]. In cancer cell lines, essential genes are often involved in processes that are critical for cell survival, such as DNA replication, cell cycle regulation, and energy metabolism [5].
+    entities: essential genes, DNA replication, cell cycle regulation, energy metabolism
+    assumptions: If SDR9C7 is essential in cancer cell lines, it should be involved in critical cellular processes.
+    consequence: SDR9C7 is not directly involved in critical cellular processes
+    probability: 80
+    explanation: While SDR9C7 may be involved in retinoid metabolism, which can influence cancer-related processes, it is not directly involved in critical cellular processes such as DNA replication, cell cycle regulation, or energy metabolism.
+    novelty: 30
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the available information, it is unlikely that SDR9C7 is essential in cancer cell lines, as it is not directly involved in critical cellular processes.
+
+references:
+  "[1]": "Persson B, Kallberg Y, Bray JE, Bruford E, Dellaporta SL, Favia AD, Duarte RG, Jörnvall H, Kavanagh KL, Kedishvili N, Kisiela M, Maser E, Mindnich R, Orchard S, Penning TM, Thornton JM, Adamski J, Oppermann U. 2009. The SDR (short-chain dehydrogenase/reductase and related enzymes) nomenclature initiative. Chem Biol Interact. 178(1-3):94-8."
+  "[2]": "Kisiela M, Faust A, Ebert B, Maser E, Scheidig AJ. 2012. Crystal structure of human SDR9C7, a short-chain dehydrogenase/reductase involved in retinoid metabolism. Chem Biol Interact. 195(2):139-47."
+  "[3]": "Bushue N, Wan YJ. 2010. Retinoid pathway and cancer therapeutics. Adv Drug Deliv Rev. 62(13):1285-98."
+  "[4]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities. Cell. 163(6):1515-26."
+  "[5]": "Meyers RM, Bryan JG, McFarland JM, Weir BA, Sizemore AE, Xu H, Dharia NV, Montgomery PG, Cowley GS, Pantel S, Goodale A, Lee Y, Ali LD, Jiang G, Lubonja R, Harrington WF, Strickland M, Wu T, Hawes DC, Zhivich VA, Wyatt MR, Kalani Z, Chang JJ, Okamoto M, Stegmaier K, Golub TR, Boehm JS, Vazquez F, Root DE, Hahn WC, Tsherniak A. 2017. Computational correction of copy number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells. Nat Genet. 49(12):1779-1784."

@@ -1,0 +1,71 @@
+parameters:
+  - age: 71
+  - stage: III
+  - location: right side of the colon
+  - histology: moderately differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage III colon adenocarcinoma with moderately differentiated histology. Moderately differentiated tumors have intermediate levels of differentiation and are associated with intermediate aggressiveness [1]. The tumor has metastasized, indicating that cancer cells have spread to other parts of the body.
+    entities: cancer cells, metastasis
+    assumptions: The patient receives optimal standard of care treatment, which may include surgery, chemotherapy, and/or radiation therapy.
+    consequence: decreased tumor growth and metastasis
+    probability: 80
+    explanation: Optimal standard of care treatment can effectively reduce tumor growth and metastasis in many cases of colon adenocarcinoma [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Chemotherapy and radiation therapy can cause DNA damage in cancer cells, leading to cell death [3]. Surgery can remove the primary tumor and potentially some metastatic sites.
+    entities: DNA damage, cell death, surgery
+    assumptions: The patient's cancer cells are sensitive to chemotherapy and radiation therapy.
+    consequence: increased cancer cell death
+    probability: 75
+    explanation: Chemotherapy and radiation therapy are generally effective in inducing cell death in cancer cells, while surgery can remove the primary tumor and some metastatic sites [3].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: As cancer cells die, the tumor size decreases, and the immune system clears dead cells and debris [4].
+    entities: tumor size, immune system
+    assumptions: The patient's immune system is functioning properly and can clear dead cells and debris.
+    consequence: decreased tumor size and clearance of dead cells
+    probability: 70
+    explanation: A functioning immune system can effectively clear dead cells and debris, leading to a decrease in tumor size [4].
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: A decrease in tumor size can lead to reduced pressure on surrounding organs and tissues, improving organ function [5].
+    entities: organ function, tumor size
+    assumptions: The patient's organs are not severely damaged by the tumor or treatment.
+    consequence: improved organ function
+    probability: 65
+    explanation: Reduced tumor size can alleviate pressure on surrounding organs and tissues, leading to improved organ function [5].
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Improved organ function and reduced tumor burden can lead to an increase in progression-free survival [6].
+    entities: progression-free survival, organ function, tumor burden
+    assumptions: The patient's overall health is not severely compromised by other factors.
+    consequence: increased progression-free survival
+    probability: 60
+    explanation: A decrease in tumor burden and improved organ function can contribute to an increase in progression-free survival [6].
+    novelty: 0
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Based on the provided examples and the patient's characteristics, the expected progression-free survival for this patient under optimal standard of care treatment is estimated to be around 10 months. This estimate takes into account the patient's age, tumor stage, histology, metastasis status, and the absence of carcinomatosis.
+
+references:
+  "[1]": "Compton CC, et al. (2000) American Joint Committee on Cancer Prognostic Factors Consensus Conference: Colorectal Working Group. Cancer 88(7):1739-57."
+  "[2]": "Van Cutsem E, et al. (2016) ESMO consensus guidelines for the management of patients with metastatic colorectal cancer. Annals of Oncology 27(8):1386-1422."
+  "[3]": "Ciccia A, Elledge SJ. (2010) The DNA damage response: making it safe to play with knives. Molecular Cell 40(2):179-204."
+  "[4]": "Galluzzi L, et al. (2017) Immunogenic cell death in cancer and infectious disease. Nature Reviews Immunology 17(2):97-111."
+  "[5]": "Gupta GP, Massagué J. (2006) Cancer metastasis: building a framework. Cell 127(4):679-95."
+  "[6]": "Gill S, et al. (2004) Pooled analysis of fluorouracil-based adjuvant therapy for stage II and III colon cancer: who benefits and by how much? Journal of Clinical Oncology 22(10):1797-806."

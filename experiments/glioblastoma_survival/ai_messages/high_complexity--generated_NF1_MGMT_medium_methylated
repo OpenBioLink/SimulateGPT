@@ -1,0 +1,36 @@
+parameters:
+  - glioblastoma diagnosis
+  - NF1 mutations
+  - MGMT methylation status: medium
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: NF1 is a tumor suppressor gene that negatively regulates the RAS-MAPK pathway, which is involved in cell proliferation and survival. Mutations in NF1 can lead to increased RAS-MAPK signaling and contribute to glioblastoma development [1]. MGMT is a DNA repair enzyme that removes alkyl groups from the O6 position of guanine. Methylation of the MGMT promoter can lead to reduced MGMT expression, which can increase the sensitivity of tumor cells to alkylating agents such as temozolomide [2].
+    entities: NF1, MGMT, RAS-MAPK pathway, temozolomide
+    assumptions: The patient has NF1 mutations and medium MGMT methylation status, which may affect their response to standard of care treatment.
+    consequence: increased RAS-MAPK signaling, increased sensitivity to temozolomide
+    probability: 80
+    explanation: NF1 mutations are known to increase RAS-MAPK signaling, and medium MGMT methylation status suggests a potential increased sensitivity to temozolomide.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Glioblastoma is an aggressive brain tumor characterized by rapid cell proliferation, invasion, and resistance to apoptosis [3]. Standard of care treatment for glioblastoma includes surgery, radiation therapy, and chemotherapy with temozolomide [4].
+    entities: glioblastoma cells, surgery, radiation therapy, chemotherapy
+    assumptions: The patient is receiving standard of care treatment, which may be influenced by their molecular profile.
+    consequence: reduced tumor growth and invasion, increased cell death
+    probability: 70
+    explanation: The increased sensitivity to temozolomide due to medium MGMT methylation status may lead to a better response to chemotherapy, while the increased RAS-MAPK signaling due to NF1 mutations may contribute to tumor aggressiveness.
+    novelty: 30
+
+conclusion:
+  outcome: increased survival, +3 months
+  explanation: The patient's medium MGMT methylation status suggests increased sensitivity to temozolomide, which may improve their response to chemotherapy and lead to a slightly increased survival compared to the median overall glioblastoma survival of 15 months. However, the presence of NF1 mutations may contribute to tumor aggressiveness, which could limit the survival benefit. Based on these factors, we estimate an increased survival of 3 months relative to the median.
+
+references:
+  "[1]": "Gutmann DH, Ferner RE, Listernick RH, Korf BR, Wolters PL, Johnson KJ. 2017. Neurology. Neurofibromatosis type 1."
+  "[2]": "Hegi ME, Diserens AC, Gorlia T, Hamou MF, de Tribolet N, Weller M, Kros JM, Hainfellner JA, Mason W, Mariani L, Bromberg JE, Hau P, Mirimanoff RO, Cairncross JG, Janzer RC, Stupp R. 2005. N Engl J Med. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[3]": "Omuro A, DeAngelis LM. 2013. JAMA. Glioblastoma and other malignant gliomas: a clinical review."
+  "[4]": "Stupp R, Mason WP, van den Bent MJ, Weller M, Fisher B, Taphoorn MJ, Belanger K, Brandes AA, Marosi C, Bogdahn U, Curschmann J, Janzer RC, Ludwin SK, Gorlia T, Allgeier A, Lacombe D, Cairncross JG, Eisenhauer E, Mirimanoff RO. 2005. N Engl J Med. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."

@@ -1,0 +1,5 @@
+conclusion:
+  outcome:
+    survival_relative_to_median: 'decreased'
+    survival_deviation_months: -4
+  explanation: The patient has a glioblastoma with an EGFR mutation and low MGMT methylation status. EGFR mutations are associated with a more aggressive tumor phenotype, while low MGMT methylation status reduces the effectiveness of standard chemotherapy (temozolomide). These factors contribute to a decreased survival relative to the median overall glioblastoma survival, with an estimated deviation of 4 months.

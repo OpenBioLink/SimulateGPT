@@ -1,0 +1,35 @@
+parameters:
+  - NDST4 gene
+  - cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: NDST4 (N-deacetylase/N-sulfotransferase 4) is a member of the heparan sulfate biosynthetic enzyme family, which is involved in the modification of heparan sulfate proteoglycans (HSPGs) [1]. HSPGs play a role in cell signaling, cell adhesion, and extracellular matrix organization [2]. Altered HSPG expression has been associated with cancer progression and metastasis [3]. However, the specific role of NDST4 in cancer cell-lines has not been extensively studied.
+    entities: NDST4, HSPGs, cancer cell-lines
+    assumptions: NDST4 may have a role in cancer cell-lines due to its involvement in HSPG modification.
+    consequence: potential involvement of NDST4 in cancer cell-line processes
+    probability: 50
+    explanation: NDST4's involvement in HSPG modification suggests it could have a role in cancer cell-lines, but the specific role is not well-established.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are critical for the survival and growth of an organism or cell [4]. To determine if a gene is essential in a specific cell type, researchers often use gene knockout or knockdown experiments and observe the effects on cell viability and growth [5].
+    entities: essential genes, gene knockout, gene knockdown, cell viability, cell growth
+    assumptions: If NDST4 is essential in cancer cell-lines, its knockout or knockdown should result in reduced cell viability and growth.
+    consequence: reduced cell viability and growth upon NDST4 knockout or knockdown in cancer cell-lines
+    probability: 50
+    explanation: The consequence is based on the assumption that essential genes, when knocked out or knocked down, lead to reduced cell viability and growth.
+    novelty: 50
+
+conclusion:
+  outcome: unlikely
+  explanation: While NDST4 is involved in HSPG modification, which has been associated with cancer progression and metastasis, its specific role in cancer cell-lines is not well-established. Therefore, it is unlikely that NDST4 is essential in cancer cell-lines. However, further experimental evidence is needed to confirm this conclusion.
+
+references:
+  "[1]": "Aikawa J, Grobe K, Tsujimoto M, Esko JD. 2001. Glycobiology. Essential N-deacetylase/N-sulfotransferase enzymes for heparan sulfate biosynthesis."
+  "[2]": "Sarrazin S, Lamanna WC, Esko JD. 2011. Cold Spring Harb Perspect Biol. Heparan sulfate proteoglycans."
+  "[3]": "Iozzo RV, Sanderson RD. 2011. FEBS J. Proteoglycans in cancer biology, tumour microenvironment and angiogenesis."
+  "[4]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. Science. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."
+  "[5]": "Echeverri CJ, Beachy PA, Baum B, Boutros M, Buchholz F, Chanda SK, Downward J, Ellenberg J, Fraser AG, Hacohen N, Hahn WC, Jackson AL, Kiger A, Linsley PS, Lum L, Ma Y, Mathey-Prevot B, Root DE, Sabatini DM, Taipale J, Perrimon N, Bernards R. 2006. Nat Methods. Minimizing the risk of reporting false positives in large-scale RNAi screens."

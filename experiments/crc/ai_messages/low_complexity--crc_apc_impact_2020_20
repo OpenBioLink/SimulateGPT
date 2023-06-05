@@ -1,0 +1,30 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage IV rectal adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage IV rectal adenocarcinoma, which is characterized by the presence of metastases and carcinomatosis. The tumor exhibits moderately differentiated differentiation histology.
+  - step: 2
+    level: organ
+    consequence: initiation of optimal standard of care treatment
+    probability: 100
+    explanation: Given the stage IV diagnosis, the patient will receive an optimal standard of care treatment plan, which typically includes a combination of chemotherapy, radiation therapy, and targeted therapies.
+  - step: 3
+    level: cellular
+    consequence: tumor cell death and reduced proliferation
+    probability: 80
+    explanation: The optimal standard of care treatment plan aims to kill cancer cells and reduce their proliferation. The moderately differentiated histology suggests that the tumor cells are somewhat responsive to treatment, but not as responsive as well-differentiated cells.
+  - step: 4
+    level: organ
+    consequence: reduced tumor burden and metastatic spread
+    probability: 70
+    explanation: As a result of the treatment-induced tumor cell death and reduced proliferation, the overall tumor burden and metastatic spread are expected to decrease. However, the presence of carcinomatosis and the moderately differentiated histology may limit the treatment's effectiveness.
+  - step: 5
+    level: organism
+    consequence: temporary stabilization of disease
+    probability: 60
+    explanation: The optimal standard of care treatment plan may lead to a temporary stabilization of the disease, with a reduction in tumor burden and metastatic spread. However, the stage IV diagnosis, presence of carcinomatosis, and moderately differentiated histology suggest that the disease may eventually progress despite treatment.
+
+conclusion:
+  outcome: 6 months of progression-free survival
+  explanation: Based on the provided examples and the patient's clinical characteristics, the expected progression-free survival for this patient under an optimal standard of care treatment plan is approximately 6 months. This estimate takes into account the stage IV diagnosis, moderately differentiated histology, presence of metastases, and signs of carcinomatosis.

@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage II colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage II colon adenocarcinoma on the left side of the colon, with moderately differentiated differentiation histology, metastasis, and no signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: surgical resection of the primary tumor
+    probability: 90
+    explanation: As part of the optimal standard of care treatment plan for stage II colon adenocarcinoma, the patient undergoes surgical resection of the primary tumor to remove cancerous tissue and prevent further growth.
+  - step: 3
+    level: cellular
+    consequence: adjuvant chemotherapy
+    probability: 80
+    explanation: Following surgery, the patient receives adjuvant chemotherapy to target and kill any remaining cancer cells, reducing the risk of recurrence and metastasis.
+  - step: 4
+    level: molecular
+    consequence: inhibition of cancer cell proliferation
+    probability: 75
+    explanation: Chemotherapy drugs target rapidly dividing cells, including cancer cells, by inhibiting DNA replication and cell division, leading to cell death and reduced tumor growth.
+  - step: 5
+    level: cellular
+    consequence: immune system activation
+    probability: 70
+    explanation: The patient's immune system is activated by the presence of dying cancer cells and debris, leading to an immune response that targets and eliminates remaining cancer cells.
+  - step: 6
+    level: organ
+    consequence: monitoring for recurrence
+    probability: 100
+    explanation: The patient undergoes regular follow-up appointments and imaging studies to monitor for any signs of cancer recurrence or new metastases.
+
+conclusion:
+  outcome: 24 months of progression-free survival
+  explanation: Based on the provided examples and the patient's stage II colon adenocarcinoma diagnosis, moderately differentiated differentiation histology, metastasis, and absence of carcinomatosis, the patient is expected to have a longer progression-free survival than the stage III and IV examples. Under an optimal standard of care treatment plan, including surgical resection, adjuvant chemotherapy, and immune system activation, the patient is expected to have approximately 24 months of progression-free survival.

@@ -1,0 +1,22 @@
+parameters:
+  - gene: MRGPRX2
+  - cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: MRGPRX2 (Mas-related G protein-coupled receptor X2) is a G protein-coupled receptor that is predominantly expressed in mast cells and is involved in the regulation of mast cell activation and degranulation [1]. It has been reported to play a role in itch and pain sensation, as well as in the regulation of the immune response [2]. However, there is limited evidence linking MRGPRX2 to cancer development or progression.
+    entities: MRGPRX2, mast cells, G protein-coupled receptor
+    assumptions: MRGPRX2 is predominantly expressed in mast cells and has not been directly linked to cancer development or progression.
+    consequence: MRGPRX2 is unlikely to be essential in cancer cell-lines.
+    probability: 80
+    explanation: Given the limited evidence linking MRGPRX2 to cancer and its predominant expression in mast cells, it is unlikely that MRGPRX2 is essential in cancer cell-lines.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the available evidence and the predominant expression of MRGPRX2 in mast cells, it is unlikely that MRGPRX2 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Tatemoto K, Nozaki Y, Tsuda R, et al. 2006. Proc Natl Acad Sci U S A. Peptide histidine isoleucine and tryptase stimulate the release of histamine from human skin mast cells through activation of Mas-related gene X2."
+  "[2]": "Lembo PM, Grazzini E, Groblewski T, et al. 2002. Proc Natl Acad Sci U S A. Proenkephalin A gene products activate a new family of sensory neuron--specific GPCRs."

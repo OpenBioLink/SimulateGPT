@@ -1,0 +1,22 @@
+parameters:
+  - gene: POLR3H
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: POLR3H encodes a subunit of RNA polymerase III, which is involved in the transcription of small non-coding RNAs, such as tRNAs and 5S rRNA [1]. RNA polymerase III is essential for cell growth and proliferation [2]. However, the specific role of POLR3H in cancer cell-lines has not been extensively studied.
+    entities: POLR3H, RNA polymerase III, tRNAs, 5S rRNA
+    assumptions: POLR3H is involved in the transcription of small non-coding RNAs, which are essential for cell growth and proliferation. Cancer cell-lines require cell growth and proliferation for survival.
+    consequence: POLR3H is likely essential for the survival of cancer cell-lines.
+    probability: 70
+    explanation: Given the role of POLR3H in the transcription of small non-coding RNAs and the importance of these RNAs in cell growth and proliferation, it is likely that POLR3H is essential for the survival of cancer cell-lines.
+    novelty: 50
+
+conclusion:
+  outcome: likely
+  explanation: Based on the role of POLR3H in the transcription of small non-coding RNAs and the importance of these RNAs in cell growth and proliferation, it is likely that POLR3H is essential for the survival of cancer cell-lines.
+
+references:
+  "[1]": "Hu, P., Wu, S., & Sun, Y. (2002). The Journal of Biological Chemistry, The 14.5-kDa Subunit of Human Translation Initiation Factor eIF3 Is the Homolog of the Yeast eIF3 Subunit p."
+  "[2]": "White, R. J. (2005). Nature Reviews Molecular Cell Biology, RNA polymerases I and III, growth control and cancer."

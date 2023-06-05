@@ -1,0 +1,53 @@
+parameters:
+  - age: 59
+  - cancer_stage: III
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: rectum
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The Wnt signaling pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and tumor growth [1]. KRAS, BRAF, and PIK3CA mutations are also common in colon adenocarcinoma and contribute to tumor progression [2]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [3].
+    entities: Wnt signaling pathway, KRAS, BRAF, PIK3CA
+    assumptions: The patient's tumor has molecular alterations typical of colon adenocarcinoma, and the moderately differentiated histology suggests a somewhat better prognosis than poorly differentiated tumors.
+    consequence: The tumor may respond better to treatment due to its moderately differentiated histology, but the presence of metastasis indicates a more aggressive disease course.
+    probability: 70
+    explanation: Moderately differentiated tumors generally have a better prognosis, but the presence of metastasis complicates the disease course and may reduce the effectiveness of treatment.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Tumor cells can develop resistance to chemotherapy through various mechanisms, such as drug efflux, DNA repair, and apoptosis inhibition [4]. Immunotherapy can be effective in treating colon adenocarcinoma, particularly in patients with microsatellite instability-high (MSI-H) or mismatch repair deficient (dMMR) tumors [5].
+    entities: chemotherapy, immunotherapy, drug resistance, microsatellite instability-high, mismatch repair deficient
+    assumptions: The patient receives optimal standard of care treatment, which may include chemotherapy and/or immunotherapy depending on the molecular characteristics of the tumor.
+    consequence: The tumor may initially respond to treatment, but the development of drug resistance could lead to disease progression.
+    probability: 60
+    explanation: The effectiveness of treatment depends on the molecular characteristics of the tumor and the development of drug resistance.
+    novelty: 30
+
+  - step: 3
+    level: tissue
+    facts: Angiogenesis is a key process in tumor growth and metastasis, and anti-angiogenic therapies can be effective in treating colon adenocarcinoma [6]. Tumor microenvironment also plays a role in disease progression and response to treatment [7].
+    entities: angiogenesis, anti-angiogenic therapies, tumor microenvironment
+    assumptions: The patient's tumor may be influenced by angiogenesis and the tumor microenvironment, which could impact the response to treatment.
+    consequence: The tumor may initially respond to treatment, but changes in the tumor microenvironment and angiogenesis could contribute to disease progression.
+    probability: 50
+    explanation: The tumor microenvironment and angiogenesis can influence the response to treatment and contribute to disease progression.
+    novelty: 40
+
+conclusion:
+  outcome: 8 months of progression-free survival
+  explanation: Based on the patient's age, cancer stage, and moderately differentiated histology, as well as the examples provided, the patient is expected to have a progression-free survival of approximately 8 months under an optimal standard of care treatment plan. This estimate takes into account the molecular, cellular, and tissue-level processes that may impact tumor progression and response to treatment.
+
+references:
+  "[1]": "Clevers H, Nusse R. 2012. Cell. Wnt/β-Catenin Signaling and Disease."
+  "[2]": "Fearon ER. 2011. Nature Reviews Cancer. Molecular genetics of colorectal cancer."
+  "[3]": "Compton CC. 2007. Archives of Pathology & Laboratory Medicine. Updated Protocol for the Examination of Specimens From Patients With Carcinomas of the Colon and Rectum."
+  "[4]": "Holohan C, Van Schaeybroeck S, Longley DB, Johnston PG. 2013. Nature Reviews Cancer. Cancer drug resistance: an evolving paradigm."
+  "[5]": "Le DT, Uram JN, Wang H, et al. 2015. New England Journal of Medicine. PD-1 Blockade in Tumors with Mismatch-Repair Deficiency."
+  "[6]": "Folkman J. 2007. Nature Reviews Drug Discovery. Angiogenesis: an organizing principle for drug discovery?"
+  "[7]": "Quail DF, Joyce JA. 2013. Nature Medicine. Microenvironmental regulation of tumor progression and metastasis."

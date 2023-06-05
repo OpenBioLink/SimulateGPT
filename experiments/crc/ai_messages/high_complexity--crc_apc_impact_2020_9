@@ -1,0 +1,62 @@
+parameters:
+  - age: 62
+  - cancer_stage: III
+  - cancer_type: rectal adenocarcinoma
+  - tumor_location: rectum
+  - differentiation: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Standard of care treatment for stage III rectal adenocarcinoma typically includes neoadjuvant chemoradiotherapy, followed by surgery and adjuvant chemotherapy [1]. Neoadjuvant chemoradiotherapy can lead to tumor shrinkage, DNA damage, and cell death [2].
+    entities: chemoradiotherapy, DNA damage, cell death
+    assumptions: The patient receives neoadjuvant chemoradiotherapy as part of the optimal standard of care treatment plan.
+    consequence: tumor shrinkage, increased DNA damage, and increased cell death in cancer cells
+    probability: 90
+    explanation: Neoadjuvant chemoradiotherapy is effective in causing tumor shrinkage, DNA damage, and cell death in a majority of patients with rectal adenocarcinoma [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Tumor shrinkage and cell death can lead to a decrease in the number of cancer cells and a reduction in the tumor size [3]. This can improve the chances of successful surgical resection and reduce the risk of local recurrence [4].
+    entities: tumor shrinkage, cell death, cancer cells, tumor size, surgical resection, local recurrence
+    assumptions: The patient's tumor responds to neoadjuvant chemoradiotherapy, leading to tumor shrinkage and cell death.
+    consequence: decreased tumor size, improved chances of successful surgical resection, reduced risk of local recurrence
+    probability: 80
+    explanation: Tumor shrinkage and cell death are associated with a decrease in tumor size and improved surgical outcomes in patients with rectal adenocarcinoma [4].
+    novelty: 0
+
+  - step: 3
+    level: organ
+    facts: Successful surgical resection of the tumor can lead to the removal of the primary tumor and any affected lymph nodes, reducing the risk of cancer recurrence and metastasis [5].
+    entities: surgical resection, primary tumor, lymph nodes, cancer recurrence, metastasis
+    assumptions: The patient undergoes successful surgical resection of the tumor and affected lymph nodes.
+    consequence: removal of primary tumor and affected lymph nodes, reduced risk of cancer recurrence and metastasis
+    probability: 75
+    explanation: Surgical resection is effective in removing the primary tumor and affected lymph nodes, reducing the risk of cancer recurrence and metastasis in patients with rectal adenocarcinoma [5].
+    novelty: 0
+
+  - step: 4
+    level: organism
+    facts: Adjuvant chemotherapy can further reduce the risk of cancer recurrence and metastasis by targeting any remaining cancer cells in the body [6].
+    entities: adjuvant chemotherapy, cancer recurrence, metastasis, cancer cells
+    assumptions: The patient receives adjuvant chemotherapy as part of the optimal standard of care treatment plan.
+    consequence: reduced risk of cancer recurrence and metastasis
+    probability: 70
+    explanation: Adjuvant chemotherapy is effective in reducing the risk of cancer recurrence and metastasis in patients with rectal adenocarcinoma [6].
+    novelty: 0
+
+conclusion:
+  outcome: 12 months of progression-free survival
+  explanation: Based on the provided examples and the simulation steps, a 62-year-old patient with stage III rectal adenocarcinoma, moderately differentiated, metastasized, and no signs of carcinomatosis, is expected to have approximately 12 months of progression-free survival under an optimal standard of care treatment plan. This estimate is based on the effectiveness of neoadjuvant chemoradiotherapy, surgical resection, and adjuvant chemotherapy in reducing tumor size, removing the primary tumor and affected lymph nodes, and reducing the risk of cancer recurrence and metastasis.
+
+references:
+  "[1]": "Glynne-Jones R, Wyrwicz L, Tiret E, et al. 2017. Ann Oncol. Rectal cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up."
+  "[2]": "Bujko K, Nowacki MP, Nasierowska-Guttmejer A, et al. 2006. J Clin Oncol. Long-term results of a randomized trial comparing preoperative short-course radiotherapy with preoperative conventionally fractionated chemoradiation for rectal cancer."
+  "[3]": "Gerard JP, Conroy T, Bonnetain F, et al. 2006. J Clin Oncol. Preoperative radiotherapy with or without concurrent fluorouracil and leucovorin in T3-4 rectal cancers: results of FFCD 9203."
+  "[4]": "Sauer R, Becker H, Hohenberger W, et al. 2004. N Engl J Med. Preoperative versus postoperative chemoradiotherapy for rectal cancer."
+  "[5]": "Heald RJ, Ryall RD. 1986. Lancet. Recurrence and survival after total mesorectal excision for rectal cancer."
+  "[6]": "André T, Boni C, Navarro M, et al. 2009. J Clin Oncol. Improved overall survival with oxaliplatin, fluorouracil, and leucovorin as adjuvant treatment in stage II or III colon cancer in the MOSAIC trial."

@@ -1,0 +1,34 @@
+parameters:
+  - gene: SS18L2
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: SS18L2, also known as CREST, is a calcium-responsive transactivator that plays a role in neuronal development and synapse formation [1]. It has been reported to be involved in the regulation of gene expression through its interaction with the transcriptional coactivator CBP [2]. There is limited information on the direct involvement of SS18L2 in cancer.
+    entities: SS18L2, CBP
+    assumptions: SS18L2 may have a role in cancer cell-lines through its interaction with CBP and regulation of gene expression.
+    consequence: altered SS18L2 expression or function in cancer cell-lines
+    probability: 50
+    explanation: Given the limited information on SS18L2's involvement in cancer, it is uncertain whether its expression or function is altered in cancer cell-lines.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are critical for the survival and proliferation of cells, and their loss or inhibition often leads to cell death or growth arrest [3]. In cancer cell-lines, essential genes are often involved in processes such as cell cycle regulation, DNA replication, and cell survival pathways [4].
+    entities: essential genes, cancer cell-lines, cell cycle regulation, DNA replication, cell survival pathways
+    assumptions: If SS18L2 is essential in cancer cell-lines, it should be involved in critical cellular processes such as cell cycle regulation, DNA replication, or cell survival pathways.
+    consequence: SS18L2 involvement in critical cellular processes in cancer cell-lines
+    probability: 40
+    explanation: While SS18L2 is involved in gene regulation, there is limited evidence linking it to critical cellular processes in cancer cell-lines.
+    novelty: 0
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the limited information on SS18L2's involvement in cancer and its uncertain role in critical cellular processes, it is unlikely that SS18L2 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Aizawa, H., Hu, S. C., Bobb, K., Balakrishnan, K., Ince, G., Gurevich, I., ... & Snyder, S. H. (2004). The Journal of Neuroscience, 24(43), 9658-9669. Dendrite development regulated by CREST, a calcium-regulated transcriptional activator."
+  "[2]": "Qiu, Z., & Ghosh, A. (2008). Neuron, 60(1), 101-112. A calcium-dependent switch in a CREST-BRG1 complex regulates activity-dependent gene expression."
+  "[3]": "Hart, T., Chandrashekhar, M., Aregger, M., Steinhart, Z., Brown, K. R., MacLeod, G., ... & Moffat, J. (2015). Cell, 162(4), 675-687. High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities."
+  "[4]": "Wang, T., Birsoy, K., Hughes, N. W., Krupczak, K. M., Post, Y., Wei, J. J., ... & Sabatini, D. M. (2015). Science, 350(6264), 1096-1101. Identification and characterization of essential genes in the human genome."

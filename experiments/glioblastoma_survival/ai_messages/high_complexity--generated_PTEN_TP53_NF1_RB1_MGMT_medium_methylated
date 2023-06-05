@@ -1,0 +1,41 @@
+parameters:
+  - glioblastoma diagnosis
+  - PTEN mutations
+  - TP53 mutations
+  - NF1 mutations
+  - RB1 mutations
+  - MGMT methylation status: medium
+  - MUC16: no mutations
+  - EGFR: no mutations
+  - PIK3CA: no mutations
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Glioblastoma is a highly aggressive brain tumor with a median overall survival of 15 months [1]. PTEN, TP53, NF1, and RB1 are tumor suppressor genes, and their mutations can lead to uncontrolled cell growth and tumor progression [2]. MGMT methylation status affects the response to temozolomide, a standard chemotherapy drug for glioblastoma [3]. MUC16, EGFR, and PIK3CA are not mutated in this case.
+    entities: PTEN, TP53, NF1, RB1, MGMT, MUC16, EGFR, PIK3CA, temozolomide
+    assumptions: The patient receives standard of care with genotype-informed treatment, which includes surgery, radiation, and chemotherapy with temozolomide. The presence of multiple tumor suppressor gene mutations may influence the tumor's aggressiveness and response to treatment.
+    consequence: increased tumor aggressiveness and altered response to temozolomide
+    probability: 80
+    explanation: The presence of multiple tumor suppressor gene mutations is likely to result in a more aggressive tumor and may affect the response to temozolomide due to the medium MGMT methylation status.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Tumor suppressor gene mutations can lead to uncontrolled cell growth, angiogenesis, and invasion [2]. Temozolomide is an alkylating agent that induces DNA damage and cell death, but its efficacy can be reduced in tumors with medium MGMT methylation status [3].
+    entities: tumor cells, blood vessels, temozolomide, MGMT
+    assumptions: The tumor cells have increased aggressiveness due to the presence of multiple tumor suppressor gene mutations. The medium MGMT methylation status may reduce the efficacy of temozolomide.
+    consequence: increased tumor growth, angiogenesis, and invasion; reduced response to temozolomide
+    probability: 75
+    explanation: The presence of multiple tumor suppressor gene mutations is likely to result in increased tumor growth, angiogenesis, and invasion. The medium MGMT methylation status may reduce the response to temozolomide.
+    novelty: 20
+
+conclusion:
+  outcome: decreased survival, -4 months
+  explanation: The presence of multiple tumor suppressor gene mutations and medium MGMT methylation status is likely to result in increased tumor aggressiveness and reduced response to temozolomide, leading to a decreased survival of 4 months relative to the median overall glioblastoma survival of 15 months.
+
+references:
+  "[1]": "Stupp R, et al. 2005. New England Journal of Medicine. Radiotherapy plus Concomitant and Adjuvant Temozolomide for Glioblastoma."
+  "[2]": "Furnari FB, et al. 2007. Genes & Development. Malignant astrocytic glioma: genetics, biology, and paths to treatment."
+  "[3]": "Hegi ME, et al. 2005. New England Journal of Medicine. MGMT Gene Silencing and Benefit from Temozolomide in Glioblastoma."

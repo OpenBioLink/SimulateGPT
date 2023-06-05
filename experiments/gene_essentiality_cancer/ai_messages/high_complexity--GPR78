@@ -1,0 +1,32 @@
+parameters:
+  - gene: GPR78
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: GPR78, also known as G protein-coupled receptor 78, is a member of the G protein-coupled receptor family. G protein-coupled receptors are involved in various physiological processes, including cell signaling and regulation of cell growth and differentiation [1]. However, there is limited information available on the specific role of GPR78 in cancer cell-lines.
+    entities: GPR78, G protein-coupled receptors, cancer cell-lines
+    assumptions: Given the limited information available on GPR78, we will assume that its role in cancer cell-lines is not well-established.
+    consequence: unknown role of GPR78 in cancer cell-lines
+    probability: 100
+    explanation: Due to the lack of information on GPR78's specific role in cancer cell-lines, it is currently unknown whether it is essential or not.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Essential genes are those that are critical for the survival and proliferation of cells. In cancer cell-lines, essential genes are often involved in processes such as cell growth, cell division, and cell signaling [2]. To determine if GPR78 is essential in cancer cell-lines, we would need to investigate its involvement in these processes.
+    entities: essential genes, cell growth, cell division, cell signaling, cancer cell-lines
+    assumptions: We assume that if GPR78 is involved in critical cellular processes in cancer cell-lines, it may be considered essential.
+    consequence: potential involvement of GPR78 in critical cellular processes in cancer cell-lines
+    probability: 50
+    explanation: Since GPR78 is a G protein-coupled receptor, it may be involved in cell signaling and other critical cellular processes in cancer cell-lines. However, due to the limited information available, we cannot definitively determine its involvement in these processes.
+    novelty: 50
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the limited information available on GPR78's specific role in cancer cell-lines, it is currently unlikely that GPR78 is essential in cancer cell-lines. However, further research is needed to confirm this conclusion.
+
+references:
+  "[1]": "Fredriksson R, Lagerström MC, Lundin LG, Schiöth HB. 2003. The G-protein-coupled receptors in the human genome form five main families. Phylogenetic analysis, paralogon groups, and fingerprints. Molecular Pharmacology 63(6):1256-1272."
+  "[2]": "Hart T, Chandrashekhar M, Aregger M, Steinhart Z, Brown KR, MacLeod G, Mis M, Zimmermann M, Fradet-Turcotte A, Sun S, Mero P, Dirks P, Sidhu S, Roth FP, Rissland OS, Durocher D, Angers S, Moffat J. 2015. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities. Cell 163(6):1515-1526."

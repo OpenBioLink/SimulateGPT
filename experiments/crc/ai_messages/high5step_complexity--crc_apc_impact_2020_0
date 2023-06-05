@@ -1,0 +1,73 @@
+parameters:
+  - age: 71
+  - stage: II
+  - location: left side of the colon
+  - histology: moderately differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The RAS-RAF-MEK-ERK pathway is often dysregulated in colon adenocarcinoma, leading to increased cell proliferation and survival [1]. Moderately differentiated tumors have a better prognosis than poorly differentiated tumors [2]. 
+    entities: RAS, RAF, MEK, ERK, cell proliferation, cell survival
+    assumptions: The patient's tumor has a dysregulated RAS-RAF-MEK-ERK pathway, contributing to tumor growth. The moderately differentiated histology indicates a better prognosis than poorly differentiated tumors.
+    consequence: The optimal standard of care treatment plan targets the dysregulated RAS-RAF-MEK-ERK pathway, reducing cell proliferation and survival.
+    probability: 80
+    explanation: Targeting the dysregulated pathway is a common approach in colon adenocarcinoma treatment, and moderately differentiated tumors generally respond better to treatment.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Tumor-infiltrating lymphocytes (TILs) are associated with a better prognosis in colon cancer [3]. 
+    entities: TILs, immune response
+    assumptions: The patient's immune system is actively fighting the tumor, and the treatment plan includes immunotherapy to enhance the immune response.
+    consequence: The presence of TILs and the use of immunotherapy lead to a more effective immune response against the tumor.
+    probability: 70
+    explanation: Immunotherapy can enhance the immune response against the tumor, improving the patient's prognosis.
+    novelty: 40
+
+  - step: 3
+    level: tissue
+    facts: Angiogenesis is a key process in tumor growth and metastasis [4]. Anti-angiogenic therapies can inhibit tumor growth and metastasis [5].
+    entities: angiogenesis, anti-angiogenic therapies
+    assumptions: The patient's tumor relies on angiogenesis for growth and metastasis. The treatment plan includes anti-angiogenic therapies.
+    consequence: The anti-angiogenic therapies inhibit tumor growth and metastasis.
+    probability: 75
+    explanation: Anti-angiogenic therapies can effectively inhibit tumor growth and metastasis in colon adenocarcinoma.
+    novelty: 30
+
+  - step: 4
+    level: organ
+    facts: The left side of the colon has a better prognosis than the right side [6]. Stage II colon cancer has a better prognosis than stage III or IV [7].
+    entities: left colon, right colon, stage II, stage III, stage IV
+    assumptions: The patient's tumor location and stage contribute to a better prognosis than patients with right-sided or more advanced stage tumors.
+    consequence: The patient has a better response to treatment and a longer progression-free survival than patients with right-sided or more advanced stage tumors.
+    probability: 85
+    explanation: The left-sided location and stage II classification are associated with a better prognosis in colon adenocarcinoma.
+    novelty: 10
+
+  - step: 5
+    level: organism
+    facts: Age is a risk factor for colon cancer, and older patients may have a worse prognosis [8].
+    entities: age, prognosis
+    assumptions: The patient's age may negatively impact their prognosis, but the optimal standard of care treatment plan is tailored to their specific needs.
+    consequence: The patient's age may slightly reduce their progression-free survival compared to younger patients, but the tailored treatment plan helps to mitigate this effect.
+    probability: 60
+    explanation: Older patients may have a worse prognosis, but a tailored treatment plan can help improve their outcomes.
+    novelty: 50
+
+conclusion:
+  outcome: The expected progression-free survival for this patient is approximately 12 months.
+  explanation: The patient's moderately differentiated, stage II, left-sided colon adenocarcinoma has a better prognosis than more advanced or poorly differentiated tumors. The optimal standard of care treatment plan, including targeted therapies, immunotherapy, and anti-angiogenic therapies, contributes to a longer progression-free survival. However, the patient's age may slightly reduce their progression-free survival compared to younger patients.
+
+references:
+  "[1]": "Downward J. (2003) Nature Reviews Cancer. Targeting RAS signalling pathways in cancer therapy."
+  "[2]": "Compton CC. (2007) Archives of Pathology & Laboratory Medicine. Prognostic factors in cancer."
+  "[3]": "Galon J, et al. (2006) Science. Type, density, and location of immune cells within human colorectal tumors predict clinical outcome."
+  "[4]": "Carmeliet P, Jain RK. (2000) Nature. Angiogenesis in cancer and other diseases."
+  "[5]": "Folkman J. (2007) Nature Reviews Drug Discovery. Angiogenesis: an organizing principle for drug discovery?"
+  "[6]": "Benedix F, et al. (2010) International Journal of Colorectal Disease. Comparison of 17,641 patients with right- and left-sided colon cancer: differences in epidemiology, perioperative course, histology, and survival."
+  "[7]": "O'Connell JB, et al. (2004) CA: A Cancer Journal for Clinicians. Survival following recurrence in stage II and III colon cancer: findings from the ACCENT data set."
+  "[8]": "Seymour MT, et al. (2007) The Lancet. Different strategies of sequential and combination chemotherapy for patients with poor prognosis advanced colorectal cancer (MRC FOCUS): a randomised controlled trial."

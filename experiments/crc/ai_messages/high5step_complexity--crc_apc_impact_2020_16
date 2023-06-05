@@ -1,0 +1,66 @@
+parameters:
+  - age: 64
+  - stage: IV
+  - location: right side of the colon
+  - differentiation: moderately differentiated
+  - metastasis: present
+  - carcinomatosis: present
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage IV colon adenocarcinoma, which is characterized by the presence of metastasis and carcinomatosis. The tumor is moderately differentiated, indicating a moderate level of aggressiveness. The patient will receive optimal standard of care treatment, which typically includes chemotherapy, targeted therapy, and/or immunotherapy [1].
+    entities: colon adenocarcinoma, metastasis, carcinomatosis, chemotherapy, targeted therapy, immunotherapy
+    assumptions: The treatment will be effective in controlling the tumor growth and metastasis to some extent.
+    consequence: decreased tumor growth and metastasis
+    probability: 70
+    explanation: Optimal standard of care treatment has been shown to be effective in controlling tumor growth and metastasis in many patients with colon adenocarcinoma [1].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Chemotherapy, targeted therapy, and immunotherapy work by targeting cancer cells and inhibiting their growth and proliferation. These treatments can also induce apoptosis (cell death) in cancer cells [1].
+    entities: cancer cells, apoptosis
+    assumptions: The treatment will induce apoptosis in a significant proportion of cancer cells.
+    consequence: increased cancer cell apoptosis
+    probability: 70
+    explanation: The optimal standard of care treatment is designed to target cancer cells and induce apoptosis, leading to a reduction in tumor growth and metastasis [1].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: As cancer cells undergo apoptosis, the tumor size decreases, and the surrounding healthy tissue can recover [1].
+    entities: tumor size, healthy tissue
+    assumptions: The treatment will lead to a decrease in tumor size and recovery of surrounding healthy tissue.
+    consequence: decreased tumor size and recovery of surrounding healthy tissue
+    probability: 60
+    explanation: The treatment-induced apoptosis of cancer cells can lead to a decrease in tumor size and recovery of surrounding healthy tissue [1].
+    novelty: 0
+
+  - step: 4
+    level: organ
+    facts: A decrease in tumor size and recovery of surrounding healthy tissue can lead to improved organ function [1].
+    entities: organ function
+    assumptions: The treatment will lead to improved organ function.
+    consequence: improved organ function
+    probability: 60
+    explanation: As the tumor size decreases and surrounding healthy tissue recovers, organ function can improve [1].
+    novelty: 0
+
+  - step: 5
+    level: organism
+    facts: Improved organ function can lead to a better overall health status and increased progression-free survival [1].
+    entities: overall health status, progression-free survival
+    assumptions: The treatment will lead to a better overall health status and increased progression-free survival.
+    consequence: increased progression-free survival
+    probability: 50
+    explanation: The treatment's effectiveness in controlling tumor growth, inducing cancer cell apoptosis, and improving organ function can lead to a better overall health status and increased progression-free survival [1].
+    novelty: 0
+
+conclusion:
+  outcome: Based on the simulation, the expected progression-free survival for this patient is approximately 10 months.
+  explanation: The optimal standard of care treatment is expected to control tumor growth, induce cancer cell apoptosis, decrease tumor size, improve organ function, and lead to a better overall health status, resulting in an increased progression-free survival.
+
+references:
+  "[1]": "Van Cutsem E, Cervantes A, Adam R, et al. 2016. ESMO consensus guidelines for the management of patients with metastatic colorectal cancer. Annals of Oncology 27(8): 1386-1422."

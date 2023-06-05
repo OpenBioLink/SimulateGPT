@@ -1,0 +1,5 @@
+conclusion:
+  outcome:
+    survival_relative_to_median: 'decreased'
+    survival_deviation_months: -4
+  explanation: The presence of PTEN and NF1 mutations in the glioblastoma may lead to a more aggressive tumor and poorer prognosis. Additionally, low MGMT methylation status is associated with reduced responsiveness to temozolomide, a standard chemotherapy for glioblastoma. These factors combined suggest a decreased survival relative to the median overall glioblastoma survival, with an estimated deviation of 4 months.

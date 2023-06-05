@@ -1,0 +1,50 @@
+parameters:
+  - age: 58
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: rectum
+  - differentiation: moderately differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage IV colon adenocarcinoma, which is characterized by the presence of metastasis. The tumor is moderately differentiated, indicating a moderate level of aggressiveness. The absence of carcinomatosis suggests that the cancer has not spread extensively throughout the peritoneal cavity [1].
+    entities: cancer cells, metastatic cells, molecular pathways, tumor microenvironment
+    assumptions: The optimal standard of care treatment plan is effective in controlling the growth and spread of the tumor.
+    consequence: decreased cancer cell proliferation and metastasis
+    probability: 70
+    explanation: The optimal standard of care treatment plan, which may include chemotherapy, radiation therapy, and targeted therapy, is expected to reduce cancer cell proliferation and metastasis by targeting specific molecular pathways and the tumor microenvironment [2].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: The optimal standard of care treatment plan targets cancer cells and the tumor microenvironment, which can lead to cancer cell death (apoptosis) and reduced angiogenesis, limiting the tumor's ability to grow and spread [3].
+    entities: cancer cells, immune cells, blood vessels, tumor microenvironment
+    assumptions: The treatment plan effectively targets cancer cells and the tumor microenvironment.
+    consequence: increased cancer cell apoptosis and reduced angiogenesis
+    probability: 70
+    explanation: The treatment plan is expected to induce cancer cell apoptosis and reduce angiogenesis, which can limit the tumor's growth and spread [3].
+    novelty: 0
+
+  - step: 3
+    level: tissue
+    facts: Reduced cancer cell proliferation, metastasis, apoptosis, and angiogenesis can lead to tumor shrinkage and decreased metastatic potential [4].
+    entities: tumor, metastatic sites, surrounding tissues
+    assumptions: The treatment plan effectively reduces cancer cell proliferation, metastasis, apoptosis, and angiogenesis.
+    consequence: tumor shrinkage and decreased metastatic potential
+    probability: 70
+    explanation: The treatment plan is expected to result in tumor shrinkage and decreased metastatic potential due to the reduced cancer cell proliferation, metastasis, apoptosis, and angiogenesis [4].
+    novelty: 0
+
+conclusion:
+  outcome: 10 months of progression-free survival
+  explanation: Based on the provided examples and the patient's characteristics, the expected progression-free survival for this patient under an optimal standard of care treatment plan is approximately 10 months. This estimate takes into account the patient's age, cancer stage, differentiation, metastasis, and absence of carcinomatosis, as well as the general effectiveness of colon adenocarcinoma therapies.
+
+references:
+  "[1]": "Siegel RL, Miller KD, Jemal A. 2020. CA Cancer J Clin. Cancer statistics, 2020."
+  "[2]": "Van Cutsem E, Cervantes A, Nordlinger B, Arnold D. 2014. Ann Oncol. Metastatic colorectal cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up."
+  "[3]": "Hanahan D, Weinberg RA. 2011. Cell. Hallmarks of cancer: the next generation."
+  "[4]": "Mehlen P, Puisieux A. 2006. Nat Rev Cancer. Metastasis: a question of life or death."

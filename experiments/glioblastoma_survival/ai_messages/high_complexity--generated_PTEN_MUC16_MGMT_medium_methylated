@@ -1,0 +1,38 @@
+parameters:
+  - glioblastoma diagnosis
+  - PTEN mutations
+  - MUC16 mutations
+  - MGMT methylation status: medium
+  - standard of care with genotype-informed treatment
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: PTEN is a tumor suppressor gene that negatively regulates the PI3K/AKT/mTOR pathway, which is involved in cell growth, survival, and metabolism [1]. MUC16 is a large transmembrane mucin that is overexpressed in various cancers and has been associated with tumor progression and poor prognosis [2]. MGMT is a DNA repair enzyme that removes alkyl groups from the O6 position of guanine, and its methylation status can influence the response to alkylating agents like temozolomide [3].
+    entities: PTEN, MUC16, MGMT, PI3K/AKT/mTOR pathway
+    assumptions: The patient has glioblastoma with PTEN and MUC16 mutations and medium MGMT methylation status. Standard of care with genotype-informed treatment is applied.
+    consequence: The presence of PTEN mutations may lead to increased activation of the PI3K/AKT/mTOR pathway, promoting tumor growth and survival. MUC16 mutations may contribute to tumor progression and poor prognosis. Medium MGMT methylation status may result in a moderate response to temozolomide treatment.
+    probability: 80
+    explanation: PTEN and MUC16 mutations are known to be associated with tumor progression and poor prognosis, while MGMT methylation status can influence the response to temozolomide treatment [1, 2, 3].
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: Glioblastoma is a highly aggressive and infiltrative brain tumor characterized by rapid cell proliferation, angiogenesis, and resistance to apoptosis [4]. Standard of care for glioblastoma includes surgery, radiotherapy, and chemotherapy with temozolomide [5].
+    entities: glioblastoma cells, angiogenesis, apoptosis, temozolomide
+    assumptions: The patient's glioblastoma cells have PTEN and MUC16 mutations and medium MGMT methylation status. Standard of care with genotype-informed treatment is applied.
+    consequence: The tumor cells may exhibit increased proliferation, angiogenesis, and resistance to apoptosis due to the PTEN and MUC16 mutations. The medium MGMT methylation status may result in a moderate response to temozolomide treatment, potentially reducing tumor growth but not eliminating it completely.
+    probability: 75
+    explanation: The presence of PTEN and MUC16 mutations can contribute to the aggressive nature of glioblastoma, while medium MGMT methylation status may influence the response to temozolomide treatment [1, 2, 3, 4, 5].
+    novelty: 20
+
+conclusion:
+  outcome: decreased, -3 months
+  explanation: The presence of PTEN and MUC16 mutations in the patient's glioblastoma may contribute to increased tumor progression and poor prognosis, while medium MGMT methylation status may result in a moderate response to temozolomide treatment. This combination of factors suggests that the patient's survival is more likely to be decreased relative to the median overall glioblastoma survival (15 months) by an estimated 3 months.
+
+references:
+  "[1]": "Li J, Yen C, Liaw D, et al. 1997. Science. PTEN, a putative protein tyrosine phosphatase gene mutated in human brain, breast, and prostate cancer."
+  "[2]": "Gubbels JA, Belisle J, Onda M, et al. 2006. Cancer Res. Mesothelin-MUC16 binding is a high affinity, N-glycan dependent interaction that facilitates peritoneal metastasis of ovarian tumors."
+  "[3]": "Hegi ME, Diserens AC, Gorlia T, et al. 2005. N Engl J Med. MGMT gene silencing and benefit from temozolomide in glioblastoma."
+  "[4]": "Stupp R, Mason WP, van den Bent MJ, et al. 2005. N Engl J Med. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma."
+  "[5]": "Weller M, van den Bent M, Tonn JC, et al. 2017. Lancet Oncol. European Association for Neuro-Oncology (EANO) guideline on the diagnosis and treatment of adult astrocytic and oligodendroglial gliomas."

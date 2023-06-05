@@ -1,0 +1,41 @@
+parameters:
+  - age: 57
+  - cancer_stage: III
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: yes
+  - carcinomatosis: no
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: The patient has stage III colon adenocarcinoma with poorly differentiated histology, which is associated with a more aggressive tumor behavior and poorer prognosis compared to moderately differentiated tumors[1]. The tumor has metastasized, indicating that cancer cells have spread to other parts of the body, further complicating treatment[2]. Optimal standard of care for stage III colon cancer typically includes surgery followed by adjuvant chemotherapy[3].
+    entities: colon adenocarcinoma, poorly differentiated histology, metastasis, surgery, adjuvant chemotherapy
+    assumptions: The patient receives optimal standard of care treatment, which includes surgery and adjuvant chemotherapy.
+    consequence: The tumor is surgically removed, and adjuvant chemotherapy is administered to target any remaining cancer cells and reduce the risk of recurrence.
+    probability: 90
+    explanation: Surgery is the primary treatment for stage III colon cancer, and adjuvant chemotherapy is recommended to improve outcomes[3].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Adjuvant chemotherapy targets rapidly dividing cancer cells, but poorly differentiated tumors may be more resistant to treatment due to their aggressive nature and higher levels of genetic instability[4]. The right side of the colon has been associated with a worse prognosis compared to the left side, possibly due to differences in molecular and genetic features[5].
+    entities: adjuvant chemotherapy, poorly differentiated tumors, genetic instability, right-sided colon cancer
+    assumptions: The patient's tumor exhibits genetic instability and aggressive behavior due to its poorly differentiated histology and right-sided location.
+    consequence: The adjuvant chemotherapy may be less effective in eliminating all cancer cells, increasing the risk of recurrence and metastasis.
+    probability: 70
+    explanation: Poorly differentiated tumors and right-sided colon cancers have been associated with worse outcomes and may be more resistant to treatment[4,5].
+    novelty: 20
+
+conclusion:
+  outcome: Based on the provided examples and the patient's characteristics, the expected progression-free survival is approximately 9 months.
+  explanation: The patient's age, cancer stage, and differentiation are most similar to Example 2, but the right-sided location and lack of carcinomatosis suggest a prognosis between Example 2 (14 months) and Example 3 (9 months). Considering the potential resistance to adjuvant chemotherapy due to the poorly differentiated histology and right-sided location, a progression-free survival closer to 9 months is more likely.
+
+references:
+  "[1]": "Compton CC, Fielding LP, Burgart LJ, et al. 2000. American Joint Committee on Cancer Prognostic Factors Consensus Conference: Colorectal Working Group. Cancer 88:1739-57."
+  "[2]": "Siegel RL, Miller KD, Jemal A. 2020. Cancer statistics, 2020. CA Cancer J Clin 70:7-30."
+  "[3]": "Benson AB, Venook AP, Al-Hawary MM, et al. 2018. NCCN Guidelines Insights: Colon Cancer, Version 2.2018. J Natl Compr Canc Netw 16:359-69."
+  "[4]": "Punt CJ, Koopman M, Vermeulen L. 2017. From tumour heterogeneity to advances in precision treatment of colorectal cancer. Nat Rev Clin Oncol 14:235-46."
+  "[5]": "Lee MS, Menter DG, Kopetz S. 2017. Right Versus Left Colon Cancer Biology: Integrating the Consensus Molecular Subtypes. J Natl Compr Canc Netw 15:411-9."

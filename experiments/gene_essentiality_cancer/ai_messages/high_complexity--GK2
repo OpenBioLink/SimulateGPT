@@ -1,0 +1,33 @@
+parameters:
+  - gene: GK2
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: GK2 (glycerol kinase 2) is a gene that encodes for the enzyme glycerol kinase, which is involved in the glycerol metabolic pathway, catalyzing the conversion of glycerol to glycerol-3-phosphate [1]. Glycerol-3-phosphate is an important intermediate in lipid metabolism and glycolysis [2]. The role of GK2 in cancer is not well-established.
+    entities: GK2, glycerol kinase, glycerol, glycerol-3-phosphate, lipid metabolism, glycolysis
+    assumptions: Given the involvement of GK2 in glycerol metabolism and its potential role in lipid metabolism and glycolysis, it may have an impact on cancer cell-lines.
+    consequence: altered GK2 expression or function in cancer cell-lines
+    probability: 50
+    explanation: The involvement of GK2 in metabolic pathways suggests that it could have an impact on cancer cell-lines, but the lack of established evidence for its role in cancer makes it uncertain.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells often exhibit altered metabolism, including increased glycolysis and lipid metabolism, to support their rapid growth and proliferation [3]. However, the specific role of GK2 in these processes in cancer cells is not well-established.
+    entities: cancer cells, glycolysis, lipid metabolism, GK2
+    assumptions: If GK2 plays a significant role in the altered metabolism of cancer cells, it may be essential for their survival and proliferation.
+    consequence: GK2 is essential for cancer cell-line survival and proliferation
+    probability: 40
+    explanation: While cancer cells often exhibit altered metabolism, the specific role of GK2 in these processes is not well-established, making it uncertain whether it is essential for cancer cell-line survival and proliferation.
+    novelty: 50
+
+conclusion:
+  outcome: unlikely
+  explanation: Given the lack of established evidence for the role of GK2 in cancer and its uncertain involvement in the altered metabolism of cancer cells, it is unlikely that GK2 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Bairoch A, Apweiler R. 2000. The SWISS-PROT protein sequence database and its supplement TrEMBL in 2000. Nucleic Acids Res. 28(1):45-48."
+  "[2]": "Nelson DL, Cox MM. 2017. Lehninger Principles of Biochemistry. 7th ed. W.H. Freeman and Company."
+  "[3]": "Hanahan D, Weinberg RA. 2011. Hallmarks of cancer: the next generation. Cell. 144(5):646-674."

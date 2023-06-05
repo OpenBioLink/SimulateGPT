@@ -1,0 +1,38 @@
+parameters:
+  - patient with sepsis
+  - low ferritin levels
+  - low percentage of CD45/CD14-monocytes expressing HLA-DR
+
+simulation:
+  - step: 1
+    level: cellular
+    facts: Sepsis is a life-threatening condition caused by the body's response to an infection, leading to systemic inflammation and organ dysfunction [1]. Ferritin is a protein that stores iron and releases it in a controlled manner [2]. Low ferritin levels can indicate iron deficiency or inflammation [3]. CD45/CD14-monocytes are a type of immune cell, and HLA-DR is a major histocompatibility complex (MHC) class II cell surface receptor involved in antigen presentation [4]. A low percentage of CD45/CD14-monocytes expressing HLA-DR is associated with immune dysfunction and increased risk of secondary infections in sepsis [5].
+    entities: sepsis, ferritin, CD45/CD14-monocytes, HLA-DR, inflammation, immune dysfunction
+    assumptions: The patient's low ferritin levels and low percentage of CD45/CD14-monocytes expressing HLA-DR are related to their sepsis condition.
+    consequence: The patient is at risk of worsening sepsis, organ dysfunction, and secondary infections due to immune dysfunction.
+    probability: 80
+    explanation: The low ferritin levels and low percentage of CD45/CD14-monocytes expressing HLA-DR indicate that the patient's immune system is not functioning optimally, increasing the risk of complications related to sepsis.
+    novelty: 0
+
+  - step: 2
+    level: organism
+    facts: Treatment for sepsis typically involves antibiotics to target the underlying infection, intravenous fluids to maintain blood pressure, and vasopressors if necessary [1]. In some cases, immunomodulatory therapies may be considered to address immune dysfunction [6]. Intravenous iron supplementation can be used to treat iron deficiency, but its use in sepsis is controversial due to the potential for increased bacterial growth [7].
+    entities: antibiotics, intravenous fluids, vasopressors, immunomodulatory therapies, intravenous iron supplementation
+    assumptions: The patient's sepsis is being managed with standard care, including antibiotics and intravenous fluids. Additional treatments may be needed to address the immune dysfunction and low ferritin levels.
+    consequence: The patient may benefit from immunomodulatory therapy to improve immune function and reduce the risk of secondary infections.
+    probability: 70
+    explanation: Immunomodulatory therapy can help address the immune dysfunction associated with the low percentage of CD45/CD14-monocytes expressing HLA-DR, potentially reducing the risk of secondary infections and improving the patient's overall condition.
+    novelty: 20
+
+conclusion:
+  outcome: The recommended treatment for the patient with sepsis, low ferritin levels, and a low percentage of CD45/CD14-monocytes expressing HLA-DR would be standard sepsis care (antibiotics and intravenous fluids), along with immunomodulatory therapy to address immune dysfunction.
+  explanation: The immunomodulatory therapy can help improve the patient's immune function, reducing the risk of secondary infections and complications related to sepsis. The use of intravenous iron supplementation should be carefully considered due to the potential risks associated with sepsis.
+
+references:
+  "[1]": "Singer M, Deutschman CS, Seymour CW, et al. 2016. JAMA. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)."
+  "[2]": "Arosio P, Ingrassia R, Cavadini P. 2009. Biochim Biophys Acta. Ferritins: A family of molecules for iron storage, antioxidation and more."
+  "[3]": "Weiss G, Goodnough LT. 2005. N Engl J Med. Anemia of Chronic Disease."
+  "[4]": "Ziegler-Heitbrock L, Ancuta P, Crowe S, et al. 2010. J Leukoc Biol. Nomenclature of monocytes and dendritic cells in blood."
+  "[5]": "Monneret G, Lepape A, Voirin N, et al. 2006. Crit Care Med. Persisting low monocyte human leukocyte antigen-DR expression predicts mortality in septic shock."
+  "[6]": "Hotchkiss RS, Monneret G, Payen D. 2013. Nat Rev Immunol. Sepsis-induced immunosuppression: from cellular dysfunctions to immunotherapy."
+  "[7]": "Litton E, Xiao J, Ho KM. 2013. JAMA. Safety and efficacy of intravenous iron therapy in reducing requirement for allogeneic blood transfusion: systematic review and meta-analysis of randomised clinical trials."

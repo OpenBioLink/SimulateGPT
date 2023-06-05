@@ -1,0 +1,22 @@
+parameters:
+  - gene: DSPP
+  - context: cancer cell-lines
+simulation:
+  - step: 1
+    level: molecular
+    facts: DSPP (Dentin Sialophosphoprotein) is a gene that encodes a protein involved in the mineralization of dentin, a substance found in teeth [1]. DSPP is primarily expressed in odontoblasts and is not known to have a significant role in other tissues or cell types [2]. Cancer cell lines are derived from various types of cancerous tissues and are used for research purposes [3].
+    entities: DSPP, cancer cell-lines
+    assumptions: DSPP is primarily involved in dentin mineralization and is not known to have a significant role in other tissues or cell types.
+    consequence: DSPP is unlikely to be essential in cancer cell-lines.
+    probability: 90
+    explanation: Given that DSPP's primary function is in dentin mineralization and it is not known to have a significant role in other tissues or cell types, it is unlikely to be essential in cancer cell-lines.
+    novelty: 0
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the known function of DSPP in dentin mineralization and its limited expression in other tissues or cell types, it is unlikely that DSPP is essential in cancer cell-lines.
+
+references:
+  "[1]": "Yamakoshi Y, Hu JC, Fukae M, Zhang H, Simmer JP. 2005. Journal of Biological Chemistry. Dentin Sialophosphoprotein is Processed by MMP-2 and MMP-20 in vitro and in vivo."
+  "[2]": "Ogbureke KU, Fisher LW. 2004. Journal of Histochemistry & Cytochemistry. Expression of SIBLINGs and their partner MMPs in salivary glands."
+  "[3]": "Masters JR. 2000. British Journal of Cancer. Human cancer cell lines: fact and fantasy."

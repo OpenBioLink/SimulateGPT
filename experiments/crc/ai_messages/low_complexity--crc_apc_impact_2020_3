@@ -1,0 +1,35 @@
+simulation:
+  - step: 1
+    level: organism
+    consequence: stage III colon adenocarcinoma diagnosis
+    probability: 100
+    explanation: The patient is diagnosed with stage III colon adenocarcinoma on the left side of the colon, with moderately differentiated differentiation histology, metastasis, and signs of carcinomatosis.
+  - step: 2
+    level: organ
+    consequence: tumor growth and metastasis
+    probability: 100
+    explanation: The tumor has already metastasized, indicating that cancer cells have spread to nearby lymph nodes or other parts of the body. Carcinomatosis is also present, which is the widespread dissemination of cancer cells in the peritoneal cavity.
+  - step: 3
+    level: cellular
+    consequence: initiation of standard of care treatment
+    probability: 100
+    explanation: The patient receives an optimal standard of care treatment plan, which typically includes surgery, chemotherapy, and/or radiation therapy to remove the primary tumor and target metastatic cancer cells.
+  - step: 4
+    level: molecular
+    consequence: treatment-induced cell death
+    probability: 80
+    explanation: The standard of care treatment plan aims to kill cancer cells and prevent further tumor growth and metastasis. However, the effectiveness of the treatment may vary depending on factors such as the patient's age, overall health, and tumor characteristics.
+  - step: 5
+    level: cellular
+    consequence: reduction in tumor size and metastatic burden
+    probability: 70
+    explanation: As cancer cells are killed by the treatment, the primary tumor size and metastatic burden may decrease. However, the extent of the reduction depends on the effectiveness of the treatment and the patient's response.
+  - step: 6
+    level: organ
+    consequence: potential stabilization or regression of disease
+    probability: 60
+    explanation: If the treatment is effective, the disease may stabilize or even regress, leading to a period of progression-free survival. However, the duration of this period depends on various factors, including the patient's age, overall health, and tumor characteristics.
+
+conclusion:
+  outcome: 8 months of progression-free survival
+  explanation: Based on the provided examples and considering the patient's age, stage III colon adenocarcinoma diagnosis, moderately differentiated differentiation histology, metastasis, and signs of carcinomatosis, an estimated progression-free survival of 8 months is expected under an optimal standard of care treatment plan. This estimate takes into account the general effectiveness of colon adenocarcinoma therapies and the patient's specific clinical characteristics.

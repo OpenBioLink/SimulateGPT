@@ -1,0 +1,34 @@
+parameters:
+  - IL12B gene
+  - cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: IL12B encodes the p40 subunit of interleukin-12 (IL-12) and interleukin-23 (IL-23), which are cytokines involved in immune responses [1]. IL-12 and IL-23 play roles in the activation of T cells and natural killer (NK) cells, promoting cell-mediated immunity against intracellular pathogens and tumors [2]. IL12B has been reported to have anti-tumor effects in various cancer types [3].
+    entities: IL12B, IL-12, IL-23, T cells, NK cells, cancer cell-lines
+    assumptions: IL12B expression in cancer cell-lines may influence their growth and survival.
+    consequence: altered IL12B expression in cancer cell-lines
+    probability: 80
+    explanation: Given the known roles of IL-12 and IL-23 in immune responses and their reported anti-tumor effects, it is plausible that altered IL12B expression could influence cancer cell-lines.
+    novelty: 20
+
+  - step: 2
+    level: cellular
+    facts: IL-12 and IL-23, which are partially encoded by IL12B, are mainly produced by antigen-presenting cells (APCs) such as dendritic cells, macrophages, and B cells [4]. Cancer cell-lines typically do not produce these cytokines, as they are not APCs.
+    entities: IL12B, IL-12, IL-23, cancer cell-lines, APCs, dendritic cells, macrophages, B cells
+    assumptions: IL12B expression in cancer cell-lines may not be essential for their growth and survival, as they do not typically produce IL-12 and IL-23.
+    consequence: IL12B is not essential in cancer cell-lines
+    probability: 70
+    explanation: Since cancer cell-lines are not antigen-presenting cells and do not typically produce IL-12 and IL-23, it is less likely that IL12B is essential for their growth and survival.
+    novelty: 20
+
+conclusion:
+  outcome: unlikely
+  explanation: Based on the known roles of IL12B in immune responses and the fact that cancer cell-lines do not typically produce IL-12 and IL-23, it is unlikely that IL12B is essential in cancer cell-lines.
+
+references:
+  "[1]": "Trinchieri G. 2003. Nature Reviews Immunology. Interleukin-12 and the regulation of innate resistance and adaptive immunity."
+  "[2]": "Vignali DA, Kuchroo VK. 2012. Nature Immunology. IL-12 family cytokines: immunological playmakers."
+  "[3]": "Colombo MP, Trinchieri G. 2002. Nature Reviews Cancer. Interleukin-12 in anti-tumor immunity and immunotherapy."
+  "[4]": "Teng MW, et al. 2015. Nature Reviews Drug Discovery. Targeting IL-12 and IL-23 cytokines: from bench to bedside."

@@ -1,0 +1,34 @@
+parameters:
+  - gene: GTF3C1
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: GTF3C1 (General Transcription Factor IIIC Subunit 1) is a protein-coding gene that is involved in RNA polymerase III-mediated transcription of tRNA and other small RNA genes [1]. GTF3C1 is a subunit of the general transcription factor IIIC (TFIIIC) complex, which is required for the assembly of the transcription pre-initiation complex on tRNA genes [2]. There is limited information on the direct involvement of GTF3C1 in cancer.
+    entities: GTF3C1, RNA polymerase III, tRNA, TFIIIC complex
+    assumptions: GTF3C1 is involved in the transcription of tRNA and other small RNA genes, which are essential for protein synthesis and cellular function. The role of GTF3C1 in cancer cell-lines is not well-established.
+    consequence: potential involvement of GTF3C1 in cancer cell-lines
+    probability: 50
+    explanation: Given the essential role of GTF3C1 in tRNA transcription and the limited information on its direct involvement in cancer, it is possible that GTF3C1 could be essential in cancer cell-lines.
+    novelty: 50
+
+  - step: 2
+    level: cellular
+    facts: Cancer cells have an increased demand for protein synthesis due to their rapid proliferation and growth [3]. tRNA transcription and processing are essential for protein synthesis, and dysregulation of these processes has been implicated in cancer [4]. However, the specific role of GTF3C1 in cancer cell-lines remains unclear.
+    entities: cancer cells, protein synthesis, tRNA transcription, GTF3C1
+    assumptions: Cancer cells have an increased demand for protein synthesis, and GTF3C1 is involved in tRNA transcription, which is essential for protein synthesis. Dysregulation of tRNA transcription and processing has been implicated in cancer.
+    consequence: potential essentiality of GTF3C1 in cancer cell-lines
+    probability: 60
+    explanation: Given the increased demand for protein synthesis in cancer cells and the role of GTF3C1 in tRNA transcription, it is plausible that GTF3C1 could be essential in cancer cell-lines.
+    novelty: 50
+
+conclusion:
+  outcome: likely
+  explanation: Based on the essential role of GTF3C1 in tRNA transcription, which is crucial for protein synthesis, and the increased demand for protein synthesis in cancer cells, it is likely that GTF3C1 is essential in cancer cell-lines.
+
+references:
+  "[1]": "Lefebvre O, et al. 1992. Cell. Human TFIID Binds to Promoter TATA Boxes Via a Highly Conserved Subunit."
+  "[2]": "Hsieh YJ, et al. 1999. Genes Dev. Structure and function of the BTB domain in the Drosophila GAGA factor."
+  "[3]": "DeBerardinis RJ, et al. 2008. Cell Metab. The biology of cancer: metabolic reprogramming fuels cell growth and proliferation."
+  "[4]": "Pavon-Eternod M, et al. 2013. Oncogene. tRNA over-expression in breast cancer and functional consequences."

@@ -1,0 +1,54 @@
+parameters:
+  - age: 50
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: left side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: present
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Standard of care treatment for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and immunotherapy [1]. Chemotherapy drugs, such as 5-fluorouracil (5-FU), oxaliplatin, and irinotecan, target rapidly dividing cancer cells [2]. Targeted therapies, such as bevacizumab and cetuximab, inhibit specific molecular pathways involved in tumor growth and progression [3]. Immunotherapies, such as pembrolizumab, enhance the immune system's ability to recognize and attack cancer cells [4].
+    entities: chemotherapy, targeted therapy, immunotherapy, 5-FU, oxaliplatin, irinotecan, bevacizumab, cetuximab, pembrolizumab
+    assumptions: The patient receives optimal standard of care treatment, which includes a combination of chemotherapy, targeted therapy, and immunotherapy.
+    consequence: Decreased tumor cell proliferation and increased cancer cell death.
+    probability: 80
+    explanation: The combination of chemotherapy, targeted therapy, and immunotherapy is expected to effectively target cancer cells, leading to decreased tumor cell proliferation and increased cancer cell death.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Poorly differentiated tumors are generally more aggressive and less responsive to treatment than moderately differentiated tumors [5]. Carcinomatosis indicates the presence of cancer cells in the peritoneal cavity, which can lead to complications and poorer prognosis [6].
+    entities: poorly differentiated tumor, carcinomatosis
+    assumptions: The patient's tumor is poorly differentiated and shows signs of carcinomatosis, which may negatively impact treatment response.
+    consequence: Reduced treatment effectiveness and increased tumor progression.
+    probability: 70
+    explanation: The poorly differentiated tumor and presence of carcinomatosis may reduce the effectiveness of the standard of care treatment, leading to increased tumor progression.
+    novelty: 20
+
+  - step: 3
+    level: organ
+    facts: Metastasis is a major factor contributing to cancer-related deaths and is associated with a poorer prognosis [7]. Stage IV colon adenocarcinoma indicates that the cancer has spread to distant organs, such as the liver or lungs [8].
+    entities: metastasis, stage IV colon adenocarcinoma
+    assumptions: The patient's cancer has metastasized, which may further reduce treatment effectiveness and increase tumor progression.
+    consequence: Decreased progression-free survival.
+    probability: 90
+    explanation: The presence of metastasis in stage IV colon adenocarcinoma is likely to decrease progression-free survival due to the challenges in treating metastatic cancer.
+    novelty: 0
+
+conclusion:
+  outcome: 4 months of progression-free survival
+  explanation: Given the patient's stage IV colon adenocarcinoma with poorly differentiated histology, metastasis, and carcinomatosis, and considering the effectiveness of the optimal standard of care treatment, the expected progression-free survival is estimated to be around 4 months. This estimate is based on the provided examples and the simulation steps, which take into account the molecular, cellular, and organ-level processes impacting tumor progression.
+
+references:
+  "[1]": "National Comprehensive Cancer Network. (2021). NCCN Clinical Practice Guidelines in Oncology: Colon Cancer. Version 2.2021."
+  "[2]": "Longley, D. B., Harkin, D. P., & Johnston, P. G. (2003). 5-fluorouracil: mechanisms of action and clinical strategies. Nature Reviews Cancer, 3(5), 330-338."
+  "[3]": "Van Cutsem, E., Cervantes, A., Adam, R., Sobrero, A., Van Krieken, J. H., Aderka, D., ... & Nordlinger, B. (2016). ESMO consensus guidelines for the management of patients with metastatic colorectal cancer. Annals of Oncology, 27(8), 1386-1422."
+  "[4]": "Le, D. T., Uram, J. N., Wang, H., Bartlett, B. R., Kemberling, H., Eyring, A. D., ... & Taube, J. M. (2015). PD-1 blockade in tumors with mismatch-repair deficiency. New England Journal of Medicine, 372(26), 2509-2520."
+  "[5]": "Compton, C. C. (2007). Optimal pathologic staging: defining stage II disease. Clinical Cancer Research, 13(22), 6862s-6870s."
+  "[6]": "Franko, J., Shi, Q., Goldman, C. D., Pockaj, B. A., Nelson, G. D., Goldberg, R. M., ... & Alberts, S. R. (2012). Treatment of colorectal peritoneal carcinomatosis with systemic chemotherapy: a pooled analysis of north central cancer treatment group phase III trials N9741 and N9841. Journal of Clinical Oncology, 30(3), 263-267."
+  "[7]": "Chaffer, C. L., & Weinberg, R. A. (2011). A perspective on cancer cell metastasis. Science, 331(6024), 1559-1564."
+  "[8]": "American Cancer Society. (2021). Colorectal Cancer Stages. Retrieved from https://www.cancer.org/cancer/colon-rectal-cancer/detection-diagnosis-staging/staged.html"

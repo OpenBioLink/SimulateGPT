@@ -1,0 +1,42 @@
+parameters:
+  - age: 53
+  - cancer_stage: IV
+  - cancer_type: colon adenocarcinoma
+  - tumor_location: right side of the colon
+  - differentiation: poorly differentiated
+  - metastasis: present
+  - carcinomatosis: absent
+  - treatment: optimal standard of care
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: Standard of care treatment for stage IV colon adenocarcinoma typically includes chemotherapy, targeted therapy, and immunotherapy [1]. Chemotherapy drugs, such as 5-fluorouracil (5-FU), oxaliplatin, and irinotecan, target rapidly dividing cancer cells [2]. Targeted therapies, such as bevacizumab and cetuximab, inhibit specific molecular pathways involved in tumor growth and progression [3]. Immunotherapy, such as pembrolizumab, enhances the immune system's ability to recognize and attack cancer cells [4].
+    entities: 5-fluorouracil, oxaliplatin, irinotecan, bevacizumab, cetuximab, pembrolizumab
+    assumptions: The patient receives optimal standard of care treatment, which includes chemotherapy, targeted therapy, and immunotherapy.
+    consequence: Decreased tumor growth and progression due to the combined effects of chemotherapy, targeted therapy, and immunotherapy.
+    probability: 80
+    explanation: The combination of chemotherapy, targeted therapy, and immunotherapy has been shown to be effective in reducing tumor growth and progression in many patients with stage IV colon adenocarcinoma [1].
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: Poorly differentiated tumors are generally more aggressive and less responsive to treatment than moderately differentiated tumors [5]. The presence of metastasis indicates that the cancer has spread to other parts of the body, which can make treatment more challenging [6].
+    entities: poorly differentiated tumor cells, metastatic tumor cells
+    assumptions: The patient's tumor is poorly differentiated and has metastasized, which may reduce the effectiveness of the standard of care treatment.
+    consequence: Reduced treatment response and increased likelihood of tumor progression due to the aggressive nature of the poorly differentiated tumor and the presence of metastasis.
+    probability: 70
+    explanation: Poorly differentiated tumors and the presence of metastasis are known to be associated with a worse prognosis and reduced treatment response [5, 6].
+    novelty: 0
+
+conclusion:
+  outcome: Based on the provided examples and the patient's characteristics, the expected progression-free survival is approximately 6 months.
+  explanation: The patient's age, cancer stage, and tumor differentiation are factors that influence the progression-free survival. Comparing this case to the provided examples, the patient's age is closer to Example 2, which had a longer progression-free survival. However, the patient has stage IV cancer and a poorly differentiated tumor, which are associated with a worse prognosis. Considering these factors, the expected progression-free survival is estimated to be shorter than Example 2 but longer than Example 1, resulting in an approximate progression-free survival of 6 months.
+
+references:
+  "[1]": "Van Cutsem E, Cervantes A, Nordlinger B, Arnold D; ESMO Guidelines Working Group. 2014. Ann Oncol. Metastatic colorectal cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up."
+  "[2]": "Longley DB, Harkin DP, Johnston PG. 2003. Nat Rev Cancer. 5-fluorouracil: mechanisms of action and clinical strategies."
+  "[3]": "Cunningham D, Humblet Y, Siena S, et al. 2004. N Engl J Med. Cetuximab monotherapy and cetuximab plus irinotecan in irinotecan-refractory metastatic colorectal cancer."
+  "[4]": "Le DT, Uram JN, Wang H, et al. 2015. N Engl J Med. PD-1 Blockade in Tumors with Mismatch-Repair Deficiency."
+  "[5]": "Compton CC. 2007. Arch Pathol Lab Med. Prognostic factors in cancer: role of the pathologist."
+  "[6]": "Chaffer CL, Weinberg RA. 2011. Science. A perspective on cancer cell metastasis."

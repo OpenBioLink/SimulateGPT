@@ -1,0 +1,35 @@
+parameters:
+  - gene: RBX1
+  - context: cancer cell-lines
+
+simulation:
+  - step: 1
+    level: molecular
+    facts: RBX1 (Ring-Box 1) is a component of the SCF (Skp1-Cul1-F-box protein) E3 ubiquitin ligase complex, which is involved in the ubiquitination and subsequent proteasomal degradation of target proteins [1]. The SCF complex plays a crucial role in cell cycle regulation, DNA repair, and cellular differentiation [2]. Aberrant regulation of the SCF complex has been implicated in various types of cancer [3].
+    entities: RBX1, SCF complex, ubiquitination, proteasomal degradation, cell cycle regulation, DNA repair, cellular differentiation, cancer
+    assumptions: Given the role of RBX1 in the SCF complex and its involvement in essential cellular processes, it is reasonable to assume that RBX1 might be essential in cancer cell-lines.
+    consequence: potential essentiality of RBX1 in cancer cell-lines
+    probability: 70
+    explanation: The involvement of RBX1 in the SCF complex and its role in crucial cellular processes suggest that it might be essential in cancer cell-lines.
+    novelty: 0
+
+  - step: 2
+    level: cellular
+    facts: RBX1 has been identified as a potential essential gene in a genome-wide CRISPR-Cas9 screen across 324 human cancer cell lines [4]. Essential genes are those that are required for the survival or reproduction of an organism or cell [5].
+    entities: RBX1, CRISPR-Cas9 screen, human cancer cell lines, essential genes
+    assumptions: Based on the genome-wide CRISPR-Cas9 screen, it is assumed that RBX1 is essential in a significant number of human cancer cell lines.
+    consequence: likely essentiality of RBX1 in cancer cell-lines
+    probability: 90
+    explanation: The identification of RBX1 as a potential essential gene in a large-scale CRISPR-Cas9 screen across human cancer cell lines supports the likelihood of its essentiality in cancer cell-lines.
+    novelty: 0
+
+conclusion:
+  outcome: likely
+  explanation: The involvement of RBX1 in the SCF complex and its role in crucial cellular processes, as well as its identification as a potential essential gene in a genome-wide CRISPR-Cas9 screen across human cancer cell lines, support the conclusion that RBX1 is likely essential in cancer cell-lines.
+
+references:
+  "[1]": "Zheng N, Schulman BA, Song L, et al. 2002. Nature. Structure of the Cul1-Rbx1-Skp1-F boxSkp2 SCF ubiquitin ligase complex."
+  "[2]": "Skaar JR, Pagan JK, Pagano M. 2013. Nat Rev Mol Cell Biol. Mechanisms and function of substrate recruitment by F-box proteins."
+  "[3]": "Nakayama KI, Nakayama K. 2006. Nat Rev Cancer. Ubiquitin ligases: cell-cycle control and cancer."
+  "[4]": "Meyers RM, Bryan JG, McFarland JM, et al. 2017. Nature. Computational correction of copy number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells."
+  "[5]": "Hart T, Chandrashekhar M, Aregger M, et al. 2015. Science. High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities."
