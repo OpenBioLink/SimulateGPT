@@ -1,5 +1,6 @@
 from pathlib import Path
 import itertools
+import os
 
 configfile: "config.yaml"
 experiment_name = config["experiment_name"]
@@ -22,7 +23,7 @@ rule simulate:
         system_message=ancient("system_messages/{sys}"),
         human_message=ancient("experiments/{experiment_name}/prompts/{human}")
     output:
-        "experiments/{experiment_name}/ai_messages/{sys}--{human}"
+        protected("experiments/{experiment_name}/ai_messages/{sys}--{human}")
     conda: "env.yml"
     retries: 3
     script:
