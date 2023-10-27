@@ -1,6 +1,6 @@
 system_names:
   - "baseline"
-  - "low_complexity"
+#  - "low_complexity"
   - "high_complexity"
-  - "high5step_complexity"
+#  - "high5step_complexity"
 experiment_name: "glioblastoma_survival"  # default, override

@@ -14,17 +14,25 @@ combinations = list(itertools.product(config["system_names"], human_names))
 
 rule all:
     input:
-        [f"experiments/{experiment_name}/ai_messages/{sys}--{human}"
-         for sys, human in combinations]
+        ["reference_analysis/{}--{}--{}.csv".format(experiment_name, sys, human) for sys, human in combinations]
 
 
 rule simulate:
     input:
-        system_message="system_messages/{sys}",
-        human_message="experiments/{experiment_name}/prompts/{human}"
+        system_message=ancient("system_messages/{sys}"),
+        human_message=ancient("experiments/{experiment_name}/prompts/{human}")
     output:
         "experiments/{experiment_name}/ai_messages/{sys}--{human}"
     conda: "env.yml"
     retries: 3
     script:
         "src/rule_simulate.py"
+
+rule analyze_references:
+    input:
+        ancient("experiments/{experiment_name}/ai_messages/{sys}--{human}")
+    output:
+        "reference_analysis/{experiment_name}--{sys}--{human}.csv"
+    conda: "env.yml"
+    script:
+        "src/check_references.py"
