@@ -59,3 +59,18 @@ df = pd.concat(df_list, ignore_index=True)
 
 # Apply the function to the 'doi' column and split the returned list into 2 new columns
 df[['titleDoi', 'firstAuthDoi']] = df['doi'].apply(get_info).apply(pd.Series)
+
+
+# Automatically check first author and title
+from fuzzywuzzy import fuzz
+
+def check_author_title(row):
+    auth_similarity = fuzz.token_set_ratio(row['ref_text'], row['firstAuthDoi'])
+    title_similarity = fuzz.token_set_ratio(row['ref_text'], row['titleDoi'])
+    
+    return pd.Series((auth_similarity, title_similarity))
+
+
+df[['author_similarity', 'title_similarity']] = df.apply(check_author_title, axis=1)
+
+df.to_csv(dir_path+'/combined_ref_check.csv', index=False)
