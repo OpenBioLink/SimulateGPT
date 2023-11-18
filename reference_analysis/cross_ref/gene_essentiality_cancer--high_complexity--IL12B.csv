@@ -1,0 +1,5 @@
+,file,ref_number,ref_text,doi,doi_url
+0,experiments/gene_essentiality_cancer/ai_messages/high_complexity--IL12B,[1],Trinchieri G. 2003. Nature Reviews Immunology. Interleukin-12 and the regulation of innate resistance and adaptive immunity.,10.1038/nri1001,https://doi.org/10.1038/nri1001
+1,experiments/gene_essentiality_cancer/ai_messages/high_complexity--IL12B,[2],"Vignali DA, Kuchroo VK. 2012. Nature Immunology. IL-12 family cytokines: immunological playmakers.",10.1038/ni.2366,https://doi.org/10.1038/ni.2366
+2,experiments/gene_essentiality_cancer/ai_messages/high_complexity--IL12B,[3],"Colombo MP, Trinchieri G. 2002. Nature Reviews Cancer. Interleukin-12 in anti-tumor immunity and immunotherapy.",10.1016/s1359-6101(01)00032-6,https://doi.org/10.1016/s1359-6101(01)00032-6
+3,experiments/gene_essentiality_cancer/ai_messages/high_complexity--IL12B,[4],"Teng MW, et al. 2015. Nature Reviews Drug Discovery. Targeting IL-12 and IL-23 cytokines: from bench to bedside.",10.1016/j.ddstr.2006.08.004,https://doi.org/10.1016/j.ddstr.2006.08.004
