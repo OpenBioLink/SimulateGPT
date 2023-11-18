@@ -1,0 +1,3 @@
+file,ref_number,ref_text,doi,doi_url,titleDoi,firstAuthDoi,author_similarity,title_similarity
+experiments/gene_essentiality_cancer/ai_messages/high_complexity--KRT25,[1],"Schweizer J, Bowden PE, Coulombe PA, et al. 2006. J Cell Biol. New consensus nomenclature for mammalian keratins.",10.1083/jcb.200603161,https://doi.org/10.1083/jcb.200603161,New consensus nomenclature for mammalian keratins,Schweizer,100,100
+experiments/gene_essentiality_cancer/ai_messages/high_complexity--KRT25,[2],"Moll R, Divo M, Langbein L. 2008. Histochem Cell Biol. The human keratins: biology and pathology.",10.1007/s00418-008-0435-6,https://doi.org/10.1007/s00418-008-0435-6,The human keratins: biology and pathology,Moll,100,100

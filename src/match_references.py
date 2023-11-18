@@ -1,76 +1,52 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import os
+import pandas as pd
 import requests
 import json
-import yaml
-import re
-import pandas as pd
-from pathlib import Path
+from fuzzywuzzy import fuzz
+
 
 def get_info(input_doi):
     # Send a request to the Crossref API
-    response = requests.get(
-        "https://api.crossref.org/works/"+input_doi
-    )
+    response = requests.get("https://api.crossref.org/works/" + input_doi)
 
     # Parse the response
     data = json.loads(response.text)
-    
+
     # If there are no results, return None
-    if 'title' not in data["message"]:
-        title = ''
+    if "title" not in data["message"]:
+        title = ""
     else:
         title = data["message"]["title"][0]
 
     # If there are no results, return None
     if "author" not in data["message"]:
-        firstAuth = ''
+        firstAuth = ""
     else:
-        if "family" in  data["message"]["author"][0]:
+        if "family" in data["message"]["author"][0]:
             firstAuth = data["message"]["author"][0]["family"]
         else:
             print(data["message"]["author"][0])
-            firstAuth=data["message"]["author"][0]['name']
+            firstAuth = data["message"]["author"][0]["name"]
 
     # Otherwise, return the DOI of the first result
-    return [title,firstAuth]
+    return [title, firstAuth]
 
-# Define your directory path
-dir_path = "/Users/rterhorst/Research/Projects/2023-04-19_gptSimulator/SimulateGPT/reference_analysis"
-
-# Get list of all files in directory
-file_list = os.listdir(dir_path)
-
-# Create an empty list to store dataframes
-df_list = []
-
-# Iterate over the files in directory
-for file in file_list:
-    # Check if filename contains the desired substring
-    if "--high_complexity--" in file:
-        # Construct the full file path
-        file_path = os.path.join(dir_path, file)
-        # Load the data into a pandas DataFrame and append to the list
-        df_list.append(pd.read_csv(file_path))
-
-# Concatenate all dataframes in the list along the rows
-df = pd.concat(df_list, ignore_index=True)
-
-# Apply the function to the 'doi' column and split the returned list into 2 new columns
-df[['titleDoi', 'firstAuthDoi']] = df['doi'].apply(get_info).apply(pd.Series)
-
-
-# Automatically check first author and title
-from fuzzywuzzy import fuzz
 
 def check_author_title(row):
-    auth_similarity = fuzz.token_set_ratio(row['ref_text'], row['firstAuthDoi'])
-    title_similarity = fuzz.token_set_ratio(row['ref_text'], row['titleDoi'])
-    
+    auth_similarity = fuzz.token_set_ratio(row["ref_text"], row["firstAuthDoi"])
+    title_similarity = fuzz.token_set_ratio(row["ref_text"], row["titleDoi"])
+
     return pd.Series((auth_similarity, title_similarity))
 
 
-df[['author_similarity', 'title_similarity']] = df.apply(check_author_title, axis=1)
+df = pd.read_csv(snakemake.input[0], index_col=0)
+if len(df) > 0:
+    df[["titleDoi", "firstAuthDoi"]] = df["doi"].apply(get_info).apply(pd.Series)
+    df[["author_similarity", "title_similarity"]] = df.apply(check_author_title, axis=1)
+else:
+    # add the empty columns
+    df["titleDoi"] = ""
+    df["firstAuthDoi"] = ""
+    df["author_similarity"] = ""
+    df["title_similarity"] = ""
 
-df.to_csv(dir_path+'/combined_ref_check.csv', index=False)
+df.to_csv(snakemake.output[0], index=False)

@@ -14,10 +14,9 @@ df = []
 
 # read in LLM output (yaml format) and extract conclusion->outcome field
 for res_file in glioblastoma_results.iterdir():
+    # make sure to only process the files that correspond to our analysis
     prompt = res_file.name.split("--")[0]
-    if prompt not in "high_complexity".split(
-        ", "
-    ):  # baseline, medium_complexity, state_based
+    if prompt not in "high_complexity, baseline".split(", "):
         continue
     gene_combination = res_file.name.split("--")[1].replace("generated_", "")
     if res_file.name.endswith("swp"):  # vim -.-

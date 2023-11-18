@@ -26,12 +26,8 @@ def get_doi(input_string):
 
 ##### CONFIGURATION
 
-input_path = Path(
-    snakemake.input[0]
-)  # os.path.join("experiments/trained_immunity/ai_messages/high_complexity--training_betaglucan") # trained-immunity test
-output_path = Path(
-    snakemake.output[0]
-)  # os.path.join("/research/home/sreichl/projects/tmp/","{}.csv".format(os.path.basename(input_path)))
+input_path = Path(snakemake.input[0])
+output_path = Path(snakemake.output[0])
 
 ##### LOAD DATA
 
@@ -57,5 +53,4 @@ for ref in references.keys():
 
 ##### SAVE RESULTS
 
-# print(ref_df)
 ref_df.to_csv(output_path)

@@ -8,7 +8,8 @@
 </a>
 
 
-This repository contains code for the paper **"Large language models are universal biomedical simulators"** (Schaefer et al., 2023).
+
+This repository contains code for the paper **"Large language models are universal biomedical simulators"** (Schaefer et al., 2023, https://www.biorxiv.org/content/10.1101/2023.06.16.545235v1).
 
 Computational simulation of biological processes can be a valuable tool in accelerating biomedical research, but usually requires a high level of domain knowledge and extensive manual adaptations. Recently, large language models (LLMs) – such as GPT-4 have proven surprisingly successful in solving complex tasks across diverse fields by emulating human language generation at a very large scale. Here we explore the potential of leveraging LLMs as simulators of biological systems. We establish proof-of-concept of a text-based simulator, **SimulateGPT**, that leverages LLM reasoning. We demonstrate good prediction performance across diverse biomedical use cases without explicit domain knowledge or manual tuning. Our results show that LLMs can be used as versatile and broadly applicable biological simulators.
 
@@ -37,6 +38,13 @@ Each experiment is kept in a separate folder containing:
 Simply run `snakemake -c1 -k --config experiment_name=<your_experiment_name>` (1 core, continue with undone jobs if a job failed). If you want to use my conda env, add `--use-conda`.
 
 The pipeline generates the files according to the schema indicated above.
+
+### Run all experiments
+
+To run all experiments, call snakemake like so:
+
+`for experiment_name in $(ls experiments); do snakemake -c1 --config experiment_name=$experiment_name; done`
+
 
 ## Code files
 
