@@ -1,0 +1,89 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: SimulateGPT
+message: Large language models are universal biomedical simulators.
+type: software
+authors:
+  - given-names: Moritz
+    family-names: Schaefer
+    email: mschaefer@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0001-6489-1947'
+  - given-names: Stephan
+    family-names: Reichl
+    email: sreichl@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0001-8555-7198'
+  - given-names: Rob
+    family-names: ter Horst
+    email: rterhorst@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0003-0576-5873'
+  - given-names: Adele M
+    family-names: Nicolas
+    email: anicolas@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0003-0784-7207'
+  - given-names: Thomas
+    family-names: Krausgruber
+    email: tkrausgruber@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0002-1374-0329'
+  - given-names: Francesco
+    family-names: Piras
+    email: fpiras@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0002-0938-6072'
+  - given-names: Peter
+    family-names: Stepper
+    email: pstepper@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0003-1785-2405'
+  - given-names: Christoph
+    family-names: Bock
+    email: cbock@cemm.oeaw.ac.at
+    affiliation: CeMM Research Center for Molecular Medicine
+    orcid: 'https://orcid.org/0000-0001-6091-3088'
+  - given-names: Matthias
+    family-names: Samwald
+    email: matthias.samwald@meduniwien.ac.at
+    affiliation: Medical University of Vienna
+    orcid: 'https://orcid.org/0000-0002-4855-2571'
+identifiers:
+  - type: doi
+    value: 10.1101/2023.06.16.545235
+    description: bioRxiv DOI
+  - type: url
+    value: >-
+      https://www.biorxiv.org/content/10.1101/2023.06.16.545235v1
+    description: bioRxiv URL
+repository-code: 'https://github.com/OpenBioLink/SimulateGPT'
+abstract: >-
+  Computational simulation of biological processes can be a
+  valuable tool in accelerating biomedical research, but
+  usually requires extensive domain knowledge and manual
+  adaptation. Recently, large language models (LLMs) such as
+  GPT-4 have proven surprisingly successful for a wide range
+  of tasks by generating human language at a very large
+  scale. Here we explore the potential of leveraging LLMs as
+  simulators of biological systems. We establish
+  proof-of-concept of a text-based simulator, SimulateGPT,
+  that uses LLM reasoning. We demonstrate good prediction
+  performance for various biomedical applications, without
+  requiring explicit domain knowledge or manual tuning. LLMs
+  thus enable a new class of versatile and broadly
+  applicable biological simulators. This text-based
+  simulation paradigm is well-suited for modeling and
+  understanding complex living systems that are difficult to
+  describe with physics-based first-principles simulation,
+  but for which extensive knowledge and context is available
+  as written text.
+keywords:
+  - Biomedicine
+  - Precision Medicine
+  - Simulation
+  - Large Language Models
+  - Machine Learning
+license: MIT
